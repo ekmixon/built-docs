@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Reload the configuration dynamically
         | Auditbeat Reference [7.3]
       | Elastic
-    </title><link rel="home" href="index.html" title="Auditbeat Reference [7.3]" /><link rel="up" href="configuring-howto-auditbeat.html" title="Configuring Auditbeat" /><link rel="prev" href="configuration-general-options.html" title="Specify general settings" /><link rel="next" href="configuring-internal-queue.html" title="Configure the internal queue" /><meta name="DC.type" content="Learn/Docs/Auditbeat/Reference/7.3" /><meta name="DC.subject" content="Auditbeat" /><meta name="DC.identifier" content="7.3" /></head><body><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Auditbeat Reference
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Auditbeat Reference [7.3]" /><link rel="up" href="configuring-howto-auditbeat.html" title="Configuring Auditbeat" /><link rel="prev" href="configuration-general-options.html" title="Specify general settings" /><link rel="next" href="configuring-internal-queue.html" title="Configure the internal queue" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Auditbeat/Reference/7.3" /><meta name="DC.subject" content="Auditbeat" /><meta name="DC.identifier" content="7.3" /></head><body><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Auditbeat Reference
       [7.3]
     </a></span> » <span class="breadcrumb-link"><a href="configuring-howto-auditbeat.html">Configuring Auditbeat</a></span> » <span class="breadcrumb-node">Reload the configuration dynamically</span></div><div class="navheader"><span class="prev"><a href="configuration-general-options.html">
               « 
@@ -20,10 +20,22 @@ started/stopped according to changes in the configuration files.</p><p>To enable
 in the main <code class="literal">auditbeat.yml</code> config file. For example:</p><div class="pre_wrapper lang-sh"><pre class="programlisting prettyprint lang-sh">auditbeat.config.modules:
   path: ${path.config}/conf.d/*.yml
   reload.enabled: true
-  reload.period: 10s</pre></div><div class="variablelist"><dl class="variablelist"><dt><span class="term"><span class="strong strong"><strong><code class="literal">path</code></strong></span></span></dt><dd>A glob that defines the files to check for changes.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">reload.enabled</code></strong></span></span></dt><dd>When set to <code class="literal">true</code>, enables dynamic config reload.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">reload.period</code></strong></span></span></dt><dd>Specifies how often the files are checked for changes. Do not
+  reload.period: 10s</pre></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">path</code></strong></span>
+</span></dt><dd>
+A glob that defines the files to check for changes.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">reload.enabled</code></strong></span>
+</span></dt><dd>
+When set to <code class="literal">true</code>, enables dynamic config reload.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">reload.period</code></strong></span>
+</span></dt><dd>
+Specifies how often the files are checked for changes. Do not
 set the <code class="literal">period</code> to less than 1s because the modification time of files is often
 stored in seconds. Setting the <code class="literal">period</code> to less than 1s will result in
-unnecessary overhead.</dd></dl></div><p>Each file found by the glob must contain a list of one or more module
+unnecessary overhead.
+</dd></dl></div><p>Each file found by the glob must contain a list of one or more module
 definitions. For example:</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">- module: file_integrity
   paths:
   - /www/wordpress

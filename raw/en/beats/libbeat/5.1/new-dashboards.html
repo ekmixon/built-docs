@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Developer Guide: Creating New Kibana Dashboards for a Beat
         | Beats Platform Reference [5.1]
       | Elastic
-    </title><link rel="home" href="index.html" title="Beats Platform Reference [5.1]" /><link rel="up" href="index.html" title="Beats Platform Reference [5.1]" /><link rel="prev" href="event-conventions.html" title="Naming Conventions" /><link rel="next" href="import-dashboards.html" title="Importing Existing Beat Dashboards" /><meta name="DC.type" content="Learn/Docs/Libbeat/Reference/5.1" /><meta name="DC.subject" content="libbeat" /><meta name="DC.identifier" content="5.1" /></head><body><div class="page_header">You are looking at documentation for an older release.
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Beats Platform Reference [5.1]" /><link rel="up" href="index.html" title="Beats Platform Reference [5.1]" /><link rel="prev" href="event-conventions.html" title="Naming Conventions" /><link rel="next" href="import-dashboards.html" title="Importing Existing Beat Dashboards" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Libbeat/Reference/5.1" /><meta name="DC.subject" content="libbeat" /><meta name="DC.identifier" content="5.1" /></head><body><div class="page_header">You are looking at documentation for an older release.
 Not what you want? See the
 <a href="../current/index.html">current release documentation</a>.
 </div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Beats Platform Reference
@@ -22,7 +22,19 @@ existing Beat into Kibana, where you can modify the dashboards or use them as a 
 a special index in Elasticsearch. By default the index is <code class="literal">.kibana</code>, but you can specify a different index.</p><p>When you’re done making changes to the dashboards in Kibana, you can use the <code class="literal">export_dashboards</code> script to <a class="link" href="export-dashboards.html" title="Exporting New and Modified Beat Dashboards">export the dashboards</a>, along with all dependencies, to a local directory.</p><p>To make sure the dashboards are compatible with the latest version of Kibana and Elasticsearch, we
 recommend that you use the virtual environment under
 <a class="ulink" href="https://github.com/elastic/beats/tree/master/testing/environments" target="_top">beats/testing/environments</a> to import, create, and
-export the Kibana dashboards.</p><p>The following topics provide more detail about importing and working with Beats dashboards:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><a class="xref" href="import-dashboards.html" title="Importing Existing Beat Dashboards">Importing Existing Beat Dashboards</a></li><li class="listitem"><a class="xref" href="build-dashboards.html" title="Building Your Own Beat Dashboards">Building Your Own Beat Dashboards</a></li><li class="listitem"><a class="xref" href="generate-index-pattern.html" title="Generating the Beat Index Pattern">Generating the Beat Index Pattern</a></li><li class="listitem"><a class="xref" href="export-dashboards.html" title="Exporting New and Modified Beat Dashboards">Exporting New and Modified Beat Dashboards</a></li><li class="listitem"><a class="xref" href="archive-dashboards.html" title="Archiving Your Beat Dashboards">Archiving Your Beat Dashboards</a></li><li class="listitem"><a class="xref" href="share-beat-dashboards.html" title="Sharing Your Beat Dashboards">Sharing Your Beat Dashboards</a></li></ul></div></div><div class="navfooter"><span class="prev"><a href="event-conventions.html">
+export the Kibana dashboards.</p><p>The following topics provide more detail about importing and working with Beats dashboards:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<a class="xref" href="import-dashboards.html" title="Importing Existing Beat Dashboards">Importing Existing Beat Dashboards</a>
+</li><li class="listitem">
+<a class="xref" href="build-dashboards.html" title="Building Your Own Beat Dashboards">Building Your Own Beat Dashboards</a>
+</li><li class="listitem">
+<a class="xref" href="generate-index-pattern.html" title="Generating the Beat Index Pattern">Generating the Beat Index Pattern</a>
+</li><li class="listitem">
+<a class="xref" href="export-dashboards.html" title="Exporting New and Modified Beat Dashboards">Exporting New and Modified Beat Dashboards</a>
+</li><li class="listitem">
+<a class="xref" href="archive-dashboards.html" title="Archiving Your Beat Dashboards">Archiving Your Beat Dashboards</a>
+</li><li class="listitem">
+<a class="xref" href="share-beat-dashboards.html" title="Sharing Your Beat Dashboards">Sharing Your Beat Dashboards</a>
+</li></ul></div></div><div class="navfooter"><span class="prev"><a href="event-conventions.html">
               « 
               Naming Conventions</a>
            

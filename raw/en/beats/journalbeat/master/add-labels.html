@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Add labels
         | Journalbeat Reference [master]
       | Elastic
-    </title><link rel="home" href="index.html" title="Journalbeat Reference [master]" /><link rel="up" href="filtering-and-enhancing-data.html" title="Filter and enhance the exported data" /><link rel="prev" href="add-fields.html" title="Add fields" /><link rel="next" href="add-locale.html" title="Add the local time zone" /><meta name="DC.type" content="Learn/Docs/Journalbeat/Reference/master" /><meta name="DC.subject" content="Journalbeat" /><meta name="DC.identifier" content="master" /></head><body><div class="page_header">This functionality is experimental and may be changed or removed completely in a
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Journalbeat Reference [master]" /><link rel="up" href="filtering-and-enhancing-data.html" title="Filter and enhance the exported data" /><link rel="prev" href="add-fields.html" title="Add fields" /><link rel="next" href="add-locale.html" title="Add the local time zone" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Journalbeat/Reference/master" /><meta name="DC.subject" content="Journalbeat" /><meta name="DC.identifier" content="master" /></head><body><div class="page_header">This functionality is experimental and may be changed or removed completely in a
 future release. Elastic will take a best effort approach to fix any issues, but
 experimental features are not subject to the support SLA of official GA
 features.</div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Journalbeat Reference
@@ -19,7 +19,11 @@ features.</div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="i
 The processor will flatten nested configuration objects like arrays or
 dictionaries into a fully qualified name by merging nested names with a <code class="literal">.</code>.
 Array entries create numeric names starting with 0.  Labels are always stored
-under the Elastic Common Schema compliant <code class="literal">labels</code> sub-dictionary.</p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="literal">labels</code></span></dt><dd>dictionaries of labels to be added.</dd></dl></div><p>For example, this configuration:</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">processors:
+under the Elastic Common Schema compliant <code class="literal">labels</code> sub-dictionary.</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<code class="literal">labels</code>
+</span></dt><dd>
+dictionaries of labels to be added.
+</dd></dl></div><p>For example, this configuration:</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">processors:
 - add_labels:
     labels:
       number: 1

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Stack - Versions - CRUD
+        | Elasticsearch Service Documentation [master]
+      | Elastic
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Elasticsearch Service Documentation [master]" /><link rel="up" href="ec-api-reference.html" title="API reference" /><link rel="prev" href="Platform_-_Configuration_-_Instances_-_CRUD.html" title="Platform - Configuration - Instances - CRUD" /><link rel="next" href="Templates_-_Deployments.html" title="Templates - Deployments" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Cloud/Reference/master" /><meta name="DC.subject" content="Elastic Cloud" /><meta name="DC.identifier" content="master" /></head><body><div class="page_header">You are looking at the future. Not what you want? See the <a href="https://www.elastic.co/guide/en/cloud/current/index.html">current release documentation</a>.</div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Elasticsearch Service Documentation
+      [master]
+    </a></span> » <span class="breadcrumb-link"><a href="ec-restful-api.html">RESTful API</a></span> » <span class="breadcrumb-link"><a href="ec-api-reference.html">API reference</a></span> » <span class="breadcrumb-node">Stack - Versions - CRUD</span></div><div class="navheader"><span class="prev"><a href="Platform_-_Configuration_-_Instances_-_CRUD.html">
+              « 
+              Platform - Configuration - Instances - CRUD</a>
+           
+        </span><span class="next">
+           
+          <a href="Templates_-_Deployments.html">Templates - Deployments
+               »
+            </a></span></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="Stack_-_Versions_-_CRUD"></a>Stack - Versions - CRUD</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<a class="xref" href="Stack_-_Versions_-_CRUD.html#get-version-stacks" title="Get stack versions">Get stack versions</a>
+</li></ul></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="get-version-stacks"></a>Get stack versions</h3></div></div></div><p>By default, retrieves only the available Elastic Stack versions. To retrieve all of the Elastic Stack versions, use the <code class="literal">show_deleted parameter</code>.</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="ec-request_106"></a>Request</h4></div></div></div><p><code class="literal">GET /api/v1/stack/versions</code></p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="ec-query_parameters_54"></a>Query parameters</h4></div></div></div><div class="informaltable"><table cellpadding="4px" border="1"><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><thead><tr><th align="left" valign="top">Name </th><th align="left" valign="top">Type </th><th align="left" valign="top">Required </th><th align="left" valign="top">Description</th></tr></thead><tbody><tr><td align="left" valign="top"><p><code class="literal">show_deleted</code></p></td><td align="left" valign="top"><p><code class="literal">boolean</code>; default: <code class="literal">false</code></p></td><td align="left" valign="top"><p>N</p></td><td align="left" valign="top"><p>Whether to show deleted stack versions or not</p></td></tr><tr><td align="left" valign="top"><p><code class="literal">show_unusable</code></p></td><td align="left" valign="top"><p><code class="literal">boolean</code>; default: <code class="literal">false</code></p></td><td align="left" valign="top"><p>N</p></td><td align="left" valign="top"><p>Whether to show versions that are unusable by the authenticated user</p></td></tr></tbody></table></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="ec-responses_106"></a>Responses</h4></div></div></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<code class="literal">200</code>
+</span></dt><dd>(<a class="link" href="definitions.html#StackVersionConfigs" title="StackVersionConfigs"><code class="literal">StackVersionConfigs</code></a>) The list of all available Elastic Stack versions are retrieved, including the template version and structure.</dd></dl></div><div class="warning admon"><div class="icon"><img alt="Warning" src="images/icons/warning.png" /></div><div class="admon_content"><p>To perform this operation, you must be authenticated by means of one of the following methods: apiKey, basicAuth.</p></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="ec-request_example_106"></a>Request example</h4></div></div></div><div class="pre_wrapper lang-json"><pre class="programlisting prettyprint lang-json">curl -XGET {{hostname}}/api/v1/stack/versions \
+-u $CLOUD_USER:$CLOUD_KEY</pre></div></div></div></div><div class="navfooter"><span class="prev"><a href="Platform_-_Configuration_-_Instances_-_CRUD.html">
+              « 
+              Platform - Configuration - Instances - CRUD</a>
+           
+        </span><span class="next">
+           
+          <a href="Templates_-_Deployments.html">Templates - Deployments
+               »
+            </a></span></div></body></html>

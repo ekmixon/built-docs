@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Getting Ready
         | Beats Developer Guide [6.1]
       | Elastic
-    </title><link rel="home" href="index.html" title="Beats Developer Guide [6.1]" /><link rel="up" href="new-beat.html" title="Creating a New Beat" /><link rel="prev" href="new-beat.html" title="Creating a New Beat" /><link rel="next" href="newbeat-overview.html" title="Overview" /><meta name="DC.type" content="Learn/Docs/Devguide/Reference/6.1" /><meta name="DC.subject" content="Beats" /><meta name="DC.identifier" content="6.1" /></head><body><div class="page_header">You are looking at documentation for an older release.
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Beats Developer Guide [6.1]" /><link rel="up" href="new-beat.html" title="Creating a New Beat" /><link rel="prev" href="new-beat.html" title="Creating a New Beat" /><link rel="next" href="newbeat-overview.html" title="Overview" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Devguide/Reference/6.1" /><meta name="DC.subject" content="Beats" /><meta name="DC.identifier" content="6.1" /></head><body><div class="page_header">You are looking at documentation for an older release.
 Not what you want? See the
 <a href="../current/index.html">current release documentation</a>.
 </div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Beats Developer Guide
@@ -26,8 +26,7 @@ your preferred workspace location, a simple way of getting the source code for
 Beats, including libbeat and the Beat generator, is to do:</p><div class="pre_wrapper lang-shell"><pre class="programlisting prettyprint lang-shell">go get github.com/elastic/beats</pre></div><p>When you run the command, all source files are downloaded to the
 <code class="literal">$GOPATH/src/github.com/elastic/beats</code> path. You can ignore the "no buildable Go source files" message because
 you will build the source later. By default <code class="literal">go get</code>  fetches the master branch. To build your beat
-on a specific version of libbeat, check out the specific branch (6.1 in the example below):</p><div class="pre_wrapper lang-sh"><pre class="programlisting prettyprint lang-sh">cd ${GOPATH}/src/github.com/elastic/beats
-git checkout 6.1</pre></div><div class="note admon"><div class="icon"><img alt="Note" src="images/icons/note.png" /></div><div class="admon_content"><p>If you have multiple go paths, use <code class="literal">${GOPATH%%:*}</code> instead of <code class="literal">${GOPATH}</code>.</p></div></div></div><div class="navfooter"><span class="prev"><a href="new-beat.html">
+on a specific version of libbeat, check out the specific branch (6.1 in the example below):</p><div class="pre_wrapper lang-sh"><pre class="programlisting prettyprint lang-sh">git checkout 6.1</pre></div><div class="note admon"><div class="icon"><img alt="Note" src="images/icons/note.png" /></div><div class="admon_content"><p>If you have multiple go paths, use <code class="literal">${GOPATH%%:*}</code> instead of <code class="literal">${GOPATH}</code>.</p></div></div></div><div class="navfooter"><span class="prev"><a href="new-beat.html">
               « 
               Creating a New Beat</a>
            

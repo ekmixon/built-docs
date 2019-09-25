@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Command Line Options
         | Filebeat Reference [1.1]
       | Elastic
-    </title><link rel="home" href="index.html" title="Filebeat Reference [1.1]" /><link rel="up" href="filebeat-getting-started.html" title="Getting Started With Filebeat" /><link rel="prev" href="_step_5_starting_filebeat.html" title="Step 5: Starting Filebeat" /><link rel="next" href="configuring-howto-filebeat.html" title="Configuring Filebeat" /><meta name="DC.type" content="Learn/Docs/Filebeat/Reference/1.1" /><meta name="DC.subject" content="Filebeat" /><meta name="DC.identifier" content="1.1" /></head><body><div class="page_header">You are looking at documentation for an older release.
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Filebeat Reference [1.1]" /><link rel="up" href="filebeat-getting-started.html" title="Getting Started With Filebeat" /><link rel="prev" href="_step_5_starting_filebeat.html" title="Step 5: Starting Filebeat" /><link rel="next" href="configuring-howto-filebeat.html" title="Configuring Filebeat" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Filebeat/Reference/1.1" /><meta name="DC.subject" content="Filebeat" /><meta name="DC.identifier" content="1.1" /></head><body><div class="page_header">You are looking at documentation for an older release.
 Not what you want? See the
 <a href="../current/index.html">current release documentation</a>.
 </div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Filebeat Reference
@@ -34,13 +34,53 @@ Usage of ./filebeat:
       Write memory profile to this file
   -v  Log at INFO level
   -version
-      Print version and exit</pre></div><div class="variablelist"><dl class="variablelist"><dt><span class="term"><span class="strong strong"><strong><code class="literal">-N</code></strong></span></span></dt><dd>Disable the publishing of events to the defined output. This option is useful only
-for testing the Beat.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">-c &lt;file&gt;</code></strong></span></span></dt><dd>Pass the location of a configuration file for the Beat.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">-configtest</code></strong></span></span></dt><dd>Test the configuration file and then exit. This option is useful for
-troubleshooting the configuration of a Beat.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">-cpuprofile &lt;output file&gt;</code></strong></span></span></dt><dd>Write CPU profile data to the specified file. This option is useful for
-troubleshooting the Beat.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">-d &lt;selectors&gt;</code></strong></span></span></dt><dd>Enable debugging for the specified selectors. For the selectors, you can specify a comma-separated
+      Print version and exit</pre></div><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">-N</code></strong></span>
+</span></dt><dd>
+Disable the publishing of events to the defined output. This option is useful only
+for testing the Beat.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">-c &lt;file&gt;</code></strong></span>
+</span></dt><dd>
+Pass the location of a configuration file for the Beat.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">-configtest</code></strong></span>
+</span></dt><dd>
+Test the configuration file and then exit. This option is useful for
+troubleshooting the configuration of a Beat.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">-cpuprofile &lt;output file&gt;</code></strong></span>
+</span></dt><dd>
+Write CPU profile data to the specified file. This option is useful for
+troubleshooting the Beat.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">-d &lt;selectors&gt;</code></strong></span>
+</span></dt><dd>
+Enable debugging for the specified selectors. For the selectors, you can specify a comma-separated
 list of components, or you can use <code class="literal">-d "*"</code> to enable debugging for all components. For example,
-<code class="literal">-d "publish"</code> displays all the "publish" related messages.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">-e</code></strong></span></span></dt><dd>Log to stderr and disable syslog/file output.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">-httpprof [&lt;host&gt;]:&lt;port&gt;</code></strong></span></span></dt><dd>Start http server for profiling. This option is useful for troubleshooting and profiling the Beat.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">-memprofile &lt;output file&gt;</code></strong></span></span></dt><dd>Write memory profile data to the specified output file. This option is useful for
-troubleshooting the Beat.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">-v</code></strong></span></span></dt><dd>Enable verbose output to show INFO-level messages.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">-version</code></strong></span></span></dt><dd>Display the Beat version and exit.</dd></dl></div></div><div class="navfooter"><span class="prev"><a href="_step_5_starting_filebeat.html">
+<code class="literal">-d "publish"</code> displays all the "publish" related messages.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">-e</code></strong></span>
+</span></dt><dd>
+Log to stderr and disable syslog/file output.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">-httpprof [&lt;host&gt;]:&lt;port&gt;</code></strong></span>
+</span></dt><dd>
+Start http server for profiling. This option is useful for troubleshooting and profiling the Beat.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">-memprofile &lt;output file&gt;</code></strong></span>
+</span></dt><dd>
+Write memory profile data to the specified output file. This option is useful for
+troubleshooting the Beat.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">-v</code></strong></span>
+</span></dt><dd>
+Enable verbose output to show INFO-level messages.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">-version</code></strong></span>
+</span></dt><dd>
+Display the Beat version and exit.
+</dd></dl></div></div><div class="navfooter"><span class="prev"><a href="_step_5_starting_filebeat.html">
               « 
               Step 5: Starting Filebeat</a>
            

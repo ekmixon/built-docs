@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Winlogbeat Configuration
         | Winlogbeat Reference [5.0]
       | Elastic
-    </title><link rel="home" href="index.html" title="Winlogbeat Reference [5.0]" /><link rel="up" href="winlogbeat-configuration-details.html" title="Configuration Options (Reference)" /><link rel="prev" href="winlogbeat-configuration-details.html" title="Configuration Options (Reference)" /><link rel="next" href="configuration-general.html" title="General Configuration" /><meta name="DC.type" content="Learn/Docs/Winlogbeat/Reference/5.0" /><meta name="DC.subject" content="Winlogbeat" /><meta name="DC.identifier" content="5.0" /></head><body><div class="page_header">You are looking at documentation for an older release.
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Winlogbeat Reference [5.0]" /><link rel="up" href="winlogbeat-configuration-details.html" title="Configuration Options (Reference)" /><link rel="prev" href="winlogbeat-configuration-details.html" title="Configuration Options (Reference)" /><link rel="next" href="configuration-general.html" title="General Configuration" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Winlogbeat/Reference/5.0" /><meta name="DC.subject" content="Winlogbeat" /><meta name="DC.identifier" content="5.0" /></head><body><div class="page_header">You are looking at documentation for an older release.
 Not what you want? See the
 <a href="../current/index.html">current release documentation</a>.
 </div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Winlogbeat Reference
@@ -145,7 +145,19 @@ field names added by Winlogbeat, then the custom fields overwrite the other
 fields.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_metrics_bindaddress"></a>metrics.bindaddress<a href="https://github.com/elastic/beats/edit/5.0/winlogbeat/docs/reference/configuration/winlogbeat-options.asciidoc" class="edit_me" title="Edit this page on GitHub" rel="nofollow">edit</a></h4></div></div></div><p>The hostname and port where the Beat will host an HTTP web service that provides
 metrics. This field is optional.</p><p>The following example specifies that the metrics service is available at
 <a class="ulink" href="http://localhost:8128/debug/vars" target="_top">http://localhost:8128/debug/vars</a>:</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">winlogbeat.metrics:
-  bindaddress: 'localhost:8123'</pre></div><p>The metrics are served as a JSON document. The metrics include:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">memory stats</li><li class="listitem">number of published events from each log</li><li class="listitem">total number of failures while publishing</li><li class="listitem">total number of filtered events</li><li class="listitem">total number of successfully published events</li><li class="listitem">uptime</li></ul></div></div></div></div><div class="navfooter"><span class="prev"><a href="winlogbeat-configuration-details.html">
+  bindaddress: 'localhost:8123'</pre></div><p>The metrics are served as a JSON document. The metrics include:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+memory stats
+</li><li class="listitem">
+number of published events from each log
+</li><li class="listitem">
+total number of failures while publishing
+</li><li class="listitem">
+total number of filtered events
+</li><li class="listitem">
+total number of successfully published events
+</li><li class="listitem">
+uptime
+</li></ul></div></div></div></div><div class="navfooter"><span class="prev"><a href="winlogbeat-configuration-details.html">
               « 
               Configuration Options (Reference)</a>
            

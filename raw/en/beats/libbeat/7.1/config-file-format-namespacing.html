@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Namespacing
         | Beats Platform Reference [7.1]
       | Elastic
-    </title><link rel="home" href="index.html" title="Beats Platform Reference [7.1]" /><link rel="up" href="config-file-format.html" title="Config file format" /><link rel="prev" href="config-file-format.html" title="Config file format" /><link rel="next" href="config-file-format-type.html" title="Config file data types" /><meta name="DC.type" content="Learn/Docs/Libbeat/Reference/7.1" /><meta name="DC.subject" content="libbeat" /><meta name="DC.identifier" content="7.1" /></head><body><div class="page_header">You are looking at documentation for an older release.
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Beats Platform Reference [7.1]" /><link rel="up" href="config-file-format.html" title="Config file format" /><link rel="prev" href="config-file-format.html" title="Config file format" /><link rel="next" href="config-file-format-type.html" title="Config file data types" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Libbeat/Reference/7.1" /><meta name="DC.subject" content="libbeat" /><meta name="DC.identifier" content="7.1" /></head><body><div class="page_header">You are looking at documentation for an older release.
 Not what you want? See the
 <a href="../current/index.html">current release documentation</a>.
 </div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Beats Platform Reference
@@ -20,7 +20,7 @@ into "namespaced" settings, by creating a setting using the full path of the
 settings name and it’s parent structures names, when reading the configuration
 file.</p><p>For example this setting:</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">output:
   elasticsearch:
-    index: 'beat-%{[agent.version]}-%{+yyyy.MM.dd}'</pre></div><p>gets collapsed into <code class="literal">output.elasticsearch.index: 'beat-%{[agent.version]}-%{+yyyy.MM.dd}\'</code>. The
+    index: 'beat-%{[agent.version]}-%{+yyyy.MM.dd}'</pre></div><p>gets collapsed into <code class="literal">output.elasticsearch.index: 'beat-%{[agent.version]}-%{+yyyy.MM.dd}'</code>. The
 full name of a setting is based on all parent structures involved.</p><p>Lists create numeric names starting with 0.</p><p>For example this filebeat setting:</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">filebeat:
   inputs:
     - type: log</pre></div><p>Gets collapsed into <code class="literal">filebeat.inputs.0.type: log</code>.</p><p>Alternatively to using indentation, setting names can be used in collapsed form too.</p><p>Note: having two settings with same fully collapsed path is invalid.</p><p>Simple filebeat example with partially collapsed setting names and use of compact form:</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">filebeat.inputs:

@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Add fields
         | Heartbeat Reference [7.1]
       | Elastic
-    </title><link rel="home" href="index.html" title="Heartbeat Reference [7.1]" /><link rel="up" href="filtering-and-enhancing-data.html" title="Filter and Enhance the exported data" /><link rel="prev" href="add-cloud-metadata.html" title="Add cloud metadata" /><link rel="next" href="add-labels.html" title="Add labels" /><meta name="DC.type" content="Learn/Docs/Heartbeat/Reference/7.1" /><meta name="DC.subject" content="Heartbeat" /><meta name="DC.identifier" content="7.1" /></head><body><div class="page_header">You are looking at documentation for an older release.
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Heartbeat Reference [7.1]" /><link rel="up" href="filtering-and-enhancing-data.html" title="Filter and Enhance the exported data" /><link rel="prev" href="add-cloud-metadata.html" title="Add cloud metadata" /><link rel="next" href="add-labels.html" title="Add labels" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Heartbeat/Reference/7.1" /><meta name="DC.subject" content="Heartbeat" /><meta name="DC.identifier" content="7.1" /></head><body><div class="page_header">You are looking at documentation for an older release.
 Not what you want? See the
 <a href="../current/index.html">current release documentation</a>.
 </div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Heartbeat Reference
@@ -20,7 +20,15 @@ scalar values, arrays, dictionaries, or any nested combination of these.  By
 default the fields that you specify will be grouped under the <code class="literal">fields</code>
 sub-dictionary in the event. To group the fields under a different
 sub-dictionary, use the <code class="literal">target</code> setting. To store the fields as
-top-level fields, set <code class="literal">target: ''</code>.</p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="literal">target</code></span></dt><dd>(Optional) Sub-dictionary to put all fields into. Defaults to <code class="literal">fields</code>.</dd><dt><span class="term"><code class="literal">fields</code></span></dt><dd>Fields to be added.</dd></dl></div><p>For example, this configuration:</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">processors:
+top-level fields, set <code class="literal">target: ''</code>.</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<code class="literal">target</code>
+</span></dt><dd>
+(Optional) Sub-dictionary to put all fields into. Defaults to <code class="literal">fields</code>.
+</dd><dt><span class="term">
+<code class="literal">fields</code>
+</span></dt><dd>
+Fields to be added.
+</dd></dl></div><p>For example, this configuration:</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">processors:
 - add_fields:
     target: project
     fields:

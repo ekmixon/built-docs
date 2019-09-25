@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Step 3: Load the index template in Elasticsearch
         | Journalbeat Reference [master]
       | Elastic
-    </title><link rel="home" href="index.html" title="Journalbeat Reference [master]" /><link rel="up" href="journalbeat-getting-started.html" title="Getting started with Journalbeat" /><link rel="prev" href="journalbeat-configuration.html" title="Step 2: Configure Journalbeat" /><link rel="next" href="journalbeat-starting.html" title="Step 5: Start Journalbeat" /><meta name="DC.type" content="Learn/Docs/Journalbeat/Reference/master" /><meta name="DC.subject" content="Journalbeat" /><meta name="DC.identifier" content="master" /></head><body><div class="page_header">This functionality is experimental and may be changed or removed completely in a
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Journalbeat Reference [master]" /><link rel="up" href="journalbeat-getting-started.html" title="Getting started with Journalbeat" /><link rel="prev" href="journalbeat-configuration.html" title="Step 2: Configure Journalbeat" /><link rel="next" href="journalbeat-starting.html" title="Step 5: Start Journalbeat" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Journalbeat/Reference/master" /><meta name="DC.subject" content="Journalbeat" /><meta name="DC.identifier" content="master" /></head><body><div class="page_header">This functionality is experimental and may be changed or removed completely in a
 future release. Elastic will take a best effort approach to fix any issues, but
 experimental features are not subject to the support SLA of official GA
 features.</div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Journalbeat Reference
@@ -27,10 +27,18 @@ it’s not overwritten unless you configure Journalbeat to do so.</p><div class=
 <code class="literal">fields.yml</code>, if the Elasticsearch output is enabled. If you want to use the
 default index template, no additional configuration is required. Otherwise, you
 can change the defaults in the <code class="literal">journalbeat.yml</code> config file
-to:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara"><span class="strong strong"><strong>Load a different template</strong></span></p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">setup.template.name: "your_template_name"
+to:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+<span class="strong strong"><strong>Load a different template</strong></span>
+</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">setup.template.name: "your_template_name"
 setup.template.fields: "path/to/fields.yml"</pre></div><p class="simpara">If the template already exists, it’s not overwritten unless you configure
-Journalbeat to do so.</p></li><li class="listitem"><p class="simpara"><span class="strong strong"><strong>Overwrite an existing template</strong></span></p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">setup.template.overwrite: true</pre></div></li><li class="listitem"><p class="simpara"><span class="strong strong"><strong>Disable automatic template loading</strong></span></p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">setup.template.enabled: false</pre></div><p class="simpara">If you disable automatic template loading, you need to
-<a class="link" href="journalbeat-template.html#load-template-manually" title="Load the template manually">load the template manually</a>.</p></li><li class="listitem"><p class="simpara"><span class="strong strong"><strong>Change the index name</strong></span></p><div class="tip admon"><div class="icon"><img alt="Tip" src="images/icons/tip.png" /></div><div class="admon_content"><p>If you’re sending events to a cluster that supports index lifecycle
+Journalbeat to do so.</p></li><li class="listitem"><p class="simpara">
+<span class="strong strong"><strong>Overwrite an existing template</strong></span>
+</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">setup.template.overwrite: true</pre></div></li><li class="listitem"><p class="simpara">
+<span class="strong strong"><strong>Disable automatic template loading</strong></span>
+</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">setup.template.enabled: false</pre></div><p class="simpara">If you disable automatic template loading, you need to
+<a class="link" href="journalbeat-template.html#load-template-manually" title="Load the template manually">load the template manually</a>.</p></li><li class="listitem"><p class="simpara">
+<span class="strong strong"><strong>Change the index name</strong></span>
+</p><div class="tip admon"><div class="icon"><img alt="Tip" src="images/icons/tip.png" /></div><div class="admon_content"><p>If you’re sending events to a cluster that supports index lifecycle
 management, see <a class="xref" href="ilm.html" title="Configure index lifecycle management"><em>Configure index lifecycle management</em></a> to learn how to change the index name.</p></div></div><p class="simpara">Journalbeat uses time series indices, by default, when index lifecycle
 management is disabled or unsupported. The indices are named
 <code class="literal">journalbeat-8.0.0-yyyy.MM.dd</code>, where <code class="literal">yyyy.MM.dd</code> is the date when the

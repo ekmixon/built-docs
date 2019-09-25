@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Drop fields from events
         | Filebeat Reference [master]
       | Elastic
-    </title><link rel="home" href="index.html" title="Filebeat Reference [master]" /><link rel="up" href="filtering-and-enhancing-data.html" title="Filter and enhance the exported data" /><link rel="prev" href="drop-event.html" title="Drop events" /><link rel="next" href="extract-array.html" title="Extract array" /><meta name="DC.type" content="Learn/Docs/Filebeat/Reference/master" /><meta name="DC.subject" content="Filebeat" /><meta name="DC.identifier" content="master" /></head><body><div class="page_header">You are looking at preliminary documentation for a future release.
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Filebeat Reference [master]" /><link rel="up" href="filtering-and-enhancing-data.html" title="Filter and enhance the exported data" /><link rel="prev" href="drop-event.html" title="Drop events" /><link rel="next" href="extract-array.html" title="Extract array" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Filebeat/Reference/master" /><meta name="DC.subject" content="Filebeat" /><meta name="DC.identifier" content="master" /></head><body><div class="page_header">You are looking at preliminary documentation for a future release.
 Not what you want? See the
 <a href="../current/index.html">current release documentation</a>.
 </div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Filebeat Reference
@@ -24,8 +24,12 @@ be dropped, even if they show up in the <code class="literal">drop_fields</code>
         condition
      fields: ["field1", "field2", ...]
      ignore_missing: false</pre></div><p>See <a class="xref" href="defining-processors.html#conditions" title="Conditions">Conditions</a> for a list of supported conditions.</p><div class="note admon"><div class="icon"><img alt="Note" src="images/icons/note.png" /></div><div class="admon_content"><p>If you define an empty list of fields under <code class="literal">drop_fields</code>, then no fields
-are dropped.</p></div></div><p>The <code class="literal">drop_fields</code> processor has the following configuration settings:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="literal">ignore_missing</code></span></dt><dd>(Optional) If <code class="literal">true</code> the processor will not return an error
-when a specified field does not exist. Defaults to <code class="literal">false</code>.</dd></dl></div></div><div class="navfooter"><span class="prev"><a href="drop-event.html">
+are dropped.</p></div></div><p>The <code class="literal">drop_fields</code> processor has the following configuration settings:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<code class="literal">ignore_missing</code>
+</span></dt><dd>
+(Optional) If <code class="literal">true</code> the processor will not return an error
+when a specified field does not exist. Defaults to <code class="literal">false</code>.
+</dd></dl></div></div><div class="navfooter"><span class="prev"><a href="drop-event.html">
               « 
               Drop events</a>
            

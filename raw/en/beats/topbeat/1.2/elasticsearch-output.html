@@ -2,7 +2,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Elasticsearch Output
         | Topbeat Reference [1.2]
       | Elastic
-    </title><link rel="home" href="index.html" title="Topbeat Reference [1.2]" /><link rel="up" href="topbeat-configuration-options.html" title="Configuration Options" /><link rel="prev" href="configuration-input.html" title="Input" /><link rel="next" href="logstash-output.html" title="Logstash Output" /><meta name="DC.type" content="Learn/Docs/Legacy/Topbeat/Reference/1.2" /><meta name="DC.subject" content="Topbeat" /><meta name="DC.identifier" content="1.2" /><meta name="robots" content="noindex,nofollow" /></head><body><div class="page_header">Topbeat was replaced by <a href="https://www.elastic.co/products/beats/metricbeat">
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Topbeat Reference [1.2]" /><link rel="up" href="topbeat-configuration-options.html" title="Configuration Options" /><link rel="prev" href="configuration-input.html" title="Input" /><link rel="next" href="logstash-output.html" title="Logstash Output" /><meta name="description" content="Get started with the documentation for Elasticsearch, Kibana, Logstash, Beats, X-Pack, Elastic Cloud, Elasticsearch for Apache Hadoop, and our language clients." /><meta name="DC.type" content="Learn/Docs/Legacy/Topbeat/Reference/1.2" /><meta name="DC.subject" content="Topbeat" /><meta name="DC.identifier" content="1.2" /><meta name="robots" content="noindex,nofollow" /></head><body><div class="page_header">Topbeat was replaced by <a href="https://www.elastic.co/products/beats/metricbeat">
 Metricbeat</a> in 5.0. To learn more about Metricbeat, see the
 <a href="https://www.elastic.co/guide/en/beats/metricbeat/current/index.html">
 Metricbeat documentation</a>. </div><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Topbeat Reference
@@ -98,8 +98,20 @@ For example "topbeat" generates "[topbeat-]YYYY.MM.DD" indexes (for example,
 template</a> to use for setting mappings in Elasticsearch. By default, template loading is
 disabled. If you leave this option disabled, you must load the template by running the
 load script that is provided with Topbeat.</p><p>If you enable the <code class="literal">template</code> config option, you can adjust the following settings to load your
-own template or overwrite an existing one:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><span class="strong strong"><strong><code class="literal">name</code></strong></span></span></dt><dd>The name of the template. The default is <code class="literal">topbeat</code>.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">path</code></strong></span></span></dt><dd>The path to the template file.</dd><dt><span class="term"><span class="strong strong"><strong><code class="literal">overwrite</code></strong></span></span></dt><dd>A boolean that specifies whether to overwrite the existing template. The default
-is false.</dd></dl></div><p>For example:</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">output:
+own template or overwrite an existing one:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">name</code></strong></span>
+</span></dt><dd>
+The name of the template. The default is <code class="literal">topbeat</code>.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">path</code></strong></span>
+</span></dt><dd>
+The path to the template file.
+</dd><dt><span class="term">
+<span class="strong strong"><strong><code class="literal">overwrite</code></strong></span>
+</span></dt><dd>
+A boolean that specifies whether to overwrite the existing template. The default
+is false.
+</dd></dl></div><p>For example:</p><div class="pre_wrapper lang-yaml"><pre class="programlisting prettyprint lang-yaml">output:
   elasticsearch:
     hosts: ["localhost:9200"]
       name: "topbeat"
