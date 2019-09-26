@@ -1,16 +1,10 @@
-POST _search
+GET /_search
 {
-  "suggest": {
-    "text" : "tring out Elasticsearch",
-    "my-suggest-1" : {
-      "term" : {
-        "field" : "message"
-      }
+    "_source": {
+        "includes": [ "obj1.*", "obj2.*" ],
+        "excludes": [ "*.description" ]
     },
-    "my-suggest-2" : {
-       "term" : {
-        "field" : "user"
-       }
+    "query" : {
+        "term" : { "user" : "kimchy" }
     }
-  }
 }

@@ -1,1 +1,8 @@
-GET _scripts/<templateid>
+PUT /index_long
+{
+    "mappings": {
+        "properties": {
+            "field": { "type": "date_nanos" }
+        }
+    }
+}

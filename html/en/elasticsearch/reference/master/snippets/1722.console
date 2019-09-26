@@ -1,15 +1,5 @@
-GET /twitter/_rank_eval
-{
-    "requests": [
-    {
-        "id": "JFK query",
-        "request": { "query": { "match_all": {}}},
-        "ratings": []
-    }],
-    "metric": {
-       "expected_reciprocal_rank": {
-            "maximum_relevance" : 3,
-            "k" : 20
-       }
-    }
-}
+GET _msearch/template
+{"index" : "twitter"}
+{ "source" : "{ \"query\": { \"match\": { \"message\" : \"{{keywords}}\" } } } }", "params": { "query_type": "match", "keywords": "some message" } }
+{"index" : "twitter"}
+{ "source" : "{ \"query\": { \"match_{{template}}\": {} } }", "params": { "template": "all" } }

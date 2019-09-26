@@ -1,24 +1,28 @@
-POST _ml/anomaly_detectors/_validate
+PUT _watcher/watch/my_watch
 {
-  "analysis_config" : {
-    "categorization_analyzer" : {
-      "tokenizer" : "ml_classic",
-      "filter" : [
-        { "type" : "stop", "stopwords": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
-          "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",
-          "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
-          "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-          "GMT", "UTC"
-        ] }
-      ]
-    },
-    "categorization_field_name": "message",
-    "detectors" :[{
-      "function":"count",
-      "by_field_name": "mlcategory"
-    }]
+  "trigger": {
+    "schedule": {
+      "hourly": {
+        "minute": [ 0, 5 ]
+      }
+    }
   },
-  "data_description" : {
+  "input": {
+    "simple": {
+      "payload": {
+        "send": "yes"
+      }
+    }
+  },
+  "condition": {
+    "always": {}
+  },
+  "actions": {
+    "test_index": {
+      "throttle_period": "15m",
+      "index": {
+        "index": "test"
+      }
+    }
   }
 }

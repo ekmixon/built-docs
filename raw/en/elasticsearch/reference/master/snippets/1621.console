@@ -1,15 +1,17 @@
-PUT /my_index/_doc/1?refresh
+PUT /shirts
 {
-   "product": "chocolate",
-   "price": [20, 4]
+    "mappings": {
+        "properties": {
+            "brand": { "type": "keyword"},
+            "color": { "type": "keyword"},
+            "model": { "type": "keyword"}
+        }
+    }
 }
 
-POST /_search
+PUT /shirts/_doc/1?refresh
 {
-   "query" : {
-      "term" : { "product" : "chocolate" }
-   },
-   "sort" : [
-      {"price" : {"order" : "asc", "mode" : "avg"}}
-   ]
+    "brand": "gucci",
+    "color": "red",
+    "model": "slim"
 }

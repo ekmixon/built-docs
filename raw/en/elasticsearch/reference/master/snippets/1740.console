@@ -1,9 +1,33 @@
-POST /_security/role_mapping/mapping9
+GET /twitter/_search
 {
-  "rules": { "field": { "realm.name": "cloud-saml" } },
-  "role_templates": [
-    { "template": { "source" : "saml_user" } },
-    { "template": { "source" : "_user_{{username}}" } }
-  ],
-  "enabled": true
+  "profile": true,
+  "query": {
+    "term": {
+      "user": {
+        "value": "test"
+      }
+    }
+  },
+  "aggs": {
+    "my_scoped_agg": {
+      "terms": {
+        "field": "likes"
+      }
+    },
+    "my_global_agg": {
+      "global": {},
+      "aggs": {
+        "my_level_agg": {
+          "terms": {
+            "field": "likes"
+          }
+        }
+      }
+    }
+  },
+  "post_filter": {
+    "match": {
+      "message": "some"
+    }
+  }
 }

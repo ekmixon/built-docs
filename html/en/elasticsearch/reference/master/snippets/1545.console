@@ -1,6 +1,11 @@
-POST /twitter/_doc?routing=kimchy
+POST _ml/data_frame/analytics/_estimate_memory_usage
 {
-    "user" : "kimchy",
-    "post_date" : "2009-11-15T14:12:12",
-    "message" : "trying out Elasticsearch"
+  "data_frame_analytics_config": {
+    "source": {
+      "index": "logdata"
+    },
+    "analysis": {
+      "outlier_detection": {}
+    }
+  }
 }

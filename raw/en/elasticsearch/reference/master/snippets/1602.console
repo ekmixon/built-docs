@@ -1,22 +1,17 @@
 GET /_search
 {
-    "query" : {
-        "match_all": {}
+    "query": {
+        "query_string": {
+            "query": "running scissors",
+            "fields": ["comment", "comment.plain^10"]
+        }
     },
-    "script_fields" : {
-        "test1" : {
-            "script" : {
-                "lang": "painless",
-                "source": "doc['price'].value * 2"
-            }
-        },
-        "test2" : {
-            "script" : {
-                "lang": "painless",
-                "source": "doc['price'].value * params.factor",
-                "params" : {
-                    "factor"  : 2.0
-                }
+    "highlight": {
+        "order": "score",
+        "fields": {
+            "comment": {
+                "matched_fields": ["comment", "comment.plain"],
+                "type" : "fvh"
             }
         }
     }

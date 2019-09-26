@@ -1,9 +1,9 @@
-POST /twitter/_search?scroll=1m
+GET /_search
 {
-    "size": 100,
-    "query": {
-        "match" : {
-            "title" : "elasticsearch"
-        }
+    "highlight": {
+        "fields": [
+            { "title": {} },
+            { "text": {} }
+        ]
     }
 }

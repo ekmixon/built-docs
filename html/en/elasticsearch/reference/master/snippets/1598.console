@@ -1,8 +1,12 @@
-GET /_search?preference=xyzabc123
+GET /_search
 {
-    "query": {
-        "match": {
-            "title": "elasticsearch"
+    "query" : {
+        "match": { "user": "kimchy" }
+    },
+    "highlight" : {
+        "tags_schema" : "styled",
+        "fields" : {
+            "comment" : {}
         }
     }
 }

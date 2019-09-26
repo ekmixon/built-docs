@@ -1,15 +1,10 @@
-POST place/_search?pretty
+GET _search/template
 {
-    "suggest": {
-        "place_suggestion" : {
-            "prefix" : "tim",
-            "completion" : {
-                "field" : "suggest",
-                "size": 10,
-                "contexts": {
-                    "place_type": [ "cafe", "restaurants" ]
-                }
-            }
-        }
-    }
+    "source": "{\"query\":{\"bool\":{\"must\": {{#toJson}}clauses{{/toJson}} }}}",
+    "params": {
+        "clauses": [
+            { "term": { "user" : "foo" } },
+            { "term": { "user" : "bar" } }
+        ]
+   }
 }

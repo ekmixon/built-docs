@@ -1,13 +1,16 @@
-POST /_scripts/my_template_2
+POST _search
 {
-    "script": {
-        "lang": "mustache",
-        "source": {
-            "query": {
-                "term": {
-                    "{{field}}": "{{value}}"
-                }
-            }
-        }
+  "suggest": {
+    "text" : "tring out Elasticsearch",
+    "my-suggest-1" : {
+      "term" : {
+        "field" : "message"
+      }
+    },
+    "my-suggest-2" : {
+       "term" : {
+        "field" : "user"
+       }
     }
+  }
 }

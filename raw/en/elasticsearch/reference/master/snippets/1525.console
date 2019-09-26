@@ -1,31 +1,6 @@
-PUT /my_index
+GET _ml/anomaly_detectors/job-*/results/overall_buckets
 {
-    "settings": {
-        "index" : {
-            "analysis" : {
-                "analyzer" : {
-                    "my_synonyms" : {
-                        "tokenizer" : "whitespace",
-                        "filter" : ["synonym"]
-                    }
-                },
-                "filter" : {
-                    "synonym" : {
-                        "type" : "synonym",
-                        "synonyms_path" : "analysis/synonym.txt",
-                        "updateable" : true
-                    }
-                }
-            }
-        }
-    },
-    "mappings": {
-        "properties": {
-            "text": {
-                "type": "text",
-                "analyzer" : "standard",
-                "search_analyzer": "my_synonyms"
-            }
-        }
-    }
+  "top_n": 2,
+  "overall_score": 50.0,
+  "start": "1403532000000"
 }

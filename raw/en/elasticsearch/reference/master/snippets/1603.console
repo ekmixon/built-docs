@@ -1,11 +1,18 @@
 GET /_search
-    {
-        "query" : {
-            "match_all": {}
-        },
-        "script_fields" : {
-            "test1" : {
-                "script" : "params['_source']['message']"
+{
+    "query": {
+        "query_string": {
+            "query": "running scissors",
+            "fields": ["comment", "comment.plain^10"]
+        }
+    },
+    "highlight": {
+        "order": "score",
+        "fields": {
+            "comment": {
+                "matched_fields": ["comment.plain"],
+                "type" : "fvh"
             }
         }
     }
+}

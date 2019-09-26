@@ -1,15 +1,7 @@
-GET twitter/_validate/query
+PUT music/_doc/1?refresh
 {
-  "query" : {
-    "bool" : {
-      "must" : {
-        "query_string" : {
-          "query" : "*:*"
-        }
-      },
-      "filter" : {
-        "term" : { "user" : "kimchy" }
-      }
+    "suggest" : {
+        "input": [ "Nevermind", "Nirvana" ],
+        "weight" : 34
     }
-  }
 }

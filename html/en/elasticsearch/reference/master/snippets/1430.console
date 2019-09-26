@@ -1,1 +1,1 @@
-POST /twitter/_forcemerge
+HEAD /_template/template_1

@@ -1,25 +1,33 @@
-POST /_security/role/my_admin_role
+GET /twitter/_search
 {
-  "cluster": ["all"],
-  "indices": [
-    {
-      "names": [ "index1", "index2" ],
-      "privileges": ["all"],
-      "field_security" : { // optional
-        "grant" : [ "title", "body" ]
-      },
-      "query": "{\"match\": {\"title\": \"foo\"}}" // optional
+  "profile": true,
+  "query": {
+    "term": {
+      "user": {
+        "value": "test"
+      }
     }
-  ],
-  "applications": [
-    {
-      "application": "myapp",
-      "privileges": [ "admin", "read" ],
-      "resources": [ "*" ]
+  },
+  "aggs": {
+    "my_scoped_agg": {
+      "terms": {
+        "field": "likes"
+      }
+    },
+    "my_global_agg": {
+      "global": {},
+      "aggs": {
+        "my_level_agg": {
+          "terms": {
+            "field": "likes"
+          }
+        }
+      }
     }
-  ],
-  "run_as": [ "other_user" ], // optional
-  "metadata" : { // optional
-    "version" : 1
+  },
+  "post_filter": {
+    "match": {
+      "message": "some"
+    }
   }
 }

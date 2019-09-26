@@ -1,11 +1,21 @@
-PUT /_slm/policy/daily-snapshots
+GET /_security/user/_has_privileges
 {
-  "schedule": "0 30 1 * * ?",
-  "name": "<daily-snap-{now/d}>",
-  "repository": "my_repository",
-  "config": {
-    "indices": ["data-*", "important"],
-    "ignore_unavailable": true,
-    "include_global_state": false
-  }
+  "cluster": [ "monitor", "manage" ],
+  "index" : [
+    {
+      "names": [ "suppliers", "products" ],
+      "privileges": [ "read" ]
+    },
+    {
+      "names": [ "inventory" ],
+      "privileges" : [ "read", "write" ]
+    }
+  ],
+  "application": [
+    {
+      "application": "inventory_manager",
+      "privileges" : [ "read", "data:write/inventory" ],
+      "resources" : [ "product/1852563" ]
+    }
+  ]
 }

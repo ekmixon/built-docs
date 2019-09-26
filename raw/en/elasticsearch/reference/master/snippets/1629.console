@@ -1,39 +1,23 @@
-POST /_search
+GET /_search
 {
-   "query": {
-      "nested": {
-         "path": "parent",
-         "query": {
-            "bool": {
-                "must": {"range": {"parent.age": {"gte": 21}}},
-                "filter": {
-                    "nested": {
-                        "path": "parent.child",
-                        "query": {"match": {"parent.child.name": "matt"}}
-                    }
+    "query" : {
+        "match_all": {}
+    },
+    "script_fields" : {
+        "test1" : {
+            "script" : {
+                "lang": "painless",
+                "source": "doc['price'].value * 2"
+            }
+        },
+        "test2" : {
+            "script" : {
+                "lang": "painless",
+                "source": "doc['price'].value * params.factor",
+                "params" : {
+                    "factor"  : 2.0
                 }
             }
-         }
-      }
-   },
-   "sort" : [
-      {
-         "parent.child.age" : {
-            "mode" :  "min",
-            "order" : "asc",
-            "nested": {
-               "path": "parent",
-               "filter": {
-                  "range": {"parent.age": {"gte": 21}}
-               },
-               "nested": {
-                  "path": "parent.child",
-                  "filter": {
-                     "match": {"parent.child.name": "matt"}
-                  }
-               }
-            }
-         }
-      }
-   ]
+        }
+    }
 }

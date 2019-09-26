@@ -1,8 +1,16 @@
-PUT /index_long
+GET /shirts/_search
 {
-    "mappings": {
-        "properties": {
-            "field": { "type": "long" }
-        }
+  "query": {
+    "bool": {
+      "filter": [
+        { "term": { "color": "red"   }},
+        { "term": { "brand": "gucci" }}
+      ]
     }
+  },
+  "aggs": {
+    "models": {
+      "terms": { "field": "model" }
+    }
+  }
 }
