@@ -61042,6 +61042,482 @@
 </url>
 
 <url>
+    <loc>https://www.elastic.co/guide/en/stack/current/_concepts.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/_machine_learning_data_frame_analytics.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/_reference.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/accessibility.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/add-data.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/add-dev-data.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/admin-guides.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/alert.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/analyst-guides.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/analyze-data.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/analyze.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/anomaly-detection.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/beats-highlights.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/breaking-changes.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/canvas.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/ci-failures.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/contributor-guides.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/core-dev.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/dashboards.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/deployment.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/dev-security.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/developer-guides.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/ecs.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/elasticsearch-apis.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/elasticsearch-highlights.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/elasticsearch-plugins.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/elasticsearch-settings.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/explore-data.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/get-started.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/graph-data.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/grok.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/interact.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/kibana-apis.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/kibana-highlights.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/kibana-solutions.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/manage-cluster.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/manage-indices.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/manage-kibana.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/managing-licenses.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/maps.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/ml-functions.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/ml-limitations.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/ml-modules.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/monitor.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/painless.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/plugin-dev.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/profile.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/prs.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/release-notes.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/reports.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/script.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/search.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/secure.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/security-privileges.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/security-roles.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/security-users.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/security.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/setup.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/stack-intro.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/stack-quickstart.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/store.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/terms.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/transform-data.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/troubleshoot.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/upgrading-elastic-stack.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/visualizations.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/visualize-data.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/stack/current/whats-new.html</loc>
+    <lastmod>2020-05-20T20:33:05+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
     <loc>https://www.elastic.co/guide/en/swiftype/appsearch/current/index.html</loc>
     <lastmod>2020-04-21T16:37:02+00:00</lastmod>
     <changefreq>weekly</changefreq>

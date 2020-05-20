@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Playing with Asciidoctor to create Elastic Stack docs">
+<meta name="keywords" content="Elasticsearch, Kibana, Logstash">
+<title>Elastic Stack docs | Elastic</title>
+<link rel="home" href="index.html" title="Elastic Stack docs"/>
+<link rel="next" href="whats-new.html" title="What&#8217;s new in the Stack"/>
+<meta name="DC.type" content="Learn/Docs/Elastic Stack"/>
+<meta name="DC.subject" content="Elastic Stack"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body>
+<div class="navheader">
+<span class="prev">
+</span>
+<span class="next">
+<a href="whats-new.html">What&#8217;s new in the Stack »</a>
+</span>
+</div>
+<div class="book" lang="en">
+<div class="titlepage">
+<div>
+<div><h1 class="title"><a id="id-1"></a>Elastic Stack docs</h1></div>
+</div>
+<hr>
+</div>
+<div id="content">
+<!--START_TOC-->
+<div class="toc">
+<ul class="toc">
+<li><span class="chapter"><a href="whats-new.html">What&#8217;s new in the Stack</a></span>
+<ul>
+<li><span class="section"><a href="beats-highlights.html">Beats release highlights</a></span>
+</li>
+<li><span class="section"><a href="elasticsearch-highlights.html">Elasticsearch release highlights</a></span>
+</li>
+<li><span class="section"><a href="kibana-highlights.html">Kibana release highlights</a></span>
+</li>
+</ul>
+</li>
+<li><span class="chapter"><a href="get-started.html">Get started</a></span>
+<ul>
+<li><span class="section"><a href="stack-intro.html">Intro to the stack</a></span>
+</li>
+<li><span class="section"><a href="stack-quickstart.html">Quick start</a></span>
+</li>
+<li><span class="section"><a href="kibana-solutions.html">Kibana for solutions</a></span>
+</li>
+</ul>
+</li>
+<li><span class="chapter"><a href="admin-guides.html">Admin Guides</a></span>
+<ul>
+<li><span class="section"><a href="deployment.html">Deployment scenarios</a></span>
+</li>
+<li><span class="section"><a href="setup.html">Set up the Elastic Stack</a></span>
+</li>
+<li><span class="section"><a href="upgrading-elastic-stack.html">Upgrading the Elastic Stack</a></span>
+</li>
+<li><span class="section"><a href="secure.html">Secure the stack</a></span>
+</li>
+<li><span class="section"><a href="alert.html">Alert and take action</a></span>
+</li>
+<li><span class="section"><a href="manage-cluster.html">Manage clusters</a></span>
+</li>
+<li><span class="section"><a href="manage-indices.html">Manage indices</a></span>
+</li>
+<li><span class="section"><a href="managing-licenses.html">Manage subscriptions</a></span>
+</li>
+<li><span class="section"><a href="monitor.html">Monitor the stack</a></span>
+</li>
+<li><span class="section"><a href="troubleshoot.html">Troubleshoot the stack</a></span>
+</li>
+</ul>
+</li>
+<li><span class="chapter"><a href="analyst-guides.html">Analyst Guides</a></span>
+<ul>
+<li><span class="section"><a href="add-data.html">Add data</a></span>
+</li>
+<li><span class="section"><a href="explore-data.html">Explore your data</a></span>
+</li>
+<li><span class="section"><a href="visualize-data.html">Visualize your data</a></span>
+</li>
+<li><span class="section"><a href="dashboards.html">Build dashboards</a></span>
+</li>
+<li><span class="section"><a href="canvas.html">Create presentations with Canvas</a></span>
+</li>
+<li><span class="section"><a href="maps.html">Create maps</a></span>
+</li>
+<li><span class="section"><a href="graph-data.html">Graph data connections</a></span>
+</li>
+<li><span class="section"><a href="reports.html">Generate reports</a></span>
+</li>
+<li><span class="section"><a href="transform-data.html">Transform your data</a></span>
+</li>
+<li><span class="section"><a href="analyze-data.html">Analyze your data</a></span>
+</li>
+<li><span class="section"><a href="manage-kibana.html">Manage Kibana</a></span>
+</li>
+</ul>
+</li>
+<li><span class="chapter"><a href="developer-guides.html">Developer Guides</a></span>
+<ul>
+<li><span class="section"><a href="interact.html">Interact with Elasticsearch</a></span>
+</li>
+<li><span class="section"><a href="store.html">Store</a></span>
+</li>
+<li><span class="section"><a href="search.html">Search</a></span>
+</li>
+<li><span class="section"><a href="analyze.html">Analyze</a></span>
+</li>
+<li><span class="section"><a href="profile.html">Profile search queries</a></span>
+</li>
+<li><span class="section"><a href="grok.html">Debug grok patterns</a></span>
+</li>
+<li><span class="section"><a href="script.html">Script</a></span>
+</li>
+</ul>
+</li>
+<li><span class="chapter"><a href="contributor-guides.html">Contributor/Plugin Developer Guides</a></span>
+<ul>
+<li><span class="section"><a href="core-dev.html">Core development</a></span>
+</li>
+<li><span class="section"><a href="plugin-dev.html">Plugin development</a></span>
+</li>
+<li><span class="section"><a href="visualizations.html">Develop visualizations</a></span>
+</li>
+<li><span class="section"><a href="add-dev-data.html">Add data</a></span>
+</li>
+<li><span class="section"><a href="dev-security.html">Security</a></span>
+</li>
+<li><span class="section"><a href="prs.html">Pull request review guidelines</a></span>
+</li>
+<li><span class="section"><a href="ci-failures.html">Interpreting CI failures</a></span>
+</li>
+</ul>
+</li>
+<li><span class="chapter"><a href="_concepts.html">Concepts</a></span>
+<ul>
+<li><span class="section"><a href="anomaly-detection.html">Machine learning - anomaly detection</a></span>
+</li>
+<li><span class="data-frame-analytics"><a href="_machine_learning_data_frame_analytics.html">Machine learning - data frame analytics</a></span>
+</li>
+<li><span class="section"><a href="security.html">Security</a></span>
+</li>
+</ul>
+</li>
+<li><span class="chapter"><a href="_reference.html">Reference</a></span>
+<ul>
+<li><span class="section"><a href="accessibility.html">Accessibility</a></span>
+</li>
+<li><span class="section"><a href="breaking-changes.html">Breaking changes</a></span>
+</li>
+<li><span class="section"><a href="ecs.html">Elastic common schema</a></span>
+</li>
+<li><span class="section"><a href="elasticsearch-apis.html">Elasticsearch APIs</a></span>
+</li>
+<li><span class="section"><a href="elasticsearch-settings.html">Elasticsearch settings</a></span>
+</li>
+<li><span class="section"><a href="elasticsearch-plugins.html">Elasticsearch plugins &amp; integrations</a></span>
+</li>
+<li><span class="section"><a href="kibana-apis.html">Kibana APIs</a></span>
+</li>
+<li><span class="section"><a href="ml-functions.html">Machine learning functions</a></span>
+</li>
+<li><span class="section"><a href="ml-modules.html">Machine learning modules</a></span>
+</li>
+<li><span class="section"><a href="ml-limitations.html">Machine learning limitations</a></span>
+</li>
+<li><span class="section"><a href="painless.html">Painless</a></span>
+</li>
+<li><span class="section"><a href="release-notes.html">Release notes</a></span>
+</li>
+<li><span class="section"><a href="security-users.html">Security built-in users</a></span>
+</li>
+<li><span class="section"><a href="security-roles.html">Security built-in roles</a></span>
+</li>
+<li><span class="section"><a href="security-privileges.html">Security privileges</a></span>
+</li>
+<li><span class="section"><a href="terms.html">Terminology</a></span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!--END_TOC-->
+
+<div id="preamble">
+<div class="sectionbody">
+<p>Take data from any source, and search, analyze, and visualize it in real time.
+Learn how to get it done with the Elastic Stack&#8212;&#8203;Elasticsearch, Kibana, Beats, and Logstash.</p>
+<div class="informaltable">
+<table border="1" cellpadding="4px">
+<colgroup>
+<col class="col_1"/>
+</colgroup>
+<tbody>
+<tr>
+<td align="left" valign="top"><p><em>What do you want to learn today?</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2><a id="_get_started_with_the_elastic_stack"></a>Get started with the Elastic Stack<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/landing.asciidoc">edit</a></h2>
+<div class="informaltable">
+<table border="1" cellpadding="4px">
+<colgroup>
+<col class="col_1"/>
+<col class="col_2"/>
+<col class="col_3"/>
+<col class="col_4"/>
+</colgroup>
+<tbody>
+<tr>
+<td align="left" valign="top"><p>1. <span class="strong strong"><strong>Try on cloud</strong></span> &gt; Run the Elastic Stack on our hosted Elasticsearch Service.</p></td>
+<td align="left" valign="top"><p>2. <span class="strong strong"><strong>Get data in</strong></span> &gt; Set up a data flow using our add data tutorials.</p></td>
+<td align="left" valign="top"><p>3. <span class="strong strong"><strong>Discover data</strong></span> &gt; Search for hidden insights and relationships in your data.</p></td>
+<td align="left" valign="top"><p>4. <span class="strong strong"><strong>Visualize</strong></span> &gt; Show off your data in graphs, metrics, tables, and more.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2><a id="_featured_topics"></a>Featured topics<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/landing.asciidoc">edit</a></h2>
+<div class="informaltable">
+<table border="1" cellpadding="4px">
+<colgroup>
+<col class="col_1"/>
+<col class="col_2"/>
+</colgroup>
+<tbody>
+<tr>
+<td align="left" valign="top">
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+<a class="xref" href="get-started.html" title="Get started">Get started</a>
+</li>
+<li class="listitem">
+<a class="xref" href="monitor.html" title="Monitor the stack">Monitor the Elastic Stack</a>
+</li>
+<li class="listitem">
+<a class="xref" href="upgrading-elastic-stack.html" title="Upgrading the Elastic Stack">Upgrade the Elastic Stack</a>
+</li>
+<li class="listitem">
+&#8230;&#8203;
+</li>
+</ul>
+</div>
+</td>
+<td align="left" valign="top">
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+<a class="xref" href="kibana-apis.html" title="Kibana APIs">Kibana APIs</a>
+</li>
+<li class="listitem">
+&#8230;&#8203;
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2><a id="_get_the_details"></a>Get the details<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/landing.asciidoc">edit</a></h2>
+<div class="informaltable">
+<table border="1" cellpadding="4px">
+<colgroup>
+<col class="col_1"/>
+<col class="col_2"/>
+<col class="col_3"/>
+</colgroup>
+<tbody>
+<tr>
+<td align="left" valign="top"><p><span class="strong strong"><strong>Lens</strong></span> Use our drag-and-drop interface, to rapidly build charts, tables, metrics, and more. We have examples.</p></td>
+<td align="left" valign="top"><p><span class="strong strong"><strong>Canvas</strong></span> Learn about workpads and elements and how to use them to  present your data in a visually compelling,</p></td>
+<td align="left" valign="top"><p><span class="strong strong"><strong>Elastic Maps</strong></span> Follow our tutorial on how to ask (and answer) meaningful questions of your location-based data.</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p><span class="strong strong"><strong>ILM</strong></span> Description goes here.</p></td>
+<td align="left" valign="top"><p><span class="strong strong"><strong>Machine learning</strong></span> Find anomalies and outliers, forecast based on trends, and identify areas of interest in your data with Elastic machine learning features.</p></td>
+<td align="left" valign="top"><p><span class="strong strong"><strong>Topic</strong></span> Description goes here.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+</div><div class="navfooter">
+<span class="prev">
+</span>
+<span class="next">
+<a href="whats-new.html">What&#8217;s new in the Stack »</a>
+</span>
+</div>
+</body>
+</html>

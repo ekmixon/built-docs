@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Playing with Asciidoctor to create Elastic Stack docs">
+<meta name="keywords" content="Elasticsearch, Kibana, Logstash">
+<title>Machine learning - anomaly detection | Elastic Stack docs | Elastic</title>
+<link rel="home" href="index.html" title="Elastic Stack docs"/>
+<link rel="up" href="_concepts.html" title="Concepts"/>
+<link rel="prev" href="_concepts.html" title="Concepts"/>
+<link rel="next" href="_machine_learning_data_frame_analytics.html" title="Machine learning - data frame analytics"/>
+<meta name="DC.type" content="Learn/Docs/Elastic Stack"/>
+<meta name="DC.subject" content="Elastic Stack"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elastic Stack docs</a></span>
+»
+<span class="breadcrumb-link"><a href="_concepts.html">Concepts</a></span>
+»
+<span class="breadcrumb-node">Machine learning - anomaly detection</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="_concepts.html">« Concepts</a>
+</span>
+<span class="next">
+<a href="_machine_learning_data_frame_analytics.html">Machine learning - data frame analytics »</a>
+</span>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="anomaly-detection"></a>Machine learning - anomaly detection<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/landing.asciidoc">edit</a></h2>
+</div></div></div>
+<h3><a id="ml-analyzing"></a>Analyzing the past and present<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/ml/anomaly-detection/analyzing.asciidoc">edit</a></h3>
+<p>The machine learning features automate the analysis of time series data by creating
+accurate baselines of normal behavior in the data and identifying anomalous
+patterns in that data. You can submit your data for analysis in batches or
+continuously in real-time datafeeds.</p>
+<p>Using <a class="xref" href="anomaly-detection.html#anomaly-algorithms" title="Anomaly detection algorithms">proprietary machine learning algorithms</a>, the following
+circumstances are detected, scored, and linked with statistically significant
+influencers in the data:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Anomalies related to temporal deviations in values, counts, or frequencies
+</li>
+<li class="listitem">
+Statistical rarity
+</li>
+<li class="listitem">
+Unusual behaviors for a member of a population
+</li>
+</ul>
+</div>
+<p>Automated periodicity detection and quick adaptation to changing data ensure
+that you don’t need to specify algorithms, models, or other data science-related
+configurations in order to get the benefits of machine learning.</p>
+<p>You can view the machine learning results in Kibana where, for example, charts illustrate the
+actual data values, the bounds for the expected values, and the anomalies that
+occur outside these bounds.</p>
+<div class="imageblock screenshot">
+<div class="content">
+<img src="images/overview-smv.jpg" alt="Example screenshot from the Machine Learning Single Metric Viewer in Kibana">
+</div>
+</div>
+<h3><a id="ml-forecasting"></a>Forecasting the future<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/ml/anomaly-detection/forecasting.asciidoc">edit</a></h3>
+<p>After the machine learning features create baselines of normal behavior for your data,
+you can use that information to extrapolate future behavior.</p>
+<p>You can use a forecast to estimate a time series value at a specific future date.
+For example, you might want to determine how many users you can expect to visit
+your website next Sunday at 0900.</p>
+<p>You can also use it to estimate the probability of a time series value occurring
+at a future date. For example, you might want to determine how likely it is that
+your disk utilization will reach 100% before the end of next week.</p>
+<p>Each forecast has a unique ID, which you can use to distinguish between forecasts
+that you created at different times. You can create a forecast by using the
+<a href="/guide/en/elasticsearch/reference/master/ml-forecast.html" class="ulink" target="_top">forecast anomaly detection jobs API</a> or by using Kibana. For
+example:</p>
+<div class="imageblock screenshot">
+<div class="content">
+<img src="images/overview-forecast.jpg" alt="Example screenshot from the Machine Learning Single Metric Viewer in Kibana">
+</div>
+</div>
+<p>The yellow line in the chart represents the predicted data values. The
+shaded yellow area represents the bounds for the predicted values, which also
+gives an indication of the confidence of the predictions.</p>
+<p>When you create a forecast, you specify its <em>duration</em>, which indicates how far
+the forecast extends beyond the last record that was processed. By default, the
+duration is 1 day. Typically the farther into the future that you forecast, the
+lower the confidence levels become (that is to say, the bounds increase).
+Eventually if the confidence levels are too low, the forecast stops.
+For more information about limitations that affect your ability to create a
+forecast, see <a class="xref" href="ml-forecast-limitations.html" title="Forecast limitations">Forecast limitations</a>.</p>
+<p>You can also optionally specify when the forecast expires. By default, it
+expires in 14 days and is deleted automatically thereafter. You can specify a
+different expiration period by using the <code class="literal">expires_in</code> parameter in the
+<a href="/guide/en/elasticsearch/reference/master/ml-forecast.html" class="ulink" target="_top">forecast anomaly detection jobs API</a>.</p>
+<h4><a id="anomaly-algorithms"></a>Anomaly detection algorithms<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/ml/anomaly-detection/algorithms.asciidoc">edit</a></h4>
+<p>The anomaly detection machine learning features use a bespoke amalgamation of different
+techniques such as clustering, various types of time series decomposition,
+Bayesian distribution modeling, and correlation analysis. These analytics
+provide sophisticated real-time automated anomaly detection for time series data.</p>
+<p>The machine learning analytics statistically model the time-based characteristics of your
+data by observing historical behavior and adapting to new data. The model
+represents a baseline of normal behavior and can therefore be used to determine
+how anomalous new events are.</p>
+<p>Anomaly detection results are written for each <a class="xref" href="anomaly-detection.html#ml-buckets" title="Buckets">bucket span</a>.
+These results include scores that are aggregated in order to reduce noise and
+normalized in order to rank the most mathematically significant anomalies. For
+more information, see <a class="xref" href="anomaly-detection.html#ml-bucket-results" title="Bucket results">Bucket results</a> and <a class="xref" href="anomaly-detection.html#ml-influencer-results" title="Influencer results">Influencer results</a>.</p>
+<div class="section xpack">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="ml-jobs"></a>Anomaly detection jobs<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/ml/anomaly-detection/jobs.asciidoc">edit</a><a class="xpack_tag" href="/subscriptions"></a></h3>
+</div></div></div>
+
+<p>Anomaly detection jobs contain the configuration information and metadata
+necessary to perform an analytics task.</p>
+<p>Each anomaly detection job has one or more <em>detectors</em>. A detector applies an analytical
+function to specific fields in your data. For more information about the types
+of analysis you can perform, see <a class="xref" href="ml-functions.html" title="Machine learning functions">Machine learning functions</a>.</p>
+<p>A job can also contain properties that affect which types of entities or events
+are considered anomalous. For example, you can specify whether entities are
+analyzed relative to their own previous behavior or relative to other entities
+in a population. There are also multiple options for splitting the data into
+categories and partitions. Some of these more advanced job configurations
+are described in the following section: <a class="xref" href="anomaly-examples.html" title="Anomaly detection examples">Anomaly detection examples</a>.</p>
+<p>For a description of all the job properties, see the
+<a href="/guide/en/elasticsearch/reference/master/ml-put-job.html" class="ulink" target="_top">create anomaly detection jobs API</a>.</p>
+<p>In Kibana, there are wizards that help you create specific types of jobs, such
+as <em>single metric</em>, <em>multi-metric</em>, and <em>population</em> jobs. A single metric job
+is just a job with a single detector and limited job properties. To have access
+to all of the job properties in Kibana, you must choose the <em>advanced</em> job wizard.</p>
+<p>You can also optionally assign jobs to one or more <em>job groups</em>. You can use
+job groups to view the results from multiple jobs more easily and to expedite
+administrative tasks by opening or closing multiple jobs at once.</p>
+</div>
+
+<div class="section xpack">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="ml-buckets"></a>Buckets<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/ml/anomaly-detection/buckets.asciidoc">edit</a><a class="xpack_tag" href="/subscriptions"></a></h3>
+</div></div></div>
+
+<p>The machine learning features use the concept of a <em>bucket</em> to divide the time series into
+batches for processing.</p>
+<p>The <em>bucket span</em> is part of the configuration information for an anomaly detection job.
+It defines the time interval that is used to summarize and model the data. This
+is typically between 5 minutes to 1 hour and it depends on your data
+characteristics. When you set the bucket span, take into account the granularity
+at which you want to analyze, the frequency of the input data, the typical
+duration of the anomalies, and the frequency at which alerting is required.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ml-bucket-results"></a>Bucket results<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/ml/anomaly-detection/buckets.asciidoc">edit</a></h4>
+</div></div></div>
+<p>When you view your machine learning results, each bucket has an anomaly score. This score is
+a statistically aggregated and normalized view of the combined anomalousness of
+all the record results in the bucket.</p>
+<p>The machine learning analytics enhance the anomaly score for each bucket by considering
+contiguous buckets. This extra <em>multi-bucket analysis</em> effectively uses a
+sliding window to evaluate the events in each bucket relative to the larger
+context of recent events. When you review your machine learning results, there is a
+<code class="literal">multi_bucket_impact</code> property that indicates how strongly the final anomaly
+score is influenced by multi-bucket analysis. In Kibana, anomalies with medium or
+high multi-bucket impact are depicted in the <span class="strong strong"><strong>Anomaly Explorer</strong></span> and the
+<span class="strong strong"><strong>Single Metric Viewer</strong></span> with a cross symbol instead of a dot. For example:</p>
+<div class="imageblock screenshot">
+<div class="content">
+<img src="images/multibucketanalysis.jpg" alt="Examples of anomalies with multi-bucket impact in Kibana">
+</div>
+</div>
+<p>In this example, you can see that some of the anomalies fall within the shaded
+blue area, which represents the bounds for the expected values. The bounds are
+calculated per bucket, but multi-bucket analysis is not limited by that scope.</p>
+<p>If you have more than one anomaly detection job, you can also obtain <em>overall bucket</em>
+results, which combine and correlate anomalies from multiple jobs into an
+overall score. When you view the results for job groups in Kibana, it provides
+the overall bucket scores. For more information, see
+<a href="/guide/en/elasticsearch/reference/master/ml-get-overall-buckets.html" class="ulink" target="_top">Get overall buckets API</a>.</p>
+<p>Bucket results provide the top level, overall view of the anomaly detection job and are
+ideal for alerts. For example, the bucket results might indicate that at 16:05
+the system was unusual. This information is a summary of all the anomalies,
+pinpointing when they occurred. When you identify an anomalous bucket, you can
+investigate further by examining the pertinent records.</p>
+</div>
+
+</div>
+
+<div class="section xpack">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="ml-dfeeds"></a>Datafeeds<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/ml/anomaly-detection/datafeeds.asciidoc">edit</a><a class="xpack_tag" href="/subscriptions"></a></h3>
+</div></div></div>
+<p>Anomaly detection jobs can analyze data that is stored in Elasticsearch or data that is
+sent from some other source via an API. <em>Datafeeds</em> retrieve data from Elasticsearch
+for analysis, which is the simpler and more common scenario.</p>
+<p>You can associate only one datafeed with each anomaly detection job. The datafeed contains
+a query that runs at a defined interval (<code class="literal">frequency</code>). By default, this interval
+is calculated relative to the <a class="xref" href="anomaly-detection.html#ml-buckets" title="Buckets">bucket span</a> of the anomaly detection job.
+If you are concerned about delayed data, you can add a delay before the query
+runs at each interval. See <a class="xref" href="ml-delayed-data-detection.html" title="Handling delayed data">Handling delayed data</a>.</p>
+<p>Datafeeds can also aggregate data before sending it to the anomaly detection job.
+There are some limitations, however, and aggregations should generally be used
+only for low cardinality data. See <a class="xref" href="ml-configuring-aggregation.html" title="Aggregating data for faster performance">Aggregating data for faster performance</a>.</p>
+<p>If you create anomaly detection jobs in Kibana, you <em>must</em> use datafeeds. When you create
+an anomaly detection job, you select an index pattern and Kibana configures the datafeed
+for you under the covers. For a description of all the datafeed properties, see
+the <a href="/guide/en/elasticsearch/reference/master/ml-put-datafeed.html" class="ulink" target="_top">create datafeeds API</a>.</p>
+<p>To start retrieving data from Elasticsearch, you must start the datafeed. When you start
+it, you can optionally specify start and end times. If you do not specify an
+end time, the datafeed runs continuously. You can start and stop datafeeds in
+Kibana or use the <a href="/guide/en/elasticsearch/reference/master/ml-start-datafeed.html" class="ulink" target="_top">start datafeeds</a> and
+<a href="/guide/en/elasticsearch/reference/master/ml-stop-datafeed.html" class="ulink" target="_top">stop datafeeds</a> APIs. A datafeed can be started and
+stopped multiple times throughout its lifecycle.</p>
+<div class="important admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>When the Elasticsearch security features are enabled, a datafeed stores the roles of the
+user who created or updated the datafeed at that time. This means that if those
+roles are updated, the datafeed subsequently runs with the new permissions that
+are associated with the roles. However, if the user’s roles are adjusted after
+creating or updating the datafeed, the datafeed continues to run with the
+permissions that were associated with the original roles.</p>
+<p>One way to update the roles that are stored within the datafeed without changing
+any other settings is to submit an empty JSON document ({}) to the
+<a href="/guide/en/elasticsearch/reference/master/ml-update-datafeed.html" class="ulink" target="_top">update datafeed API</a>.</p>
+</div>
+</div>
+<p>If the data that you want to analyze is not stored in Elasticsearch, you cannot use
+datafeeds. You can however send batches of data directly to the job by using the
+<a href="/guide/en/elasticsearch/reference/master/ml-post-data.html" class="ulink" target="_top">post data to jobs API</a>.</p>
+</div>
+
+<div class="section xpack">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="ml-influencers"></a>Influencers<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/ml/anomaly-detection/influencers.asciidoc">edit</a><a class="xpack_tag" href="/subscriptions"></a></h3>
+</div></div></div>
+<p>When anomalous events occur, we want to know why. To determine the cause,
+however, you often need a broader knowledge of the domain. If you have
+suspicions about which entities in your dataset are likely causing
+irregularities, you can identify them as influencers in your anomaly detection jobs.
+That is to say, <em>influencers</em> are fields that you suspect contain information
+about someone or something that influences or contributes to anomalies in your
+data.</p>
+<p>Influencers can be any field in your data. If you use datafeeds, however, the
+field must exist in your datafeed query or aggregation; otherwise it is not
+included in the job analysis. If you use a query in your datafeed, there is an
+additional requirement: influencer fields must exist in the query results in the
+same hit as the detector fields. Datafeeds process data by paging through the
+query results; since search hits cannot span multiple indices or documents,
+datafeeds have the same limitation.</p>
+<p>Influencers do not need to be fields that are specified in your anomaly detection job
+detectors, though they often are. If you use aggregations in your datafeed, it is
+possible to use influencers that come from different indices than the detector
+fields. However, both indices must have a date field with the same name, which you
+specify in the <code class="literal">data_description</code>.<code class="literal">time_field</code> property for the datafeed.</p>
+<p>Picking an influencer is strongly recommended for the following reasons:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+It allows you to more easily assign blame for anomalies
+</li>
+<li class="listitem">
+It simplifies and aggregates the results
+</li>
+</ul>
+</div>
+<p>If you use Kibana, the job creation wizards can suggest which fields to use as
+influencers. The best influencer is the person or thing that you want to blame
+for the anomaly. In many cases, users or client IP addresses make excellent
+influencers.</p>
+<div class="tip admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>As a best practice, do not pick too many influencers. For example, you
+generally do not need more than three. If you pick many influencers, the results
+can be overwhelming and there is a small overhead to the analysis.</p>
+</div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ml-influencer-results"></a>Influencer results<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/stack/ml/anomaly-detection/influencers.asciidoc">edit</a></h4>
+</div></div></div>
+<p>The influencer results show which entities were anomalous and when. One
+influencer result is written per bucket for each influencer that affects the
+anomalousness of the bucket. The machine learning analytics determine the impact of an
+influencer by performing a series of experiments that remove all data points
+with a specific influencer value and check whether the bucket is still anomalous.
+For jobs with more than one detector, influencer scores provide a powerful view
+of the most anomalous entities.</p>
+<p>For example, the <code class="literal">high_sum_total_sales</code> anomaly detection job for the eCommerce orders
+sample data uses <code class="literal">customer_full_name.keyword</code> and <code class="literal">category.keyword</code> as
+influencers. You can examine the influencer results with the
+<a href="/guide/en/elasticsearch/reference/master/ml-get-influencer.html" class="ulink" target="_top">get influencers API</a>. Alternatively, you can use
+the <span class="strong strong"><strong>Anomaly Explorer</strong></span> in Kibana:</p>
+<div class="imageblock screenshot">
+<div class="content">
+<img src="images/influencers.jpg" alt="Influencers in the Kibana Anomaly Explorer">
+</div>
+</div>
+<p>On the left is a list of the top influencers for all of the detected anomalies
+in that same time period. The list includes maximum anomaly scores, which in
+this case are aggregated for each influencer, for each bucket, across all
+detectors. There is also a total sum of the anomaly scores for each influencer.
+You can use this list to help you narrow down the contributing factors and focus
+on the most anomalous entities.</p>
+<p>You can also explore swim lanes that correspond to the values of an influencer.
+In this example, the swim lanes correspond to the values for the
+<code class="literal">customer_full_name.keyword</code>. By default, the swim lanes are sorted according to
+which entity has the maximum anomaly score values. You can click on the sections
+in the swim lane to see details about the anomalies that occurred in that time
+interval.</p>
+<div class="tip admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>The anomaly scores that you see in each section of the <span class="strong strong"><strong>Anomaly Explorer</strong></span>
+might differ slightly. This disparity occurs because for each anomaly detection job,
+there are bucket results, influencer results, and record results. Anomaly scores
+are generated for each type of result. The anomaly timeline in Kibana uses the
+bucket-level anomaly scores. If you view swim lanes by influencer, it uses the
+influencer-level anomaly scores, as does the list of top influencers. The list
+of anomalies uses the record-level anomaly scores.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="_concepts.html">« Concepts</a>
+</span>
+<span class="next">
+<a href="_machine_learning_data_frame_analytics.html">Machine learning - data frame analytics »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

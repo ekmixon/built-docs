@@ -868,7 +868,7 @@ beats:
   Installation and Upgrade Guide/libbeat/docs/7.7: 411845eec4474f169e97ce2727c4d9f2940a607a
   Installation and Upgrade Guide/libbeat/docs/7.8: d4417ac478730ec6f73b3fb7f67d390a7977fd3c
   Installation and Upgrade Guide/libbeat/docs/7.x: 311ab02870cff8b84612239647b3fb3e22d3c27b
-  Installation and Upgrade Guide/libbeat/docs/master: 0b12bb453d316734b0dcc1fa1dfde54761457c98
+  Installation and Upgrade Guide/libbeat/docs/master: 2c90b6a32682966f1e566077c8604bcd9e66c875
   Journalbeat Reference/CHANGELOG.asciidoc/6.5: 0083450fd8b25e2bac56a4869b27f08b595d8b91
   Journalbeat Reference/CHANGELOG.asciidoc/6.6: cded42f7c6fa998aa5665e0e9583de0c66bed1ab
   Journalbeat Reference/CHANGELOG.asciidoc/6.7: dd8fb587bc433843c1cf566d6cc566e7f8149b4c
@@ -1293,6 +1293,7 @@ beats:
   Packetbeat Reference/x-pack/libbeat/processors/*/docs/*/7.8: 4ca6972518c2b3d3a798e7ccd38fed8cc03071f8
   Packetbeat Reference/x-pack/libbeat/processors/*/docs/*/7.x: 319254d978edd69115c0b0173f82f0774ebaba1d
   Packetbeat Reference/x-pack/libbeat/processors/*/docs/*/master: 3a73e88b9c5afac5bce8a917c81eea3d9d8132a9
+  Play/libbeat/docs/master: 2c90b6a32682966f1e566077c8604bcd9e66c875
   Winlogbeat Reference/CHANGELOG.asciidoc/1.1: e76f04b0b1838383e613b0b1083cb47ac18c3143
   Winlogbeat Reference/CHANGELOG.asciidoc/1.2: 5fca626b08427e148fb967e6e963277b1fe66946
   Winlogbeat Reference/CHANGELOG.asciidoc/1.3: 0564b54e544d056b01b7d1179588eca4abea95e9
@@ -1619,6 +1620,8 @@ docs:
   Elastic Cloud on Kubernetes/shared/versions/stack/current.asciidoc/1.0-beta: e6148b45190d44d9c274e139593b6d737ff0acb0
   Elastic Cloud on Kubernetes/shared/versions/stack/current.asciidoc/1.1: dc89ec942b26e3de69d280f3b6b4edcc0fe3fce9
   Elastic Cloud on Kubernetes/shared/versions/stack/current.asciidoc/master: dc89ec942b26e3de69d280f3b6b4edcc0fe3fce9
+  Elastic Endpoint Security/shared/attributes.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
+  'Elastic Endpoint Security/shared/versions/stack/{version}.asciidoc/master': 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Elastic Logging Plugin for Docker/shared/attributes.asciidoc/7.6: e6148b45190d44d9c274e139593b6d737ff0acb0
   Elastic Logging Plugin for Docker/shared/attributes.asciidoc/7.7: 0c96da951ca807526eeb905ca706cd5001dad50d
   Elastic Logging Plugin for Docker/shared/attributes.asciidoc/7.8: 0c96da951ca807526eeb905ca706cd5001dad50d
@@ -1629,14 +1632,8 @@ docs:
   'Elastic Logging Plugin for Docker/shared/versions/stack/{version}.asciidoc/7.8': 0c96da951ca807526eeb905ca706cd5001dad50d
   'Elastic Logging Plugin for Docker/shared/versions/stack/{version}.asciidoc/7.x': 0c96da951ca807526eeb905ca706cd5001dad50d
   'Elastic Logging Plugin for Docker/shared/versions/stack/{version}.asciidoc/master': e6148b45190d44d9c274e139593b6d737ff0acb0
-  Elastic Security/shared/attributes.asciidoc/7.8: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  Elastic Security/shared/attributes.asciidoc/7.x: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  Elastic Security/shared/attributes.asciidoc/master: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  'Elastic Security/shared/versions/stack/{version}.asciidoc/7.8': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  'Elastic Security/shared/versions/stack/{version}.asciidoc/7.x': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  'Elastic Security/shared/versions/stack/{version}.asciidoc/master': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  Elastic Stack and Google Cloud's Anthos/shared/attributes.asciidoc/master: e6148b45190d44d9c274e139593b6d737ff0acb0
-  "Elastic Stack and Google Cloud's Anthos/shared/versions/stack/{version}.asciidoc/master": e6148b45190d44d9c274e139593b6d737ff0acb0
+  Elastic Stack and Google Cloud's Anthos/shared/attributes.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
+  "Elastic Stack and Google Cloud's Anthos/shared/versions/stack/{version}.asciidoc/master": 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Elasticsearch Reference/shared/attributes.asciidoc/6.3: e6148b45190d44d9c274e139593b6d737ff0acb0
   Elasticsearch Reference/shared/attributes.asciidoc/6.4: e6148b45190d44d9c274e139593b6d737ff0acb0
   Elasticsearch Reference/shared/attributes.asciidoc/6.5: e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -1758,7 +1755,7 @@ docs:
   Getting Started/shared/attributes.asciidoc/7.7: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Getting Started/shared/attributes.asciidoc/7.8: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Getting Started/shared/attributes.asciidoc/7.x: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  Getting Started/shared/attributes.asciidoc/master: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  Getting Started/shared/attributes.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   'Getting Started/shared/versions/stack/{version}.asciidoc/6.3': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Getting Started/shared/versions/stack/{version}.asciidoc/6.4': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Getting Started/shared/versions/stack/{version}.asciidoc/6.5': e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -1775,9 +1772,9 @@ docs:
   'Getting Started/shared/versions/stack/{version}.asciidoc/7.7': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'Getting Started/shared/versions/stack/{version}.asciidoc/7.8': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'Getting Started/shared/versions/stack/{version}.asciidoc/7.x': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  'Getting Started/shared/versions/stack/{version}.asciidoc/master': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  Glossary/shared/attributes.asciidoc/master: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  'Glossary/shared/versions/stack/{version}.asciidoc/master': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  'Getting Started/shared/versions/stack/{version}.asciidoc/master': 2d28bfa3b9223f4c1b3b795c964f146a22acb424
+  Glossary/shared/attributes.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
+  'Glossary/shared/versions/stack/{version}.asciidoc/master': 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Heartbeat Reference/shared/attributes.asciidoc/6.3: e6148b45190d44d9c274e139593b6d737ff0acb0
   Heartbeat Reference/shared/attributes.asciidoc/6.4: e6148b45190d44d9c274e139593b6d737ff0acb0
   Heartbeat Reference/shared/attributes.asciidoc/6.5: e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -1846,7 +1843,7 @@ docs:
   Installation and Upgrade Guide/shared/attributes.asciidoc/7.7: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Installation and Upgrade Guide/shared/attributes.asciidoc/7.8: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Installation and Upgrade Guide/shared/attributes.asciidoc/7.x: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  Installation and Upgrade Guide/shared/attributes.asciidoc/master: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  Installation and Upgrade Guide/shared/attributes.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Installation and Upgrade Guide/shared/attributes62.asciidoc/6.0: 576d15d8312965a3e6b75ebf44566afe0cd7f6e7
   Installation and Upgrade Guide/shared/attributes62.asciidoc/6.1: 576d15d8312965a3e6b75ebf44566afe0cd7f6e7
   Installation and Upgrade Guide/shared/attributes62.asciidoc/6.2: 576d15d8312965a3e6b75ebf44566afe0cd7f6e7
@@ -1866,7 +1863,7 @@ docs:
   'Installation and Upgrade Guide/shared/versions/stack/{version}.asciidoc/7.7': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'Installation and Upgrade Guide/shared/versions/stack/{version}.asciidoc/7.8': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'Installation and Upgrade Guide/shared/versions/stack/{version}.asciidoc/7.x': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  'Installation and Upgrade Guide/shared/versions/stack/{version}.asciidoc/master': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  'Installation and Upgrade Guide/shared/versions/stack/{version}.asciidoc/master': 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Java API/shared/attributes.asciidoc/6.3: e6148b45190d44d9c274e139593b6d737ff0acb0
   Java API/shared/attributes.asciidoc/6.4: e6148b45190d44d9c274e139593b6d737ff0acb0
   Java API/shared/attributes.asciidoc/6.5: e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2012,13 +2009,13 @@ docs:
   Logs Monitoring Guide/shared/attributes.asciidoc/7.7: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Logs Monitoring Guide/shared/attributes.asciidoc/7.8: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Logs Monitoring Guide/shared/attributes.asciidoc/7.x: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  Logs Monitoring Guide/shared/attributes.asciidoc/master: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  Logs Monitoring Guide/shared/attributes.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   'Logs Monitoring Guide/shared/versions/stack/{version}.asciidoc/7.5': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Logs Monitoring Guide/shared/versions/stack/{version}.asciidoc/7.6': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Logs Monitoring Guide/shared/versions/stack/{version}.asciidoc/7.7': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'Logs Monitoring Guide/shared/versions/stack/{version}.asciidoc/7.8': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'Logs Monitoring Guide/shared/versions/stack/{version}.asciidoc/7.x': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  'Logs Monitoring Guide/shared/versions/stack/{version}.asciidoc/master': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  'Logs Monitoring Guide/shared/versions/stack/{version}.asciidoc/master': 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Logstash Reference/shared/attributes.asciidoc/6.3: e6148b45190d44d9c274e139593b6d737ff0acb0
   Logstash Reference/shared/attributes.asciidoc/6.4: e6148b45190d44d9c274e139593b6d737ff0acb0
   Logstash Reference/shared/attributes.asciidoc/6.5: e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2070,7 +2067,7 @@ docs:
   Machine Learning/shared/attributes.asciidoc/7.7: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Machine Learning/shared/attributes.asciidoc/7.8: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Machine Learning/shared/attributes.asciidoc/7.x: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  Machine Learning/shared/attributes.asciidoc/master: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  Machine Learning/shared/attributes.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Machine Learning/shared/settings.asciidoc/6.3: e6148b45190d44d9c274e139593b6d737ff0acb0
   Machine Learning/shared/settings.asciidoc/6.4: e6148b45190d44d9c274e139593b6d737ff0acb0
   Machine Learning/shared/settings.asciidoc/6.5: e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2087,7 +2084,7 @@ docs:
   Machine Learning/shared/settings.asciidoc/7.7: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Machine Learning/shared/settings.asciidoc/7.8: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Machine Learning/shared/settings.asciidoc/7.x: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  Machine Learning/shared/settings.asciidoc/master: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  Machine Learning/shared/settings.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   'Machine Learning/shared/versions/stack/{version}.asciidoc/6.3': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Machine Learning/shared/versions/stack/{version}.asciidoc/6.4': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Machine Learning/shared/versions/stack/{version}.asciidoc/6.5': e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2104,7 +2101,7 @@ docs:
   'Machine Learning/shared/versions/stack/{version}.asciidoc/7.7': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'Machine Learning/shared/versions/stack/{version}.asciidoc/7.8': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'Machine Learning/shared/versions/stack/{version}.asciidoc/7.x': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  'Machine Learning/shared/versions/stack/{version}.asciidoc/master': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  'Machine Learning/shared/versions/stack/{version}.asciidoc/master': 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Metricbeat Reference/shared/attributes.asciidoc/6.3: e6148b45190d44d9c274e139593b6d737ff0acb0
   Metricbeat Reference/shared/attributes.asciidoc/6.4: e6148b45190d44d9c274e139593b6d737ff0acb0
   Metricbeat Reference/shared/attributes.asciidoc/6.5: e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2144,13 +2141,13 @@ docs:
   Metrics Monitoring Guide/shared/attributes.asciidoc/7.7: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Metrics Monitoring Guide/shared/attributes.asciidoc/7.8: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   Metrics Monitoring Guide/shared/attributes.asciidoc/7.x: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  Metrics Monitoring Guide/shared/attributes.asciidoc/master: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  Metrics Monitoring Guide/shared/attributes.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   'Metrics Monitoring Guide/shared/versions/stack/{version}.asciidoc/7.5': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Metrics Monitoring Guide/shared/versions/stack/{version}.asciidoc/7.6': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Metrics Monitoring Guide/shared/versions/stack/{version}.asciidoc/7.7': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'Metrics Monitoring Guide/shared/versions/stack/{version}.asciidoc/7.8': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'Metrics Monitoring Guide/shared/versions/stack/{version}.asciidoc/7.x': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  'Metrics Monitoring Guide/shared/versions/stack/{version}.asciidoc/master': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  'Metrics Monitoring Guide/shared/versions/stack/{version}.asciidoc/master': 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   PHP API/shared/attributes.asciidoc/0.4: e6148b45190d44d9c274e139593b6d737ff0acb0
   PHP API/shared/attributes.asciidoc/1.x: e6148b45190d44d9c274e139593b6d737ff0acb0
   PHP API/shared/attributes.asciidoc/2.x: e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2226,6 +2223,8 @@ docs:
   'Painless Scripting Language/shared/versions/stack/{version}.asciidoc/7.8': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Painless Scripting Language/shared/versions/stack/{version}.asciidoc/7.x': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Painless Scripting Language/shared/versions/stack/{version}.asciidoc/master': e6148b45190d44d9c274e139593b6d737ff0acb0
+  Play/shared/attributes.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
+  'Play/shared/versions/stack/{version}.asciidoc/master': 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Plugins and Integrations/shared/attributes.asciidoc/6.3: e6148b45190d44d9c274e139593b6d737ff0acb0
   Plugins and Integrations/shared/attributes.asciidoc/6.4: e6148b45190d44d9c274e139593b6d737ff0acb0
   Plugins and Integrations/shared/attributes.asciidoc/6.5: e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2268,7 +2267,7 @@ docs:
   SIEM Guide/shared/attributes.asciidoc/7.7: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   SIEM Guide/shared/attributes.asciidoc/7.8: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   SIEM Guide/shared/attributes.asciidoc/7.x: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  SIEM Guide/shared/attributes.asciidoc/master: b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  SIEM Guide/shared/attributes.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   'SIEM Guide/shared/versions/stack/{version}.asciidoc/7.2': e6148b45190d44d9c274e139593b6d737ff0acb0
   'SIEM Guide/shared/versions/stack/{version}.asciidoc/7.3': e6148b45190d44d9c274e139593b6d737ff0acb0
   'SIEM Guide/shared/versions/stack/{version}.asciidoc/7.4': e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2277,7 +2276,7 @@ docs:
   'SIEM Guide/shared/versions/stack/{version}.asciidoc/7.7': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'SIEM Guide/shared/versions/stack/{version}.asciidoc/7.8': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
   'SIEM Guide/shared/versions/stack/{version}.asciidoc/7.x': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
-  'SIEM Guide/shared/versions/stack/{version}.asciidoc/master': b94051275bff3f6dc9c7cfbf028e0fd538b8fca3
+  'SIEM Guide/shared/versions/stack/{version}.asciidoc/master': 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Stack Overview/shared/attributes.asciidoc/6.3: e6148b45190d44d9c274e139593b6d737ff0acb0
   Stack Overview/shared/attributes.asciidoc/6.4: e6148b45190d44d9c274e139593b6d737ff0acb0
   Stack Overview/shared/attributes.asciidoc/6.5: e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2294,7 +2293,7 @@ docs:
   Stack Overview/shared/attributes.asciidoc/7.7: 0c96da951ca807526eeb905ca706cd5001dad50d
   Stack Overview/shared/attributes.asciidoc/7.8: 0c96da951ca807526eeb905ca706cd5001dad50d
   Stack Overview/shared/attributes.asciidoc/7.x: 0c96da951ca807526eeb905ca706cd5001dad50d
-  Stack Overview/shared/attributes.asciidoc/master: 0c96da951ca807526eeb905ca706cd5001dad50d
+  Stack Overview/shared/attributes.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Stack Overview/shared/settings.asciidoc/6.3: e6148b45190d44d9c274e139593b6d737ff0acb0
   Stack Overview/shared/settings.asciidoc/6.4: e6148b45190d44d9c274e139593b6d737ff0acb0
   Stack Overview/shared/settings.asciidoc/6.5: e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2311,7 +2310,7 @@ docs:
   Stack Overview/shared/settings.asciidoc/7.7: 0c96da951ca807526eeb905ca706cd5001dad50d
   Stack Overview/shared/settings.asciidoc/7.8: 0c96da951ca807526eeb905ca706cd5001dad50d
   Stack Overview/shared/settings.asciidoc/7.x: 0c96da951ca807526eeb905ca706cd5001dad50d
-  Stack Overview/shared/settings.asciidoc/master: 0c96da951ca807526eeb905ca706cd5001dad50d
+  Stack Overview/shared/settings.asciidoc/master: 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   'Stack Overview/shared/versions/stack/{version}.asciidoc/6.3': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Stack Overview/shared/versions/stack/{version}.asciidoc/6.4': e6148b45190d44d9c274e139593b6d737ff0acb0
   'Stack Overview/shared/versions/stack/{version}.asciidoc/6.5': e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2328,7 +2327,7 @@ docs:
   'Stack Overview/shared/versions/stack/{version}.asciidoc/7.7': 0c96da951ca807526eeb905ca706cd5001dad50d
   'Stack Overview/shared/versions/stack/{version}.asciidoc/7.8': 0c96da951ca807526eeb905ca706cd5001dad50d
   'Stack Overview/shared/versions/stack/{version}.asciidoc/7.x': 0c96da951ca807526eeb905ca706cd5001dad50d
-  'Stack Overview/shared/versions/stack/{version}.asciidoc/master': 0c96da951ca807526eeb905ca706cd5001dad50d
+  'Stack Overview/shared/versions/stack/{version}.asciidoc/master': 2d28bfa3b9223f4c1b3b795c964f146a22acb424
   Winlogbeat Reference/shared/attributes.asciidoc/6.3: e6148b45190d44d9c274e139593b6d737ff0acb0
   Winlogbeat Reference/shared/attributes.asciidoc/6.4: e6148b45190d44d9c274e139593b6d737ff0acb0
   Winlogbeat Reference/shared/attributes.asciidoc/6.5: e6148b45190d44d9c274e139593b6d737ff0acb0
@@ -2570,7 +2569,7 @@ elasticsearch:
   Elasticsearchリファレンス/docs/5.4: 66edcd99c815636f9aab05de8ab5c89c69c1b131
   Elasticsearchリファレンス/docs/jp/reference/5.3: 4b74b82af49069dca9d690bef5db2be4042d5e50
   Elasticsearchリファレンス/docs/jp/reference/5.4: 66edcd99c815636f9aab05de8ab5c89c69c1b131
-  Glossary/docs/reference/master: 2ed91444fec3cd655e4a1ca16ddd42ad05323903
+  Glossary/docs/reference/master: c98d548944ae8b20c2895e72c9351015faa929d4
   Go API/docs/go/master: cf40c964772bf089bf1cec9630750d35f1077c42
   Groovy API/docs/groovy-api/0.90: d9a89ea210cd3344c7365a08a1224287829bbe11
   Groovy API/docs/groovy-api/1.3: b1c8862209b77c86f1450ecbf8e15b9b8b12fb78
@@ -2609,7 +2608,7 @@ elasticsearch:
   Installation and Upgrade Guide/docs/7.7: 6db1c56b55fc9b4e7ee9a367059d275294a15a53
   Installation and Upgrade Guide/docs/7.8: fa7150acd370fae7a1fcab0236a6b4dcaec0da6e
   Installation and Upgrade Guide/docs/7.x: 5cb34d9a6e0166990e2c3f5096d4b67ad6412711
-  Installation and Upgrade Guide/docs/master: 2ed91444fec3cd655e4a1ca16ddd42ad05323903
+  Installation and Upgrade Guide/docs/master: c98d548944ae8b20c2895e72c9351015faa929d4
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.0: 977230a0ce89a55515dc6ef6452e9f059d9356a2
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.1: ffa259108204d410c1e3e50b805ee5d1740f48f6
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.2: 8fa17672189cf15b4d4617dc3e7970d6c12e0ea4
@@ -2825,7 +2824,7 @@ elasticsearch:
   Machine Learning/docs/7.7: 6db1c56b55fc9b4e7ee9a367059d275294a15a53
   Machine Learning/docs/7.8: fa7150acd370fae7a1fcab0236a6b4dcaec0da6e
   Machine Learning/docs/7.x: 5cb34d9a6e0166990e2c3f5096d4b67ad6412711
-  Machine Learning/docs/master: 2ed91444fec3cd655e4a1ca16ddd42ad05323903
+  Machine Learning/docs/master: c98d548944ae8b20c2895e72c9351015faa929d4
   Painless Scripting Language/docs/Versions.asciidoc/5.5: 5fbb5f3bc6b2d97922b58235af04b444c50ec84e
   Painless Scripting Language/docs/Versions.asciidoc/5.6: 7d49713f7b57af8c6a8b663dc7120d02585250bd
   Painless Scripting Language/docs/Versions.asciidoc/6.0: 977230a0ce89a55515dc6ef6452e9f059d9356a2
@@ -2870,6 +2869,8 @@ elasticsearch:
   Painless Scripting Language/docs/painless/7.8: 1382a9a0ab54e12b4cbfff8c620274191bb06901
   Painless Scripting Language/docs/painless/7.x: 2a943a58a4c5bfdf4dbd272d6c81d6a98e8a7f9a
   Painless Scripting Language/docs/painless/master: 79367e43da8eb875cb464403c4b31db80ce5c5d5
+  Play/docs/master: c98d548944ae8b20c2895e72c9351015faa929d4
+  Play/x-pack/docs/master: c98d548944ae8b20c2895e72c9351015faa929d4
   Plugins and Integrations/buildSrc/src/main/resources/6.2: 8fa17672189cf15b4d4617dc3e7970d6c12e0ea4
   Plugins and Integrations/buildSrc/src/main/resources/6.3: ee4f83068316f5053dd1dbcececf5941f82b9956
   Plugins and Integrations/buildSrc/src/main/resources/6.4: b34f7e461c7838ed98f82c042daa2b71cea80003
@@ -2993,9 +2994,10 @@ elasticsearch-hadoop:
   Installation and Upgrade Guide/docs/src/reference/asciidoc/7.8: 2684e557263a653baacd49336a9c866e8a073048
   Installation and Upgrade Guide/docs/src/reference/asciidoc/7.x: 1a485b0bf6897ec6ae73cc11730c2fd510f2503e
   Installation and Upgrade Guide/docs/src/reference/asciidoc/master: 5c90e6daaa45bac6dc722f8fb213649370500fa5
+  Play/docs/src/reference/asciidoc/master: 5c90e6daaa45bac6dc722f8fb213649370500fa5
 elasticsearch-js:
   Elasticsearch Reference/docs/doc_examples/master: d1ad7bd22bcaac412daf4ba330ddbb544e651f8c
-  JavaScript API/docs/16.x: 388c5e8e7ec1c0a097ee4960b2297073a484a33e
+  JavaScript API/docs/16.x: 4e0f785e89b6f093106b2de0816671c85e307751
   JavaScript API/docs/5.x: 37042aea33099b356692236e2d701971df8b4020
   JavaScript API/docs/6.x: be2a7ab5445eb70c611aeede949b80de7b1262ca
   JavaScript API/docs/7.x: 8a1e9576aa02d5ec45737b31bb3145bec95ce7a0
@@ -3068,7 +3070,7 @@ kibana:
   Installation and Upgrade Guide/docs/7.7: e6a5a9d31b69d4073c0a700bffb87d224787f0b2
   Installation and Upgrade Guide/docs/7.8: 46f916d3a56c3fb711fbeea66def40dec4baf24e
   Installation and Upgrade Guide/docs/7.x: 8c9c3594eea1a07acc3f8a277945cc59f45d2057
-  Installation and Upgrade Guide/docs/master: 5ab3e19e5bd262a1039ef5e43d2cd0909c85bece
+  Installation and Upgrade Guide/docs/master: 6d5e53859d65dab16f8c0b948665c480f56e67fe
   Kibana Guide/docs/3.0: ab14a2f8f5646e647d1f4c5cad4f8a799dd8a2af
   Kibana Guide/docs/4.0: baa2073caf869772e5ee3fd1092afd64f523554d
   Kibana Guide/docs/4.1: fb7323096a6bc4fa7e80ff8e03c27a720080637c
@@ -3108,6 +3110,7 @@ kibana:
   Kibana 사용자 가이드/docs/kr/5.4: 73d3e96e2b29b571e3c62801bfda04b3474c282c
   Kibanaユーザーガイド/docs/jp/5.3: 0d2c9728cdd64e619503715b890c1950db3b9470
   Kibanaユーザーガイド/docs/jp/5.4: 73d3e96e2b29b571e3c62801bfda04b3474c282c
+  Play/docs/master: 6d5e53859d65dab16f8c0b948665c480f56e67fe
   Uptime Monitoring Guide/docs/7.2: 865d11cac23063a2cb7b232c274a2d273148b537
   Uptime Monitoring Guide/docs/7.3: 7f276fc8f3af168582d8e6c7e70b12e121a59d12
   Uptime Monitoring Guide/docs/7.4: 46c0d9fd7bfa0842c62f696a3d47e277286d5e81
@@ -3127,7 +3130,7 @@ kibana:
   link-check-kibana/src/legacy/ui/public/documentation_links/documentation_links.ts/7.7: e6a5a9d31b69d4073c0a700bffb87d224787f0b2
   link-check-kibana/src/legacy/ui/public/documentation_links/documentation_links.ts/7.8: 8e3833f43f9e42e08e06a90a9a9f73bde92ec0bf
   link-check-kibana/src/legacy/ui/public/documentation_links/documentation_links.ts/7.x: ba965fb7f7da3706430467597508afcb2d0ace02
-  link-check-kibana/src/legacy/ui/public/documentation_links/documentation_links.ts/master: bc261436d5b75c87fb131bfec8b09539e5f9bd8f
+  link-check-kibana/src/legacy/ui/public/documentation_links/documentation_links.ts/master: 6d5e53859d65dab16f8c0b948665c480f56e67fe
   link-check-kibana/src/ui/public/documentation_links/documentation_links.js/5.0: 8c65f069c2afa5a1dab31202ff2a8f8f48236a54
   link-check-kibana/src/ui/public/documentation_links/documentation_links.js/5.1: be53f82a4294d50266d2d81eadc1dae64f84a5fb
   link-check-kibana/src/ui/public/documentation_links/documentation_links.js/5.2: 21bb22a7ed2145e5bf63848815cc44ee92c077ee
@@ -3195,6 +3198,7 @@ logstash:
   Logstash 참조/docs/kr/5.4: 09aad734ca5f743bac1ad07a14627e7670a848ad
   Logstashリファレンス/docs/jp/5.3: 191f450208459d3814ca6ce62fa8a58eb01e98c1
   Logstashリファレンス/docs/jp/5.4: 09aad734ca5f743bac1ad07a14627e7670a848ad
+  Play/docs/master: c75260d5b5127f9c3f894d3a24dc084ad6f91650
 logstash-docs:
   Logstash Reference/docs/1.5: 966b560cb5d62751dfc465c2be8be4c65bf23b6e
   Logstash Reference/docs/2.0: 5603ed436d787256deae0704f8bc5c25560678e5
@@ -3231,16 +3235,11 @@ logstash-docs:
   Logstash Reference/docs/master: ccdf4ed073de52de034e94b7a44d2a687298498a
   Logstash Versioned Plugin Reference/docs/versioned-plugins/versioned_plugin_docs: 9881d8f44aefb571dc283da3bae422151b9958df
 security-docs:
-  Elastic Security/docs/7.8: b25b32a77b35ac298eea2026bdc2133210b2a969
-  Elastic Security/docs/7.x: 41751b5e3758c860f1a142c4bb86c3ad1a63de8c
-  Elastic Security/docs/master: 29c16cb9328949b5ff07ea28e4ef406574b3f46a
+  Elastic Endpoint Security/docs/master: 29c16cb9328949b5ff07ea28e4ef406574b3f46a
 sense:
   Sense Editor for 4.x/docs/master: e4b27640c79c102d1e09941c4430092522338cff
 stack-docs:
-  Elastic Security/docs/en/7.8: 9e1e4f43e8eac6b64cc650ba0fe626a9851baa74
-  Elastic Security/docs/en/7.x: 83f7f0b8fa60008be97e468a0945c9f7351f0386
-  Elastic Security/docs/en/master: aff4e731aa676e6276cc5c8f861c693025f19e77
-  Elastic Stack and Google Cloud's Anthos/docs/en/gke-on-prem/master: 71890c06cb7500fbf9a88c10aea89454ac151972
+  Elastic Stack and Google Cloud's Anthos/docs/en/gke-on-prem/master: local
   Getting Started/docs/en/6.3: 102d889b697ee82ec1510e569d72962720f46398
   Getting Started/docs/en/6.4: 74bfa88aa51d6260be3805d6278fee6b90f6ab63
   Getting Started/docs/en/6.5: f60dfb803704d300f2ea5741fdb9d454e5c408ce
@@ -3257,8 +3256,8 @@ stack-docs:
   Getting Started/docs/en/7.7: 243d4ee03fe62cba4ae49da6d311c21206762816
   Getting Started/docs/en/7.8: 9e1e4f43e8eac6b64cc650ba0fe626a9851baa74
   Getting Started/docs/en/7.x: 83f7f0b8fa60008be97e468a0945c9f7351f0386
-  Getting Started/docs/en/master: aff4e731aa676e6276cc5c8f861c693025f19e77
-  Glossary/docs/en/master: aff4e731aa676e6276cc5c8f861c693025f19e77
+  Getting Started/docs/en/master: local
+  Glossary/docs/en/master: local
   Infrastructure Monitoring Guide for 6.5-7.4/docs/en/6.5: f60dfb803704d300f2ea5741fdb9d454e5c408ce
   Infrastructure Monitoring Guide for 6.5-7.4/docs/en/6.6: 2b01bf7241946f1ae71c8fd05682fc16b5661990
   Infrastructure Monitoring Guide for 6.5-7.4/docs/en/6.7: 449a4de8ab0a3e0559cd7609f8fa282e569ef923
@@ -3294,13 +3293,13 @@ stack-docs:
   Installation and Upgrade Guide/docs/en/7.7: 243d4ee03fe62cba4ae49da6d311c21206762816
   Installation and Upgrade Guide/docs/en/7.8: 9e1e4f43e8eac6b64cc650ba0fe626a9851baa74
   Installation and Upgrade Guide/docs/en/7.x: 83f7f0b8fa60008be97e468a0945c9f7351f0386
-  Installation and Upgrade Guide/docs/en/master: aff4e731aa676e6276cc5c8f861c693025f19e77
+  Installation and Upgrade Guide/docs/en/master: local
   Logs Monitoring Guide/docs/en/7.5: c6df8c1209004719fe52b6812f25cc898fbf4f06
   Logs Monitoring Guide/docs/en/7.6: e536c6ab2fc922a8b885d1e5c901653931bf0a0b
   Logs Monitoring Guide/docs/en/7.7: 243d4ee03fe62cba4ae49da6d311c21206762816
   Logs Monitoring Guide/docs/en/7.8: 9e1e4f43e8eac6b64cc650ba0fe626a9851baa74
   Logs Monitoring Guide/docs/en/7.x: 83f7f0b8fa60008be97e468a0945c9f7351f0386
-  Logs Monitoring Guide/docs/en/master: aff4e731aa676e6276cc5c8f861c693025f19e77
+  Logs Monitoring Guide/docs/en/master: local
   Machine Learning/docs/en/stack/6.3: 102d889b697ee82ec1510e569d72962720f46398
   Machine Learning/docs/en/stack/6.4: 74bfa88aa51d6260be3805d6278fee6b90f6ab63
   Machine Learning/docs/en/stack/6.5: f60dfb803704d300f2ea5741fdb9d454e5c408ce
@@ -3317,13 +3316,14 @@ stack-docs:
   Machine Learning/docs/en/stack/7.7: 243d4ee03fe62cba4ae49da6d311c21206762816
   Machine Learning/docs/en/stack/7.8: 9e1e4f43e8eac6b64cc650ba0fe626a9851baa74
   Machine Learning/docs/en/stack/7.x: 83f7f0b8fa60008be97e468a0945c9f7351f0386
-  Machine Learning/docs/en/stack/master: aff4e731aa676e6276cc5c8f861c693025f19e77
+  Machine Learning/docs/en/stack/master: local
   Metrics Monitoring Guide/docs/en/7.5: c6df8c1209004719fe52b6812f25cc898fbf4f06
   Metrics Monitoring Guide/docs/en/7.6: e536c6ab2fc922a8b885d1e5c901653931bf0a0b
   Metrics Monitoring Guide/docs/en/7.7: 243d4ee03fe62cba4ae49da6d311c21206762816
   Metrics Monitoring Guide/docs/en/7.8: 9e1e4f43e8eac6b64cc650ba0fe626a9851baa74
   Metrics Monitoring Guide/docs/en/7.x: 83f7f0b8fa60008be97e468a0945c9f7351f0386
-  Metrics Monitoring Guide/docs/en/master: aff4e731aa676e6276cc5c8f861c693025f19e77
+  Metrics Monitoring Guide/docs/en/master: local
+  Play/docs/en/master: local
   SIEM Guide/docs/en/7.2: 766284b3bff3eaafa87fcc4f03fc04b337842343
   SIEM Guide/docs/en/7.3: 1743754758debdf9d1ad492ef88a03e7794f5e42
   SIEM Guide/docs/en/7.4: 5e1b343357251cc83d09ba5c809ff39d1c26615c
@@ -3332,7 +3332,7 @@ stack-docs:
   SIEM Guide/docs/en/7.7: 243d4ee03fe62cba4ae49da6d311c21206762816
   SIEM Guide/docs/en/7.8: 9e1e4f43e8eac6b64cc650ba0fe626a9851baa74
   SIEM Guide/docs/en/7.x: 83f7f0b8fa60008be97e468a0945c9f7351f0386
-  SIEM Guide/docs/en/master: aff4e731aa676e6276cc5c8f861c693025f19e77
+  SIEM Guide/docs/en/master: local
   Stack Overview/docs/en/stack/6.3: 102d889b697ee82ec1510e569d72962720f46398
   Stack Overview/docs/en/stack/6.4: 74bfa88aa51d6260be3805d6278fee6b90f6ab63
   Stack Overview/docs/en/stack/6.5: f60dfb803704d300f2ea5741fdb9d454e5c408ce
@@ -3349,7 +3349,7 @@ stack-docs:
   Stack Overview/docs/en/stack/7.7: 19985858b3f39934f756b92c2ccbe0e2f0cb58df
   Stack Overview/docs/en/stack/7.8: c075cdae7af1315b5afb87c24acca8397dffdd34
   Stack Overview/docs/en/stack/7.x: 5280e5cb8905343fcb636e2e67ee1935f8417c8d
-  Stack Overview/docs/en/stack/master: 1590835382fa37ed412c72ce7fa6981f6b6b7a78
+  Stack Overview/docs/en/stack/master: local
 swiftype:
   Site Search Reference/docs/master: f705ef52d7f671ecb25f5c033ec8841d3471bdce
 x-pack:

@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Playing with Asciidoctor to create Elastic Stack docs">
+<meta name="keywords" content="Elasticsearch, Kibana, Logstash">
+<title>Terminology | Elastic Stack docs | Elastic</title>
+<link rel="home" href="index.html" title="Elastic Stack docs"/>
+<link rel="up" href="_reference.html" title="Reference"/>
+<link rel="prev" href="security-privileges.html" title="Security privileges"/>
+<link rel="next" href="redirects.html" title="Appendix A: Missing links"/>
+<meta name="DC.type" content="Learn/Docs/Elastic Stack"/>
+<meta name="DC.subject" content="Elastic Stack"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elastic Stack docs</a></span>
+»
+<span class="breadcrumb-link"><a href="_reference.html">Reference</a></span>
+»
+<span class="breadcrumb-node">Terminology</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="security-privileges.html">« Security privileges</a>
+</span>
+<span class="next">
+<a href="redirects.html">Appendix A: Missing links »</a>
+</span>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="terms"></a>Terminology<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/stack-docs/edit/master/docs/en/glossary/glossary.asciidoc">edit</a></h2>
+</div></div></div>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+<a id="glossary-metadata"></a> @metadata
+</span>
+</dt>
+<dd>
+A special field for storing content that you don&#8217;t want to include in output
+<a class="xref" href="terms.html#glossary-event">events</a>. For example, the <code class="literal">@metadata</code> field is useful for
+creating transient fields for use in <a class="xref" href="terms.html#glossary-conditional">conditional</a>
+statements.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-admin-console"></a> administration console
+</span>
+</dt>
+<dd>
+A component of Elastic Cloud Enterprise that provides the API server for the
+<a class="xref" href="terms.html#glossary-cloud-ui">Cloud UI</a>. Also syncs cluster and allocator data from
+ZooKeeper to Elasticsearch.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-allocator"></a> allocator
+</span>
+</dt>
+<dd>
+Manages hosts that contain Elasticsearch and Kibana nodes. Controls the lifecycle of these
+nodes by creating new <a class="xref" href="terms.html#glossary-container">containers</a> and managing the nodes
+within these containers when requested. Used to scale the capacity of your Elastic Cloud Enterprise
+installation.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-analysis"></a> analysis
+</span>
+</dt>
+<dd>
+<p>Analysis is the process of converting <a class="xref" href="terms.html#glossary-text">full text</a> to
+<a class="xref" href="terms.html#glossary-term">terms</a>. Depending on which analyzer is used, these phrases:
+<code class="literal">FOO BAR</code>, <code class="literal">Foo-Bar</code>, <code class="literal">foo,bar</code> will probably all result in the
+terms <code class="literal">foo</code> and <code class="literal">bar</code>. These terms are what is actually stored in
+the index.</p>
+<p>A full text query (not a <a class="xref" href="terms.html#glossary-term">term</a> query) for <code class="literal">FoO:bAR</code> will
+also be analyzed to the terms <code class="literal">foo</code>,<code class="literal">bar</code> and will thus match the
+terms stored in the index.</p>
+<p>It is this process of analysis (both at index time and at search time)
+that allows Elasticsearch to perform full text queries.</p>
+<p>Also see <a class="xref" href="terms.html#glossary-text">text</a> and <a class="xref" href="terms.html#glossary-term">term</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-anomaly-detection-job"></a> anomaly detection job
+</span>
+</dt>
+<dd>
+Anomaly detection jobs contain the configuration information and metadata
+necessary to perform an analytics task. See
+<a href="/guide/en/machine-learning/master/ml-jobs.html" class="ulink" target="_top">Machine learning jobs</a> and the
+<a href="/guide/en/elasticsearch/reference/master/ml-put-job.html" class="ulink" target="_top">create anomaly detection job API</a>.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-api-key"></a> API key
+</span>
+</dt>
+<dd>
+<p>A unique identifier that you can use for authentication when submitting Elasticsearch requests.
+When TLS is enabled, all requests must be authenticated using either basic authentication
+(user name and password) or an API key.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-auto-follow-pattern"></a> auto-follow pattern
+</span>
+</dt>
+<dd>
+<p>An <a class="xref" href="terms.html#glossary-index-pattern">index pattern</a> that automatically configures new indices as
+<a class="xref" href="terms.html#glossary-follower-index">follower indices</a> for <a class="xref" href="terms.html#glossary-ccr">cross-cluster replication</a>.
+For more information, see <a href="/guide/en/elasticsearch/reference/master/ccr-auto-follow.html#_managing_auto_follow_patterns" class="ulink" target="_top">Managing auto follow patterns</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-zone"></a> availability zone
+</span>
+</dt>
+<dd>
+Contains resources available to a Elastic Cloud Enterprise installation that are isolated from
+other availability zones to safeguard against failure. Could be a rack, a server
+zone or some other logical constraint that creates a failure boundary. In a
+highly available cluster, the nodes of a cluster are spread across two or three
+availability zones to ensure that the cluster can survive the failure of an
+entire availability zone. Also see
+<a href="/guide/en/cloud-enterprise/current/ece-ha.html" class="ulink" target="_top">Fault Tolerance (High Availability)</a>.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-beats-runner"></a> beats runner
+</span>
+</dt>
+<dd>
+Used to send Filebeat and Metricbeat information to the logging cluster.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-ml-bucket"></a> bucket
+</span>
+</dt>
+<dd>
+The machine learning features use the concept of a bucket to divide the time series into
+batches for processing. The <em>bucket span</em> is part of the configuration
+information for anomaly detection jobs. It defines the time interval that is used to
+summarize and model the data. This is typically between 5 minutes to 1 hour and
+it depends on your data characteristics. When you set the bucket span, take into
+account the granularity at which you want to analyze, the frequency of the input
+data, the typical duration of the anomalies, and the frequency at which alerting
+is required.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-client-forwarder"></a> client forwarder
+</span>
+</dt>
+<dd>
+Used for secure internal communications between various components of Elastic Cloud Enterprise and
+ZooKeeper.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-cloud-ui"></a> Cloud UI
+</span>
+</dt>
+<dd>
+Provides web-based access to manage your Elastic Cloud Enterprise installation, supported by the
+<a class="xref" href="terms.html#glossary-admin-console">administration console</a>.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-cluster"></a> cluster
+</span>
+</dt>
+<dd>
+<p>One or more <a class="xref" href="terms.html#glossary-node">nodes</a> that share the
+same cluster name. Each cluster has a single master node, which is
+chosen automatically by the cluster and can be replaced if it fails.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-codec-plugin"></a> codec plugin
+</span>
+</dt>
+<dd>
+A Logstash <a class="xref" href="terms.html#glossary-plugin">plugin</a> that changes the data representation
+of an <a class="xref" href="terms.html#glossary-event">event</a>. Codecs are essentially stream filters that
+can operate as part of an input or output. Codecs enable you to separate the
+transport of messages from the serialization process. Popular codecs include
+json, msgpack, and plain (text).
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-cold-phase"></a> cold phase
+</span>
+</dt>
+<dd>
+<p>The third possible phase in the <a class="xref" href="terms.html#glossary-index-lifecycle">index lifecycle</a>.
+In the cold phase, an index is no longer updated and seldom queried.
+The information still needs to be searchable, but it’s okay if those queries are slower.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-conditional"></a> conditional
+</span>
+</dt>
+<dd>
+A control flow that executes certain actions based on whether a statement
+(also called a condition) is true or false. Logstash supports <code class="literal">if</code>,
+<code class="literal">else if</code>, and <code class="literal">else</code> statements. You can use conditional statements to
+apply filters and send events to a specific output based on conditions that
+you specify.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-constructor"></a> constructor
+</span>
+</dt>
+<dd>
+Directs <a class="xref" href="terms.html#glossary-allocator">allocators</a> to manage containers of Elasticsearch and Kibana
+nodes and maximizes the utilization of allocators. Monitors plan change requests
+from the Cloud UI and determines how to transform the existing cluster. In a
+highly available installation, places cluster nodes within different
+availability zones to ensure that the cluster can survive the failure of an
+entire availability zone.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-container"></a> container
+</span>
+</dt>
+<dd>
+Includes an instance of Elastic Cloud Enterprise software and its dependencies. Used to provision
+similar environments, to assign a guaranteed share of host resources to nodes,
+and to simplify operational effort in Elastic Cloud Enterprise.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-coordinator"></a> coordinator
+</span>
+</dt>
+<dd>
+Consists of a logical grouping of some Elastic Cloud Enterprise services and acts as a distributed
+coordination system and resource scheduler.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-ccr"></a> cross-cluster replication (CCR)
+</span>
+</dt>
+<dd>
+<p>A feature that enables you to replicate indices in remote clusters to your
+local cluster. For more information, see
+<a href="/guide/en/elasticsearch/reference/master/xpack-ccr.html" class="ulink" target="_top">Cross-cluster replication</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-ccs"></a> cross-cluster search (CCS)
+</span>
+</dt>
+<dd>
+<p>A feature that enables any node to act as a federated client across
+multiple clusters.
+See <a href="/guide/en/elasticsearch/reference/master/modules-cross-cluster-search.html" class="ulink" target="_top">Search across clusters</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-ml-datafeed"></a> datafeed
+</span>
+</dt>
+<dd>
+Anomaly detection jobs can analyze either a one-off batch of data or continuously in
+real time. Datafeeds retrieve data from Elasticsearch for analysis. Alternatively, you
+can post data from any source directly to a machine learning API.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-dataframe-job"></a> data frame analytics job
+</span>
+</dt>
+<dd>
+Data frame analytics jobs contain the configuration information and metadata
+necessary to perform machine learning analytics tasks on a source index and store the
+outcome in a destination index. See
+<a href="/guide/en/machine-learning/master//ml-dfa-overview.html" class="ulink" target="_top">Data frame analytics overview</a> and the
+<a href="/guide/en/elasticsearch/reference/master/put-dfanalytics.html" class="ulink" target="_top">create data frame analytics job API</a>.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-delete-phase"></a> delete phase
+</span>
+</dt>
+<dd>
+<p>The last possible phase in the <a class="xref" href="terms.html#glossary-index-lifecycle">index lifecycle</a>.
+In the delete phase, an index is no longer needed and can safely be deleted.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-ml-detector"></a> detector
+</span>
+</dt>
+<dd>
+As part of the configuration information that is associated with anomaly detection jobs,
+detectors define the type of analysis that needs to be done. They also specify
+which fields to analyze. You can have more than one detector in a job, which is
+more efficient than running multiple jobs against the same data.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-director"></a> director
+</span>
+</dt>
+<dd>
+Manages the <a class="xref" href="terms.html#glossary-zookeeper">ZooKeeper</a> datastore. This role is often
+shared with the <a class="xref" href="terms.html#glossary-coordinator">coordinator</a>, though in production
+deployments it can be separated.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-document"></a> document
+</span>
+</dt>
+<dd>
+<p>A document is a JSON document which is stored in Elasticsearch. It is
+like a row in a table in a relational database. Each document is
+stored in an <a class="xref" href="terms.html#glossary-index">index</a> and has a <a class="xref" href="terms.html#glossary-type">type</a>
+and an <a class="xref" href="terms.html#glossary-id">id</a>.</p>
+<p>A document is a JSON object (also known in other languages as a hash /
+hashmap / associative array) which contains zero or more
+<a class="xref" href="terms.html#glossary-field">fields</a>, or key-value pairs.</p>
+<p>The original JSON document that is indexed will be stored in the
+<a class="xref" href="terms.html#glossary-source_field"><code class="literal">_source</code> field</a>, which is returned by default when
+getting or searching for a document.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-ecs"></a> Elastic Common Schema (ECS)
+</span>
+</dt>
+<dd>
+A document schema for Elasticsearch, for use cases such as logging and metrics.
+ECS defines a common set of fields, their datatype, and gives guidance on their
+correct usage. ECS is used to improve uniformity of event data coming from
+different sources.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-event"></a> event
+</span>
+</dt>
+<dd>
+A single unit of information, containing a timestamp plus additional data. An
+event arrives via an input, and is subsequently parsed, timestamped, and
+passed through the Logstash <a class="xref" href="terms.html#glossary-pipeline">pipeline</a>.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-feature-influence"></a> feature influence
+</span>
+</dt>
+<dd>
+In outlier detection, feature influence scores indicate which features of a data
+point contribute to its outlier behavior. See
+<a href="/guide/en/machine-learning/master/dfa-outlier-detection.html#dfa-feature-influence" class="ulink" target="_top">Feature influence</a>.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-feature-importance"></a> feature importance
+</span>
+</dt>
+<dd>
+In supervised machine learning methods such as regression and classification, feature
+importance indicates the degree to which a specific feature affects a prediction.
+See
+<a href="/guide/en/machine-learning/master/dfa-regression.html#dfa-regression-feature-importance" class="ulink" target="_top">Regression feature importance</a>
+and
+<a href="/guide/en/machine-learning/master/dfa-classification.html#dfa-classification-feature-importance" class="ulink" target="_top">Classification feature importance</a>.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-field"></a> field
+</span>
+</dt>
+<dd>
+<p>A <a class="xref" href="terms.html#glossary-document">document</a> contains a list of fields, or key-value
+pairs. The value can be a simple (scalar) value (eg a string, integer,
+date), or a nested structure like an array or an object. A field is
+similar to a column in a table in a relational database.</p>
+<p>The <a class="xref" href="terms.html#glossary-mapping">mapping</a> for each field has a field <em>type</em> (not to
+be confused with document <a class="xref" href="terms.html#glossary-type">type</a>) which indicates the type
+of data that can be stored in that field, eg <code class="literal">integer</code>, <code class="literal">string</code>,
+<code class="literal">object</code>. The mapping also allows you to define (amongst other things)
+how the value for a field should be analyzed.</p>
+<p>In Logstash, this term refers to an <a class="xref" href="terms.html#glossary-event">event</a> property. For
+example, each event in an apache access log has properties, such as a status
+code (200, 404), request path ("/", "index.html"), HTTP verb (GET, POST), client
+IP address, and so on. Logstash uses the term "fields" to refer to these
+properties.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-field-reference"></a> field reference
+</span>
+</dt>
+<dd>
+A reference to an event <a class="xref" href="terms.html#glossary-field">field</a>. This reference may appear in
+an output block or filter block in the Logstash config file. Field references
+are typically wrapped in square (<code class="literal">[]</code>) brackets, for example <code class="literal">[fieldname]</code>. If
+you are referring to a top-level field, you can omit the <code class="literal">[]</code> and simply use
+the field name. To refer to a nested field, you specify the full path to that
+field: <code class="literal">[top-level field][nested field]</code>.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-filter"></a> filter
+</span>
+</dt>
+<dd>
+<p>A filter is a non-scoring <a class="xref" href="terms.html#glossary-query">query</a>,
+meaning that it does not score documents.
+It is only concerned about answering the question - "Does this document match?".
+The answer is always a simple, binary yes or no. This kind of query is said to be made
+in a <a href="/guide/en/elasticsearch/reference/master/query-filter-context.html" class="ulink" target="_top">filter context</a>,
+hence it is called a filter. Filters are simple checks for set inclusion or exclusion.
+In most cases, the goal of filtering is to reduce the number of documents that have to be examined.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-filter-plugin"></a> filter plugin
+</span>
+</dt>
+<dd>
+A Logstash <a class="xref" href="terms.html#glossary-plugin">plugin</a> that performs intermediary processing on
+an <a class="xref" href="terms.html#glossary-event">event</a>. Typically, filters act upon event data after it
+has been ingested via inputs, by mutating, enriching, and/or modifying the
+data according to configuration rules. Filters are often applied conditionally
+depending on the characteristics of the event. Popular filter plugins include
+grok, mutate, drop, clone, and geoip. Filter stages are optional.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-flush"></a> flush
+</span>
+</dt>
+<dd>
+<p>Peform a Lucene commit to write index updates in the transaction log (translog) to disk.
+Because a Lucene commit is a relatively expensive operation,
+Elasticsearch records index and delete operations in the translog and
+automatically flushes changes to disk in batches.
+To recover from a crash, operations that have been acknowledged but not yet committed
+can be replayed from the translog.
+Before upgrading, you can explicitly call the <a href="/guide/en/elasticsearch/reference/master/indices-flush.html" class="ulink" target="_top">Flush</a> API
+to ensure that all changes are committed to disk.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-follower-index"></a> follower index
+</span>
+</dt>
+<dd>
+<p>The target index for <a class="xref" href="terms.html#glossary-ccr">cross-cluster replication</a>. A follower index exists
+in a local cluster and replicates a <a class="xref" href="terms.html#glossary-leader-index">leader index</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-frozen-index"></a> frozen index
+</span>
+</dt>
+<dd>
+<p>An index reduced to a low overhead state that still enables occasional searches.
+Frozen indices use a memory-efficient shard implementation and throttle searches to conserve resources.
+Searching a frozen index is lower overhead than re-opening a closed index to enable searching.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-gem"></a> gem
+</span>
+</dt>
+<dd>
+A self-contained package of code that&#8217;s hosted on
+<a href="https://rubygems.org" class="ulink" target="_top">RubyGems.org</a>. Logstash <a class="xref" href="terms.html#glossary-plugin">plugins</a> are
+packaged as Ruby Gems. You can use the Logstash
+<a class="xref" href="terms.html#glossary-plugin-manager">plugin manager</a> to manage Logstash gems.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-hot-phase"></a> hot phase
+</span>
+</dt>
+<dd>
+<p>The first possible phase in the <a class="xref" href="terms.html#glossary-index-lifecycle">index lifecycle</a>.
+In the hot phase, an index is actively updated and queried.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-hot-thread"></a> hot thread
+</span>
+</dt>
+<dd>
+A Java thread that has high CPU usage and executes for a longer than normal
+period of time.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-id"></a> ID
+</span>
+</dt>
+<dd>
+<p>The ID of a <a class="xref" href="terms.html#glossary-document">document</a> identifies a document. The
+<code class="literal">index/id</code> of a document must be unique. If no ID is provided,
+then it will be auto-generated. (also see <a class="xref" href="terms.html#glossary-routing">routing</a>)</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-index"></a> index
+</span>
+</dt>
+<dd>
+<p>An optimized collection of JSON documents. Each document is a collection of fields,
+the key-value pairs that contain your data.</p>
+<p>An index is a logical namespace that maps to one or more
+<a class="xref" href="terms.html#glossary-primary-shard">primary shards</a> and can have zero or more
+<a class="xref" href="terms.html#glossary-replica-shard">replica shards</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-index-alias"></a> index alias
+</span>
+</dt>
+<dd>
+<p>An index alias is a logical name used to reference one or more indices.</p>
+<p>Most Elasticsearch APIs accept an index alias in place of an index name.</p>
+<p>See <a href="/guide/en/elasticsearch/reference/master/indices-add-alias.html" class="ulink" target="_top">Add index alias</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-index-lifecycle"></a> index lifecycle
+</span>
+</dt>
+<dd>
+<p>The four phases an index can transition through:
+<a class="xref" href="terms.html#glossary-hot-phase">hot</a>, <a class="xref" href="terms.html#glossary-warm-phase">warm</a>,
+<a class="xref" href="terms.html#glossary-cold-phase">cold</a>, and <a class="xref" href="terms.html#glossary-delete-phase">delete</a>.
+For more information, see <a href="/guide/en/elasticsearch/reference/master/ilm-policy-definition.html" class="ulink" target="_top">Index lifecycle</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-index-lifecycle-policy"></a> index lifecycle policy
+</span>
+</dt>
+<dd>
+<p>Specifies how an index moves between phases in the index lifecycle and
+what actions to perform during each phase.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-index-pattern"></a> index pattern
+</span>
+</dt>
+<dd>
+<p>A string that can contain the <code class="literal">*</code> wildcard to match multiple index names.
+In most cases, the index parameter in an Elasticsearch request can be the name of a specific index,
+a list of index names, or an index pattern.
+For example, if you have the indices <code class="literal">datastream-000001</code>, <code class="literal">datastream-000002</code>, and <code class="literal">datastream-000003</code>,
+to search across all three you could use the <code class="literal">datastream-*</code> index pattern.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-indexer"></a> indexer
+</span>
+</dt>
+<dd>
+A Logstash instance that is tasked with interfacing with an Elasticsearch cluster in
+order to index <a class="xref" href="terms.html#glossary-event">event</a> data.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-influencer"></a> influencer
+</span>
+</dt>
+<dd>
+Influencers are entities that might have contributed to an anomaly in a specific
+bucket in an anomaly detection job. For more information, see
+<a href="/guide/en/machine-learning/master/ml-influencers.html" class="ulink" target="_top">Influencers</a>.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-input-plugin"></a> input plugin
+</span>
+</dt>
+<dd>
+A Logstash <a class="xref" href="terms.html#glossary-plugin">plugin</a> that reads <a class="xref" href="terms.html#glossary-event">event</a> data
+from a specific source. Input plugins are the first stage in the Logstash
+event processing <a class="xref" href="terms.html#glossary-pipeline">pipeline</a>. Popular input plugins include
+file, syslog, redis, and beats.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-ml-job"></a><a id="glossary-job"></a> job
+</span>
+</dt>
+<dd>
+Machine learning jobs contain the configuration information and metadata
+necessary to perform an analytics task. There are two types:
+<a class="xref" href="terms.html#glossary-anomaly-detection-job">anomaly detection jobs</a> and
+<a class="xref" href="terms.html#glossary-dataframe-job">data frame analytics jobs</a>. See also <a class="xref" href="terms.html#glossary-rollup-job">rollup job</a>.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-leader-index"></a> leader index
+</span>
+</dt>
+<dd>
+<p>The source index for <a class="xref" href="terms.html#glossary-ccr">cross-cluster replication</a>. A leader index exists
+on a remote cluster and is replicated to
+<a class="xref" href="terms.html#glossary-follower-index">follower indices</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-local-cluster"></a> local cluster
+</span>
+</dt>
+<dd>
+<p>The cluster that pulls data from a <a class="xref" href="terms.html#glossary-remote-cluster">remote cluster</a> in cross-cluster search or cross-cluster replication.</p>
+</dd>
+</dl>
+</div>
+<div class="variablelist">
+<a id="glossary-ml-nodes"></a>
+<dl class="variablelist">
+<dt>
+<span class="term">
+machine learning node
+</span>
+</dt>
+<dd>
+A machine learning node is a node that has <code class="literal">xpack.ml.enabled</code> and <code class="literal">node.ml</code> set to <code class="literal">true</code>,
+which is the default behavior. If you set <code class="literal">node.ml</code> to <code class="literal">false</code>, the node can
+service API requests but it cannot run machine learning jobs. If you want to use
+machine learning features, there must be at least one machine learning node in your cluster.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-mapping"></a> mapping
+</span>
+</dt>
+<dd>
+<p>A mapping is like a <em>schema definition</em> in a relational database. Each
+<a class="xref" href="terms.html#glossary-index">index</a> has a mapping,
+which defines a <a class="xref" href="terms.html#glossary-type">type</a>,
+plus a number of index-wide settings.</p>
+<p>A mapping can either be defined explicitly, or it will be generated
+automatically when a document is indexed.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-master-node"></a> master node
+</span>
+</dt>
+<dd>
+Handles write requests for the cluster and publishes changes to other nodes in
+an ordered fashion. Each cluster has a single master node which is chosen
+automatically by the cluster and is replaced if the current master node fails.
+Also see <a class="xref" href="terms.html#glossary-node">node</a>.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-message-broker"></a> message broker
+</span>
+</dt>
+<dd>
+Also referred to as a <em>message buffer</em> or <em>message queue</em>, a message broker is
+external software (such as Redis, Kafka, or RabbitMQ) that stores messages
+from the Logstash shipper instance as an intermediate store, waiting to be
+processed by the Logstash indexer instance.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-node"></a> node
+</span>
+</dt>
+<dd>
+<p>A running instance of Elasticsearch that belongs to a
+<a class="xref" href="terms.html#glossary-cluster">cluster</a>. Multiple nodes can be started on a single
+server for testing purposes, but usually you should have one node per
+server.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-output-plugin"></a> output plugin
+</span>
+</dt>
+<dd>
+A Logstash <a class="xref" href="terms.html#glossary-plugin">plugin</a> that writes <a class="xref" href="terms.html#glossary-event">event</a> data
+to a specific destination. Outputs are the final stage in the event
+<a class="xref" href="terms.html#glossary-pipeline">pipeline</a>. Popular output plugins include elasticsearch,
+file, graphite, and statsd.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-pipeline"></a> pipeline
+</span>
+</dt>
+<dd>
+A term used to describe the flow of <a class="xref" href="terms.html#glossary-event">events</a> through the
+Logstash workflow. A pipeline typically consists of a series of input, filter,
+and output stages. <a class="xref" href="terms.html#glossary-input-plugin">Input</a> stages get data from a source
+and generate events, <a class="xref" href="terms.html#glossary-filter-plugin">filter</a> stages, which are
+optional, modify the event data, and <a class="xref" href="terms.html#glossary-output-plugin">output</a> stages
+write the data to a destination. Inputs and outputs support
+<a class="xref" href="terms.html#glossary-codec-plugin">codecs</a> that enable you to encode or decode the data as
+it enters or exits the pipeline without having to use a separate filter.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-plan"></a> plan
+</span>
+</dt>
+<dd>
+Specifies the configuration and topology of an Elasticsearch or Kibana cluster, such as
+capacity, availability, and Elasticsearch version, for example. When changing a plan, the
+<a class="xref" href="terms.html#glossary-constructor">constructor</a> determines how to transform the existing
+cluster into the pending plan.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-plugin"></a> plugin
+</span>
+</dt>
+<dd>
+A self-contained software package that implements one of the stages in the
+Logstash event processing <a class="xref" href="terms.html#glossary-pipeline">pipeline</a>. The list of available
+plugins includes <a class="xref" href="terms.html#glossary-input-plugin">input plugins</a>,
+<a class="xref" href="terms.html#glossary-output-plugin">output plugins</a>,
+<a class="xref" href="terms.html#glossary-codec-plugin">codec plugins</a>, and
+<a class="xref" href="terms.html#glossary-filter-plugin">filter plugins</a>. The plugins are implemented as Ruby
+<a class="xref" href="terms.html#glossary-gem">gems</a> and hosted on <a href="https://rubygems.org" class="ulink" target="_top">RubyGems.org</a>. You
+define the stages of an event processing <a class="xref" href="terms.html#glossary-pipeline">pipeline</a>
+by configuring plugins.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-plugin-manager"></a> plugin manager
+</span>
+</dt>
+<dd>
+Accessed via the <code class="literal">bin/logstash-plugin</code> script, the plugin manager enables
+you to manage the lifecycle of <a class="xref" href="terms.html#glossary-plugin">plugins</a> in your Logstash
+deployment. You can install, remove, and upgrade plugins by using the
+plugin manager Command Line Interface (CLI).
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-primary-shard"></a> primary shard
+</span>
+</dt>
+<dd>
+<p>Each document is stored in a single primary <a class="xref" href="terms.html#glossary-shard">shard</a>. When
+you index a document, it is indexed first on the primary shard, then
+on all <a class="xref" href="terms.html#glossary-replica-shard">replicas</a> of the primary shard.</p>
+<p>By default, an <a class="xref" href="terms.html#glossary-index">index</a> has one primary shard. You can specify
+more primary shards to scale the number of <a class="xref" href="terms.html#glossary-document">documents</a>
+that your index can handle.</p>
+<p>You cannot change the number of primary shards in an index, once the index is
+created. However, an index can be split into a new index using the
+<a href="/guide/en/elasticsearch/reference/master/indices-split-index.html" class="ulink" target="_top">split index API</a>.</p>
+<p>See also <a class="xref" href="terms.html#glossary-routing">routing</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-proxy"></a> proxy
+</span>
+</dt>
+<dd>
+A highly available, TLS-enabled proxy layer that routes user requests, mapping
+cluster IDs that are passed in request URLs for the container to the cluster
+nodes handling the user requests.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-query"></a> query
+</span>
+</dt>
+<dd>
+<p>A request for information from Elasticsearch. You can think of a query as a question,
+written in a way Elasticsearch understands. A search consists of one or more queries
+combined.</p>
+<p>There are two types of queries: <em>scoring queries</em> and <em>filters</em>. For more
+information about query types,
+see <a href="/guide/en/elasticsearch/reference/master/query-filter-context.html" class="ulink" target="_top">Query and filter context</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-recovery"></a> recovery
+</span>
+</dt>
+<dd>
+<p>Shard recovery is the process
+of syncing a <a class="xref" href="terms.html#glossary-replica-shard">replica shard</a>
+from a <a class="xref" href="terms.html#glossary-primary-shard">primary shard</a>.
+Upon completion,
+the replica shard is available for search.</p>
+<p>Recovery automatically occurs
+during the following processes:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Node startup or failure.
+This type of recovery is called a <span class="strong strong"><strong>local store recovery</strong></span>.
+</li>
+<li class="listitem">
+<a class="xref" href="terms.html#glossary-replica-shard">Primary shard replication</a>.
+</li>
+<li class="listitem">
+Relocation of a shard to a different node in the same cluster.
+</li>
+<li class="listitem">
+<a href="/guide/en/elasticsearch/reference/master/snapshots-restore-snapshot.html" class="ulink" target="_top">Snapshot restoration</a>.
+</li>
+</ul>
+</div>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-reindex"></a> reindex
+</span>
+</dt>
+<dd>
+<p>To cycle through some or all documents in one or more indices, re-writing them into the same
+or new index in a local or remote cluster. This is most commonly done to update mappings, or to upgrade Elasticsearch between two incompatible index versions.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-remote-cluster"></a> remote cluster
+</span>
+</dt>
+<dd>
+<p>A separate cluster, often in a different data center or locale, that contains indices that
+can be replicated or searched by the <a class="xref" href="terms.html#glossary-local-cluster">local cluster</a>.
+The connection to a remote cluster is unidirectional.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-replica-shard"></a> replica shard
+</span>
+</dt>
+<dd>
+<p>Each <a class="xref" href="terms.html#glossary-primary-shard">primary shard</a> can have zero or more
+replicas. A replica is a copy of the primary shard, and has two
+purposes:</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+Increase failover: a replica shard can be promoted to a primary
+shard if the primary fails
+</li>
+<li class="listitem">
+Increase performance: get and search requests can be handled by
+primary or replica shards.
+</li>
+</ol>
+</div>
+<p>By default, each primary shard has one replica, but the number of
+replicas can be changed dynamically on an existing index. A replica
+shard will never be started on the same node as its primary shard.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-roles-token"></a> roles token
+</span>
+</dt>
+<dd>
+Enables a host to join an existing Elastic Cloud Enterprise installation and grants permission to
+hosts to hold certain roles, such as the <a class="xref" href="terms.html#glossary-allocator">allocator</a> role.
+Used when installing Elastic Cloud Enterprise on additional hosts, a roles token helps secure Elastic Cloud Enterprise
+by making sure that only authorized hosts become part of the installation.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-rollup"></a> rollup
+</span>
+</dt>
+<dd>
+<p>Summarize high-granularity data into a more compressed format to
+maintain access to historical data in a cost-effective way.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-rollup-index"></a> rollup index
+</span>
+</dt>
+<dd>
+<p>A special type of index for storing historical data at reduced granularity.
+Documents are summarized and indexed into a rollup index by a <a class="xref" href="terms.html#glossary-rollup-job">rollup job</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-rollup-job"></a> rollup job
+</span>
+</dt>
+<dd>
+<p>A background task that runs continuously to summarize documents in an index and
+index the summaries into a separate rollup index.
+The job configuration controls what information is rolled up and how often.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-routing"></a> routing
+</span>
+</dt>
+<dd>
+<p>When you index a document, it is stored on a single
+<a class="xref" href="terms.html#glossary-primary-shard">primary shard</a>. That shard is chosen by hashing
+the <code class="literal">routing</code> value. By default, the <code class="literal">routing</code> value is derived from
+the ID of the document or, if the document has a specified parent
+document, from the ID of the parent document (to ensure that child and
+parent documents are stored on the same shard).</p>
+<p>This value can be overridden by specifying a <code class="literal">routing</code> value at index
+time, or a <a href="/guide/en/elasticsearch/reference/master/mapping-routing-field.html" class="ulink" target="_top">routing field</a>
+in the <a class="xref" href="terms.html#glossary-mapping">mapping</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-runner"></a> runner
+</span>
+</dt>
+<dd>
+A local control agent that runs on all hosts, used to deploy local containers
+based on role definitions. Ensures that containers assigned to it exist and are
+able to run, and creates or recreates the containers if necessary.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-services-forwarder"></a> services forwarder
+</span>
+</dt>
+<dd>
+Routes data internally in an Elastic Cloud Enterprise installation.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-shard"></a> shard
+</span>
+</dt>
+<dd>
+<p>A shard is a single Lucene instance. It is a low-level “worker” unit
+which is managed automatically by Elasticsearch. An index is a logical
+namespace which points to <a class="xref" href="terms.html#glossary-primary-shard">primary</a> and
+<a class="xref" href="terms.html#glossary-replica-shard">replica</a> shards.</p>
+<p>Other than defining the number of primary and replica shards that an
+index should have, you never need to refer to shards directly.
+Instead, your code should deal only with an index.</p>
+<p>Elasticsearch distributes shards amongst all <a class="xref" href="terms.html#glossary-node">nodes</a> in the
+<a class="xref" href="terms.html#glossary-cluster">cluster</a>, and can move shards automatically from one
+node to another in the case of node failure, or the addition of new
+nodes.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-shipper"></a> shipper
+</span>
+</dt>
+<dd>
+An instance of Logstash that send events to another instance of Logstash, or
+some other application.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-shrink"></a> shrink
+</span>
+</dt>
+<dd>
+<p>Reduce the number of primary shards in an index.</p>
+<p>You can shrink an index to reduce its overhead when the request volume drops.
+For example, you might opt to shrink an index once it is no longer the write index.
+See the <a href="/guide/en/elasticsearch/reference/master/indices-shrink-index.html" class="ulink" target="_top">shrink index API</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-snapshot"></a> snapshot
+</span>
+</dt>
+<dd>
+<p>A backup taken from a running Elasticsearch cluster.
+You can take snapshots of individual indices or of the entire cluster.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-snapshot-lifecycle-policy"></a> snapshot lifecycle policy
+</span>
+</dt>
+<dd>
+<p>Specifies how frequently to perform automatic backups of a cluster and
+how long to retain the resulting snapshots.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-snapshot-repository"></a> snapshot repository
+</span>
+</dt>
+<dd>
+<p>Specifies where snapshots are to be stored.
+Snapshots can be written to a shared filesystem or to a remote repository.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-source_field"></a> source field
+</span>
+</dt>
+<dd>
+<p>By default, the JSON document that you index will be stored in the
+<code class="literal">_source</code> field and will be returned by all get and search requests.
+This allows you access to the original object directly from search
+results, rather than requiring a second step to retrieve the object
+from an ID.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-split"></a> split
+</span>
+</dt>
+<dd>
+<p>To grow the amount of shards in an index.
+See the <a href="/guide/en/elasticsearch/reference/master/indices-split-index.html" class="ulink" target="_top">split index API</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-stunnel"></a> stunnel
+</span>
+</dt>
+<dd>
+Securely tunnels all traffic in an Elastic Cloud Enterprise installation.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-term"></a> term
+</span>
+</dt>
+<dd>
+<p>A term is an exact value that is indexed in Elasticsearch. The terms
+<code class="literal">foo</code>, <code class="literal">Foo</code>, <code class="literal">FOO</code> are NOT equivalent. Terms (i.e. exact values) can
+be searched for using <em>term</em> queries.</p>
+<p>See also <a class="xref" href="terms.html#glossary-text">text</a> and <a class="xref" href="terms.html#glossary-analysis">analysis</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-text"></a> text
+</span>
+</dt>
+<dd>
+<p>Text (or full text) is ordinary unstructured text, such as this
+paragraph. By default, text will be <a class="xref" href="terms.html#glossary-analysis">analyzed</a> into
+<a class="xref" href="terms.html#glossary-term">terms</a>, which is what is actually stored in the index.</p>
+<p>Text <a class="xref" href="terms.html#glossary-field">fields</a> need to be analyzed at index time in order to
+be searchable as full text, and keywords in full text queries must be
+analyzed at search time to produce (and search for) the same terms
+that were generated at index time.</p>
+<p>See also <a class="xref" href="terms.html#glossary-term">term</a> and <a class="xref" href="terms.html#glossary-analysis">analysis</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-type"></a> type
+</span>
+</dt>
+<dd>
+<p>A type used to represent the <em>type</em> of document, e.g. an <code class="literal">email</code>, a <code class="literal">user</code>, or a <code class="literal">tweet</code>.
+Types are deprecated and are in the process of being removed.
+See <a href="/guide/en/elasticsearch/reference/master/removal-of-types.html" class="ulink" target="_top">Removal of mapping types</a>.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-warm-phase"></a> warm phase
+</span>
+</dt>
+<dd>
+<p>The second possible phase in the <a class="xref" href="terms.html#glossary-index-lifecycle">index lifecycle</a>.
+In the warm phase, an index is generally optimized for search and no longer updated.</p>
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-worker"></a> worker
+</span>
+</dt>
+<dd>
+The filter thread model used by Logstash, where each worker receives an
+<a class="xref" href="terms.html#glossary-event">event</a> and applies all filters, in order, before emitting
+the event to the output queue. This allows scalability across CPUs because
+many filters are CPU intensive.
+</dd>
+<dt>
+<span class="term">
+<a id="glossary-zookeeper"></a> ZooKeeper
+</span>
+</dt>
+<dd>
+A coordination service for distributed systems used by Elastic Cloud Enterprise to store the state
+of the installation. Responsible for discovery of hosts, resource allocation,
+leader election after failure and high priority notifications.
+</dd>
+</dl>
+</div>
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="security-privileges.html">« Security privileges</a>
+</span>
+<span class="next">
+<a href="redirects.html">Appendix A: Missing links »</a>
+</span>
+</div>
+</div>
+</body>
+</html>
