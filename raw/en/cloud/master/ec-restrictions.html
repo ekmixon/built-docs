@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Restrictions and known problems | Elasticsearch Service Documentation [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elasticsearch Service Documentation [master]"/>
+<link rel="up" href="ec-about.html" title="About Elasticsearch Service"/>
+<link rel="prev" href="ec-get-help.html" title="Getting help"/>
+<link rel="next" href="ec-restful-api.html" title="RESTful API"/>
+<meta name="DC.type" content="Learn/Docs/Cloud/Reference/master"/>
+<meta name="DC.subject" content="Elastic Cloud"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elasticsearch Service Documentation [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="ec-about.html">About Elasticsearch Service</a></span>
+»
+<span class="breadcrumb-node">Restrictions and known problems</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="ec-get-help.html">« Getting help</a>
+</span>
+<span class="next">
+<a href="ec-restful-api.html">RESTful API »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="ec-restrictions"></a>Restrictions and known problems<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h2>
+</div></div></div>
+<p>When using Elasticsearch Service, there are some limitations you should be aware of:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+<a class="xref" href="ec-restrictions.html#ec-restrictions-elastic-stack" title="Elastic Stack">Elastic Stack</a>
+</li>
+<li class="listitem">
+<a class="xref" href="ec-enable-logging-and-monitoring.html#ec-restrictions-monitoring" title="Restrictions and limitations">Monitoring</a>
+</li>
+<li class="listitem">
+<a class="xref" href="ec-restrictions.html#ec-restrictions-security" title="Security">Security</a>
+</li>
+<li class="listitem">
+<a class="xref" href="ec-restrictions.html#ec-restrictions-transport-client" title="Transport client">Transport client</a>
+</li>
+<li class="listitem">
+<a class="xref" href="ec-restrictions.html#ec-restrictions-plugins" title="Elasticsearch and Kibana plugins">Elasticsearch and Kibana plugins</a>
+</li>
+<li class="listitem">
+<a class="xref" href="ec-restrictions.html#ec-restrictions-watcher" title="Alerting (formerly Watcher)">Alerting (formerly Watcher)</a>
+</li>
+<li class="listitem">
+<a class="xref" href="ec-restrictions.html#ec-restrictions-apm" title="APM with AWS Marketplace subscriptions">APM with AWS Marketplace subscriptions</a>
+</li>
+<li class="listitem">
+<a class="xref" href="ec-restrictions.html#ec-restrictions-apm-traffic-filters" title="APM Agent central configuration with PrivateLink or traffic filters">APM Agent central configuration with PrivateLink or traffic filters</a>
+</li>
+<li class="listitem">
+<a class="xref" href="ec-restrictions.html#ec-restrictions-search-aws" title="Enterprise Search unavailable for AWS Marketplace subscriptions">Enterprise Search and AWS Marketplace subscriptions</a>
+</li>
+<li class="listitem">
+<a class="xref" href="ec-restrictions.html#ec-known-problems" title="Known problems">Known problems</a>
+</li>
+</ul>
+</div>
+<p>Occasionally, we also publish information about <a class="xref" href="ec-restrictions.html#ec-known-problems" title="Known problems">Known problems</a> with our Elasticsearch Service or the Elastic Stack.</p>
+<p>To learn more about the features that are supported by Elasticsearch Service, see <a href="/cloud/elasticsearch-service/subscriptions?baymax=docs-body&amp;elektra=docs" class="ulink" target="_top">Elastic Cloud Subscriptions</a>.</p>
+<h3><a id="ec-restrictions-heroku"></a>Elasticsearch Service<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h3>
+<p>Not all features of our Elasticsearch Service are available to Heroku users. Specifically, you cannot create additional deployments or use different deployment templates.</p>
+<p>Generally, if a feature is shown as available in the <a href="https://cloud.elastic.co?baymax=docs-body&amp;elektra=docs" class="ulink" target="_top">Elasticsearch Service Console</a>, you can use it.</p>
+<h3><a id="ec-restrictions-elastic-stack"></a>Elastic Stack<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h3>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Cross-cluster replication is not supported.
+</li>
+</ul>
+</div>
+<h3><a id="ec-restrictions-security"></a>Security<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h3>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+LDAP and Active Directory realms are not supported. Alternatively, authentication protocols such as SAML, OpenID Connect, or Kerberos can be used.
+</li>
+<li class="listitem">
+Audit logging is disabled.
+</li>
+<li class="listitem">
+Client certificates, such as PKI certificates, are not supported.
+</li>
+<li class="listitem">
+Traffic filters cannot be used for monitoring clusters, clusters used for storing leader indices for cross-cluster replication, or clusters that are searched across as part of cross-cluster search.
+</li>
+<li class="listitem">
+You can&#8217;t set the Watcher webhook target to a deployment protected by traffic filters. Public webhooks such as Slack, PagerDuty, and email are not affected by this limitation.
+</li>
+</ul>
+</div>
+<h3><a id="ec-restrictions-transport-client"></a>Transport client<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h3>
+<p>The transport client is not considered thread safe in a cloud environment. We recommend that you use the Java REST client instead. This restriction relates to the fact that your deployments hosted on Elasticsearch Service are behind proxies, which prevent the transport client from communicating directly with Elasticsearch clusters.</p>
+<h3><a id="ec-restrictions-plugins"></a>Elasticsearch and Kibana plugins<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h3>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Kibana plugins are not supported.
+</li>
+<li class="listitem">
+Some Elasticsearch plugins do not apply to Elasticsearch Service. For example, you won&#8217;t ever need to change discovery, as Elasticsearch Service handles how nodes discover one another.
+</li>
+<li class="listitem">
+In Elasticsearch 5.0 and later, site plugins are no longer supported. This change does not affect the site plugins Elasticsearch Service might provide out of the box, such as Kopf or Head, since these site plugins are serviced by our proxies and not Elasticsearch itself.
+</li>
+<li class="listitem">
+In Elasticsearch 5.0 and later, site plugins such as Kopf and Paramedic are no longer provided. We recommend that you use our <a class="xref" href="ec-monitoring.html" title="Keeping your cluster healthy">cluster performance metrics</a>, <a class="xref" href="ec-monitoring.html" title="Keeping your cluster healthy">X-Pack monitoring features</a> and Kibana&#8217;s (6.3+) <a href="/guide/en/kibana/7.9/managing-indices.html" class="ulink" target="_top">Index Management UI</a> if you want more detailed information or perform index management actions.
+</li>
+</ul>
+</div>
+<h3><a id="ec-restrictions-watcher"></a>Alerting (formerly Watcher)<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h3>
+<p>Changing the default throttle period is not possible. You can specify a throttle period per watch, however.</p>
+<div class="important admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>You cannot use your own SMTP server. All emails are sent through our servers, and the recipient must be <a class="xref" href="ec-watcher.html#ec-watcher-whitelist" title="Send alerts by email">whitelisted</a>.</p>
+</div>
+</div>
+<h3><a id="ec-restrictions-apm"></a>APM with AWS Marketplace subscriptions<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h3>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+You cannot spin up an APM Server as part of a deployment hosted on Elasticsearch Service. If you want to use APM, you can still host it on your own host and connect it to your Cloud deployment. To learn more, see <a href="/guide/en/apm/server/7.9/configure-cloud-id.html" class="ulink" target="_top">Configure the output for the Elastic Cloud</a>.
+</li>
+<li class="listitem">
+For billing differences, see <a class="xref" href="ec-billing-aws.html" title="AWS Marketplace billing">AWS Marketplace billing</a>.
+</li>
+</ul>
+</div>
+<h3><a id="ec-restrictions-apm-traffic-filters"></a>APM Agent central configuration with PrivateLink or traffic filters<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h3>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+You cannot use <a href="/guide/en/kibana/7.9/agent-configuration.html" class="ulink" target="_top">APM Agent central configuration</a> if your deployment is secured by <a class="xref" href="ec-traffic-filtering-deployment-configuration.html" title="Traffic Filtering">traffic filters</a>.
+</li>
+<li class="listitem">
+If you access your APM deployment over <a class="xref" href="ec-traffic-filtering-vpc.html" title="Private link traffic filters">PrivateLink</a>, to use APM Agent central configuration you need to allow access to the APM deployment over public internet.
+</li>
+</ul>
+</div>
+<h3><a id="ec-restrictions-ccs"></a>Cross-cluster search unavailable for AWS Marketplace subscriptions<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h3>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+You cannot spin up a cross-cluster search deployment hosted on Elasticsearch Service. Cross-cluster search functionality is not supported.
+</li>
+<li class="listitem">
+For billing differences, see <a class="xref" href="ec-billing-aws.html" title="AWS Marketplace billing">AWS Marketplace billing</a>.
+</li>
+</ul>
+</div>
+<h3><a id="ec-restrictions-search-aws"></a>Enterprise Search unavailable for AWS Marketplace subscriptions<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h3>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+If you have an AWS Marketplace subscription, you cannot spin up an Enterprise Search deployment hosted on Elasticsearch Service.
+</li>
+</ul>
+</div>
+<h3><a id="ec-known-problems"></a>Known problems<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-restrictions-known-problems.asciidoc">edit</a></h3>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+There is a known problem affecting clusters with versions 7.7.0 and 7.7.1 due to <a href="https://github.com/elastic/elasticsearch/issues/56739" class="ulink" target="_top">a bug in Elasticsearch</a>.
+Although rare, this bug can prevent you from running plans. If this occurs we recommend that you retry the plan, and if that fails please contact support to get your plan through.
+Because of this bug we recommend you to upgrade to version 7.8 and higher, where the problem has already been addressed.
+</li>
+<li class="listitem">
+A known issue can prevent direct rolling upgrades from Elasticsearch version 5.6.10 to version 6.3.0. As a workaround, we have removed version 6.3.0 from the <a href="https://cloud.elastic.co?baymax=docs-body&amp;elektra=docs" class="ulink" target="_top">Elasticsearch Service Console</a> for new cluster deployments and for upgrading existing ones. If you are affected by this issue, see <a href="https://elastic.my.salesforce.com/articles/Support_Article/Rolling-upgrades-to-6-3-0-from-5-x-fails-with-java-lang-IllegalStateException-commit-doesn-t-contain-history-uuid?popup=false&amp;id=kA0610000005JFG" class="ulink" target="_top">Rolling upgrades from 5.6.x to 6.3.0 fails with "java.lang.IllegalStateException: commit doesn&#8217;t contain history uuid"</a> in our Elastic Support Portal. If these steps do not work or you do not have access to the support portal, you can contact <a href="mailto:support@elastic.co" class="ulink" target="_top">support@elastic.co</a>.
+</li>
+</ul>
+</div>
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="ec-get-help.html">« Getting help</a>
+</span>
+<span class="next">
+<a href="ec-restful-api.html">RESTful API »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

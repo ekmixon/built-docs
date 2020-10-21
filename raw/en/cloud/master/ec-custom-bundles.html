@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Upload custom plugins and bundles | Elasticsearch Service Documentation [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elasticsearch Service Documentation [master]"/>
+<link rel="up" href="ec-adding-plugins.html" title="Add plugins"/>
+<link rel="prev" href="ec-adding-elastic-plugins.html" title="Add plugins provided with Elasticsearch Service"/>
+<link rel="next" href="ec-editing-user-settings.html" title="Edit your user settings"/>
+<meta name="DC.type" content="Learn/Docs/Cloud/Reference/master"/>
+<meta name="DC.subject" content="Elastic Cloud"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elasticsearch Service Documentation [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="ec-configure.html">Configuring your deployment</a></span>
+»
+<span class="breadcrumb-link"><a href="ec-adding-plugins.html">Add plugins</a></span>
+»
+<span class="breadcrumb-node">Upload custom plugins and bundles</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="ec-adding-elastic-plugins.html">« Add plugins provided with Elasticsearch Service</a>
+</span>
+<span class="next">
+<a href="ec-editing-user-settings.html">Edit your user settings »</a>
+</span>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="ec-custom-bundles"></a>Upload custom plugins and bundles<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-add-plugins.asciidoc">edit</a></h2>
+</div></div></div>
+<p>There are several cases where you might need your own files to be made available to your Elasticsearch cluster&#8217;s nodes:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Your own custom plugins, or third-party plugins that are not amongst the <a class="xref" href="ec-adding-plugins.html" title="Add plugins">officially available plugins</a>.
+</li>
+<li class="listitem">
+Custom dictionaries, such as synonyms, stop words, compound words, etc.
+</li>
+<li class="listitem">
+Cluster configuration files, such as an Identity Provider metadata file used when you <a class="xref" href="ec-securing-clusters-SAML.html" title="Secure your clusters with SAML">secure your clusters with SAML</a>.
+</li>
+</ul>
+</div>
+<p>To facilitate this, we make it possible to upload a ZIP file that contains the files you want to make available. Uploaded files are stored using Amazon&#8217;s highly-available S3 service. This is necessary so we do not have to rely on the availability of third-party services, such as the official plugin repository, when provisioning nodes.</p>
+<p>Custom plugins and bundles are collectively referred to as extensions.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="ec_before_you_begin_7"></a>Before you begin<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-add-plugins.asciidoc">edit</a></h3>
+</div></div></div>
+<p>The selected plugins/bundles are downloaded and provided when a node starts. Changing a plugin does not change it for nodes already running it. See <a class="xref" href="ec-custom-bundles.html#ec-update-bundles-and-plugins" title="Update your extension">Updating Plugins and Bundles</a>.</p>
+<p>With great power comes great responsibility: Your plugins can extend your cluster with new functionality, but also make it break. Be careful. We obviously cannot guarantee that your custom code works.</p>
+<div class="important admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>You cannot edit or delete a custom extension after it has been used in a deployment. To remove it from your deployment, you can disable the extension and update your deployment configuration.</p>
+</div>
+</div>
+<p>Uploaded files cannot be bigger than 20 MB for most subscription levels, for Platinum the limit is 1GB.</p>
+<p>It is important that plugins and dictionaries that you reference in mappings and configurations are available at all times. For example, if you try to upgrade Elasticsearch and de-select a dictionary that is referenced in your mapping, the new nodes will be unable to recover the cluster state and function. This is true even if the dictionary is referenced by an empty index you do not actually use.</p>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="ec-prepare-custom-bundles"></a>Prepare your files for upload<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-add-plugins.asciidoc">edit</a></h3>
+</div></div></div>
+<p>Files you upload need to be in ZIP file format. You need to choose whether your uploaded file should be treated as a <em>plugin</em> or as a <em>bundle</em>. Bundles are not installed as plugins. If you need to upload both a custom plugin and custom dictionaries, upload them separately.</p>
+<p>To prepare your files, create one of the following:</p>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+Plugins
+</span>
+</dt>
+<dd>
+<p>
+A plugin is a ZIP file that is installable as a plugin using <a href="/guide/en/elasticsearch/reference/7.9/modules-plugins.html" class="ulink" target="_top">Elasticsearch&#8217;s plugin tool</a>. When configuring the node of your cluster, that is exactly what we do. We invoke the <code class="literal">install</code>-tool with the URL of the uploaded ZIP file. This makes it easy for you to test that your uploaded ZIP file works locally: just see if you can run <code class="literal">./bin/elasticsearch-plugin install file:///path/to/plugin.zip</code> yourself.
+</p>
+<p>Elasticsearch&#8217;s plugin tool assumes that the uploaded ZIP file contains binaries. If it finds any source code, it will fail with an error message, causing provisioning to fail. Make sure you upload binaries, and not source code.</p>
+</dd>
+<dt>
+<span class="term">
+Bundles
+</span>
+</dt>
+<dd>
+<p>
+The entire content of a bundle is made available to the node. This is useful to make custom dictionaries available. Dictionaries should be placed in a <code class="literal">/dictionaries</code> folder in the root path of your ZIP file.
+</p>
+<p>Here is an example of a bundle which contains a dictionary of synonyms:</p>
+<div class="pre_wrapper lang-text">
+<pre class="programlisting prettyprint lang-text">$ tree .
+.
+└── dictionaries
+    └── synonyms.txt</pre>
+</div>
+<p>The dictionary <code class="literal">synonyms.txt</code> can be used as <code class="literal">synonyms.txt</code> in the <code class="literal">synonyms_path</code> of the <code class="literal">synonym-filter</code>.</p>
+<p>To learn more about analyzing with synonyms, see <a href="/guide/en/elasticsearch/reference/7.9/analysis-synonym-tokenfilter.html" class="ulink" target="_top">Synonym token filter</a> and <a href="/guide/en/elasticsearch/guide/2.x/synonym-formats.html" class="ulink" target="_top">Formatting Synonyms</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="ec-add-your-plugin"></a>Add your extension<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-add-plugins.asciidoc">edit</a></h3>
+</div></div></div>
+<p>You must upload your files before you can apply them to your cluster configuration:</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+Log in to the <a href="https://cloud.elastic.co?baymax=docs-body&amp;elektra=docs" class="ulink" target="_top">Elasticsearch Service Console</a>.
+</li>
+<li class="listitem">
+<p>Select your deployment on the home page in the Elasticsearch Service card or go to the deployments page.</p>
+<p>Narrow your deployments by name, ID, or choose from several other filters. To customize your view, use a combination of filters, or change the format from a grid to a list.</p>
+</li>
+<li class="listitem">
+Go to the <span class="strong strong"><strong>Extensions</strong></span> page.
+</li>
+<li class="listitem">
+Click <span class="strong strong"><strong>Create extension</strong></span>.
+</li>
+<li class="listitem">
+Complete the extension fields, including the Elasticsearch version. For plugin extensions, the extension version must match the version (down to the patch level, e.g. <code class="literal">7.8.1</code>) specified in your plugin&#8217;s <code class="literal">plugin-descriptor.properties</code> as well as the Elasticsearch deployment version you are deploying this plugin to.  For bundle extensions, we strongly recommend using a wildcard notation (e.g., <code class="literal">7.*</code>) for the major version so that the bundle is compatible across all versions of the major release.
+</li>
+<li class="listitem">
+Select the extension <span class="strong strong"><strong>Type</strong></span>.
+</li>
+<li class="listitem">
+Under <span class="strong strong"><strong>Plugin file</strong></span>, choose the file to upload.
+</li>
+<li class="listitem">
+Click <span class="strong strong"><strong>Create extension</strong></span>.
+</li>
+</ol>
+</div>
+<p>After creating your extension, you can <a class="xref" href="ec-custom-bundles.html#ec-update-bundles" title="Update your deployment configuration">enable them for existing Elasticsearch deployments</a> or enable them when creating new deployments.</p>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="ec-update-bundles"></a>Update your deployment configuration<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-add-plugins.asciidoc">edit</a></h3>
+</div></div></div>
+<p>After uploading your files, you can select to enable them when creating a new Elasticsearch deployment. For existing deployments, you must update your deployment configuration to use the new files:</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+Log in to the <a href="https://cloud.elastic.co?baymax=docs-body&amp;elektra=docs" class="ulink" target="_top">Elasticsearch Service Console</a>.
+</li>
+<li class="listitem">
+<p>Select your deployment on the home page in the Elasticsearch Service card or go to the deployments page.</p>
+<p>Narrow your deployments by name, ID, or choose from several other filters. To customize your view, use a combination of filters, or change the format from a grid to a list.</p>
+</li>
+<li class="listitem">
+From your deployment menu, click <span class="strong strong"><strong>Edit</strong></span>.
+</li>
+<li class="listitem">
+From the <span class="strong strong"><strong>Elasticsearch plugins, extensions, and settings</strong></span> list, select the custom extension.
+</li>
+<li class="listitem">
+Click <span class="strong strong"><strong>Save</strong></span>.
+</li>
+</ol>
+</div>
+<p>The selected plugins or bundles are downloaded and provisioned when each node in your Elasticsearch cluster starts.</p>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="ec-update-bundles-and-plugins"></a>Update your extension<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-add-plugins.asciidoc">edit</a></h3>
+</div></div></div>
+<p>While you can update the ZIP file for any plugin or bundle, this will not update the files on nodes that are already using the plugin or bundle. These are downloaded and made available when a node is started.</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+Prepare a new plugin or bundle.
+</li>
+<li class="listitem">
+Make your new files available by uploading them.
+</li>
+<li class="listitem">
+On the <span class="strong strong"><strong>Extensions</strong></span> page, <a class="xref" href="ec-custom-bundles.html#ec-add-your-plugin" title="Add your extension">update your extension</a>.
+</li>
+<li class="listitem">
+Select your deployment on the home page in the Elasticsearch Service card or go to the deployments page.
+</li>
+</ol>
+</div>
+<p>On the <span class="strong strong"><strong>Edit</strong></span> page, the new extension appears under <span class="strong strong"><strong>Elasticsearch plugins, extensions, and settings</strong></span>.</p>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="ec-adding-elastic-plugins.html">« Add plugins provided with Elasticsearch Service</a>
+</span>
+<span class="next">
+<a href="ec-editing-user-settings.html">Edit your user settings »</a>
+</span>
+</div>
+</div>
+</body>
+</html>
