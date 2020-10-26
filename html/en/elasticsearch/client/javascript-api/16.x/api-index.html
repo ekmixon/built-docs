@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>index | elasticsearch.js [16.x] | Elastic</title>
 <link rel="home" href="index.html" title="elasticsearch.js [16.x]"/>
-<link rel="up" href="api-reference.html" title="7.4 API"/>
+<link rel="up" href="api-reference.html" title="7.2 API"/>
 <link rel="prev" href="api-getsource.html" title="getSource"/>
 <link rel="next" href="api-info.html" title="info"/>
 <meta name="DC.type" content="Learn/Docs/Clients/JavaScript/16.x"/>
@@ -114,7 +114,7 @@ will be released for this version. For the latest information, see the
 <div class="breadcrumbs">
 <span class="breadcrumb-link"><a href="index.html">elasticsearch.js [16.x]</a></span>
 »
-<span class="breadcrumb-link"><a href="api-reference.html">7.4 API</a></span>
+<span class="breadcrumb-link"><a href="api-reference.html">7.2 API</a></span>
 »
 <span class="breadcrumb-node"><code class="literal">index</code></span>
 </div>
@@ -136,7 +136,7 @@ will be released for this version. For the latest information, see the
 <p>Stores a typed JSON document in an index, making it searchable. When the <code class="literal">id</code> param is not set, a unique id will be auto-generated. When you specify an <code class="literal">id</code> either a new document will be created, or an existing document will be updated. To enforce "put-if-absent" behavior set the <code class="literal">opType</code> to <code class="literal">"create"</code> or use the <code class="literal">create()</code> method.</p>
 <p>Optimistic concurrency control is performed, when the <code class="literal">version</code> argument is specified. By default, no version checks are performed.</p>
 <p>By default, the document will be available for <code class="literal">get()</code> actions immediately, but will only be available for searching after an index refresh (which can happen automatically or manually). See <a class="xref" href="api-indices-refresh.html" title="indices.refresh"><code class="literal">indices.refresh</code></a>.</p>
-<p>Check the <span class="strong strong"><strong><a class="xref" href="api-conventions.html" title="API Conventions"><em>API Conventions</em></a></strong></span> and <a href="/guide/en/elasticsearch/reference/7.4/docs-index_.html" class="ulink" target="_top">the elasticsearch docs</a> for more information pertaining to this method.</p>
+<p>Check the <span class="strong strong"><strong><a class="xref" href="api-conventions.html" title="API Conventions"><em>API Conventions</em></a></strong></span> and <a href="/guide/en/elasticsearch/reference/7.2/docs-index_.html" class="ulink" target="_top">the elasticsearch docs</a> for more information pertaining to this method.</p>
 <p><strong>Create or update a document.</strong></p>
 <div class="pre_wrapper lang-js">
 <pre class="programlisting prettyprint lang-js">const response = await client.index({
@@ -403,7 +403,7 @@ Options
 </td>
 <td valign="top">
 <p>
-<a class="xref" href="api-param-types.html#api-param-type-object"><code class="literal">Object</code></a>, <a class="xref" href="api-param-types.html#api-param-type-json"><code class="literal">JSON</code></a>&#8201;&#8212;&#8201;The request body, as either JSON or a JSON serializable object. See <a href="/guide/en/elasticsearch/reference/7.4/docs-index_.html" class="ulink" target="_top">the elasticsearch docs</a> for details about what can be specified here.
+<a class="xref" href="api-param-types.html#api-param-type-object"><code class="literal">Object</code></a>, <a class="xref" href="api-param-types.html#api-param-type-json"><code class="literal">JSON</code></a>&#8201;&#8212;&#8201;The request body, as either JSON or a JSON serializable object. See <a href="/guide/en/elasticsearch/reference/7.2/docs-index_.html" class="ulink" target="_top">the elasticsearch docs</a> for details about what can be specified here.
 </p>
 </td>
 </tr>
