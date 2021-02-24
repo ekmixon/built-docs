@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Access the API from the Command Line | Elastic Cloud Enterprise Reference [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elastic Cloud Enterprise Reference [master]"/>
+<link rel="up" href="ece-restful-api.html" title="RESTful API"/>
+<link rel="prev" href="ece-restful-api-calls.html" title="API calls"/>
+<link rel="next" href="ece-api-generate-client.html" title="Create an API client"/>
+<meta name="DC.type" content="Learn/Docs/CloudEnterprise/Reference/master"/>
+<meta name="DC.subject" content="ECE"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elastic Cloud Enterprise Reference [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-restful-api.html">RESTful API</a></span>
+»
+<span class="breadcrumb-node">Access the API from the Command Line</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="ece-restful-api-calls.html">« API calls</a>
+</span>
+<span class="next">
+<a href="ece-api-generate-client.html">Create an API client »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="ece-api-command-line"></a>Access the API from the Command Line<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api.asciidoc">edit</a></h2>
+</div></div></div>
+<p>You can interact with the full RESTful API for Elastic Cloud Enterprise directly from the command line through the <code class="literal">curl</code> command. When you use the command line to interact with the API, two authentication methods are available: key-based and token-based.</p>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+Using an API key
+</span>
+</dt>
+<dd>
+<p>
+You can <a class="xref" href="ece-restful-api-authentication.html#ece-api-keys" title="Authenticate using an API key">generate an API key</a> from the ECE UI, and then specify that key in the header of your API calls. This method has the advantage that, once set, the API key lasts indefinitely.
+</p>
+<p>Once you&#8217;ve generated your API key, you need to include it in an HTTP "Authentication" header when making API requests:</p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">curl -k -X GET -H "Authorization: ApiKey $ECE_API_KEY" https://$COORDINATOR_HOST:12443/api/v1/deployments</pre>
+</div>
+<div class="note admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>Our API examples use the HTTPS protocol, which requires that you have a <a class="xref" href="ece-manage-certificates.html" title="Manage security certificates">TLS certificate already installed</a>. For testing purposes only, you can specify the <code class="literal">-k</code> option to turn off certificate verification, as shown in our examples, or use HTTP over port 12400 until you get your TLS certificate sorted out.</p>
+</div>
+</div>
+</dd>
+<dt>
+<span class="term">
+Using a bearer token
+</span>
+</dt>
+<dd>
+<p>
+You can also authenticate using a temporary bearer token. First, follow the steps to <a class="xref" href="ece-restful-api-authentication.html#ece-restful-api-authentication-token" title="Authenticate using a bearer token">generate a bearer token</a>.
+</p>
+<p>You then need to include this token in an HTTP "Authentication" header when making API requests:</p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">curl -k -X GET -H "Authorization: Bearer $TOKEN" https://$COORDINATOR_HOST:12443/api/v1/deployments</pre>
+</div>
+<p>Tokens have a short life span, so you should not save them for the long term, and should expect to handle HTTP responses that indicate that you need to reauthenticate e.g. 401.</p>
+</dd>
+</dl>
+</div>
+<p>If this is your first time exploring the API, you can take a look at our <a class="xref" href="ece-restful-api-examples.html" title="API examples">API examples</a> to learn more.</p>
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="ece-restful-api-calls.html">« API calls</a>
+</span>
+<span class="next">
+<a href="ece-api-generate-client.html">Create an API client »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

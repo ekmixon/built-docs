@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EnterpriseSearch | Elastic Cloud Enterprise Reference [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elastic Cloud Enterprise Reference [master]"/>
+<link rel="up" href="definitions.html" title="Definitions"/>
+<link rel="prev" href="EnrollmentTokenRequest.html" title="EnrollmentTokenRequest"/>
+<link rel="next" href="EnterpriseSearchConfiguration.html" title="EnterpriseSearchConfiguration"/>
+<meta name="DC.type" content="Learn/Docs/CloudEnterprise/Reference/master"/>
+<meta name="DC.subject" content="ECE"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elastic Cloud Enterprise Reference [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-restful-api.html">RESTful API</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-api-reference.html">API reference</a></span>
+»
+<span class="breadcrumb-link"><a href="definitions.html">Definitions</a></span>
+»
+<span class="breadcrumb-node"><code class="literal">EnterpriseSearch</code></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="EnrollmentTokenRequest.html">« <code class="literal">EnrollmentTokenRequest</code></a>
+</span>
+<span class="next">
+<a href="EnterpriseSearchConfiguration.html"><code class="literal">EnterpriseSearchConfiguration</code> »</a>
+</span>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="EnterpriseSearch"></a><code class="literal">EnterpriseSearch</code><a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h3>
+</div></div></div>
+<p>Holds diagnostics for an Enterprise Search resource</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ece_properties_217"></a>Properties<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h4>
+</div></div></div>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+<code class="literal">backend_plan</code> (<code class="literal">object</code>, required)
+</span>
+</dt>
+<dd>
+The backend plan as JSON
+</dd>
+<dt>
+<span class="term">
+<code class="literal">display_name</code> (<code class="literal">string</code>, required)
+</span>
+</dt>
+<dd>
+The human readable name (defaults to the generated cluster id if not specified)
+</dd>
+<dt>
+<span class="term">
+<code class="literal">elasticsearch_cluster_ref_id</code> (<code class="literal">string</code>, required)
+</span>
+</dt>
+<dd>
+The user-specified id of the Elasticsearch Cluster that this will link to
+</dd>
+<dt>
+<span class="term">
+<code class="literal">ref_id</code> (<code class="literal">string</code>, required)
+</span>
+</dt>
+<dd>
+A locally-unique user-specified id
+</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ece_example_220"></a>Example<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h4>
+</div></div></div>
+<div class="pre_wrapper lang-json">
+<pre class="programlisting prettyprint lang-json">{
+   "backend_plan" : {},
+   "display_name" : "string",
+   "elasticsearch_cluster_ref_id" : "string",
+   "ref_id" : "string"
+}</pre>
+</div>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="EnrollmentTokenRequest.html">« <code class="literal">EnrollmentTokenRequest</code></a>
+</span>
+<span class="next">
+<a href="EnterpriseSearchConfiguration.html"><code class="literal">EnterpriseSearchConfiguration</code> »</a>
+</span>
+</div>
+</div>
+</body>
+</html>
