@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create your deployment | Elastic Cloud Enterprise Reference [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elastic Cloud Enterprise Reference [master]"/>
+<link rel="up" href="ece-stack-getting-started.html" title="Getting started with deployments"/>
+<link rel="prev" href="ece-stack-getting-started.html" title="Getting started with deployments"/>
+<link rel="next" href="ece-getting-started-solutions.html" title="What are solutions?"/>
+<meta name="DC.type" content="Learn/Docs/CloudEnterprise/Reference/master"/>
+<meta name="DC.subject" content="ECE"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elastic Cloud Enterprise Reference [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-stack-getting-started.html">Getting started with deployments</a></span>
+»
+<span class="breadcrumb-node">Create your deployment</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="ece-stack-getting-started.html">« Getting started with deployments</a>
+</span>
+<span class="next">
+<a href="ece-getting-started-solutions.html">What are solutions? »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="ece-create-deployment"></a>Create your deployment<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/shared/ec-ce-getting-started-create.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Deployments are Elastic products that you can spin up quickly and manage in the same user interface. There are <a class="xref" href="ece-getting-started-solutions.html" title="What are solutions?">preconfigured solutions for specific use cases</a>, such as search, observability, or security. If you need something else, you can customize the Elastic Stack for whatever you can dream up, using one of our <a class="xref" href="ece-getting-started-profiles.html" title="What are hardware profiles?">hardware profiles</a> as a starting point.</p>
+<p>To get up and running with your deployment quickly:</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+From the Cloud UI, click <span class="strong strong"><strong>Create deployment</strong></span>.
+</li>
+<li class="listitem">
+<p>Optimize your deployment for your use case by selecting a solution.</p>
+<p>Solution options are:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+<p><span class="strong strong"><strong>Elastic Enterprise Search</strong></span></p>
+<p>Elastic Enterprise Search comprises two products:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+<span class="strong strong"><strong>App Search</strong></span> enables you to build a customized and powerful search experience in your applications.
+</li>
+<li class="listitem">
+<p><span class="strong strong"><strong>Workplace Search</strong></span> lets you easily consolidate all of your document sources into one organizational search tool.</p>
+<p>This solution includes an application server to manage queries and the search application, together with worker nodes to manage data indexing and analytics. <a class="xref" href="ece-getting-started-enterprise-search.html" title="Elastic Enterprise Search">What&#8217;s included &#8230;&#8203;</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li class="listitem">
+<p><span class="strong strong"><strong>Elastic Observability</strong></span></p>
+<p>Elastic Observability includes any combination of data ingestion for Application Performance Monitoring (APM), logs, or metrics. <a class="xref" href="ece-getting-started-observability.html" title="Elastic Observability">What&#8217;s included &#8230;&#8203;</a></p>
+</li>
+<li class="listitem">
+<p><span class="strong strong"><strong>Elastic Security</strong></span></p>
+<p>Elastic Security combines SIEM threat detection features with endpoint prevention and response capabilities. &lt;&lt;ece-getting-started-security,What&#8217;s included &#8230;&#8203;&gt;</p>
+</li>
+<li class="listitem">
+<p><span class="strong strong"><strong>Elastic Stack</strong></span></p>
+<p>If you select Elastic Stack, you will also have the option to select from a number of hardware profiles. Elastic Cloud Enterprise includes the following hardware profiles:</p>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+Default
+</span>
+</dt>
+<dd>
+A template to get you started and for backwards compatibility with existing deployments. The default template is suitable for search and general all-purpose workloads that don&#8217;t require more specialized resources. <a class="xref" href="ece-getting-started-profiles-default.html" title="Default profile">What&#8217;s included &#8230;&#8203;</a>
+</dd>
+<dt>
+<span class="term">
+Cross Cluster Search
+</span>
+</dt>
+<dd>
+A lightweight hub to manage remote connections for running Elasticsearch queries across multiple deployments and indices. <a class="xref" href="ece-getting-started-profiles-ccs.html" title="Cross-cluster search profile">What&#8217;s included &#8230;&#8203;</a>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+<p>After a deployment is spun up, you can scale the size and add other features; however, the instance configuration and computing ratios cannot be changed. If you need to change an existing deployment to another template, we recommend <a class="xref" href="ece-migrate-data.html" title="Migrating your Elasticsearch data">migrating your data</a>.</p>
+</li>
+<li class="listitem">
+<p>Change your deployment settings by clicking Expand in the Deployment settings section.</p>
+
+<p>+
+.. Pick your Elastic Stack version, and optionally choose to restore an Elasticsearch snapshot from another deployment.</p>
+<p>+
+Restoring a snapshot can help with major version upgrades by creating a separate, non-production deployment where you can test, for example. Or, make life easier for your developers by providing them with a development environment that is populated with real data.</p>
+</li>
+<li class="listitem">
+<p>Enable additional features, such as:</p>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+Monitoring
+</span>
+</dt>
+<dd>
+Ship your metrics to a dedicated deployment by enabling monitoring and selecting
+a pre-existing deployment.
+</dd>
+<dt>
+<span class="term">
+Security
+</span>
+</dt>
+<dd>
+Connect to your virtual private cloud (VPC) and/or whitelist your IP addresses by enabling traffic filtering
+and adding traffic filters.
+</dd>
+</dl>
+</div>
+</li>
+<li class="listitem">
+Give your deployment a name if you prefer a name other than the one that has been pre-populated for you.
+</li>
+<li class="listitem">
+<p>At this point, you can:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Click <span class="strong strong"><strong>Create deployment</strong></span> to get started right away. Recommended if you are a trial user or new to the Elastic Stack.
+</li>
+<li class="listitem">
+Click <span class="strong strong"><strong>Customize deployment</strong></span> to tweak the performance of the Elastic Stack by changing the size of your instances, including of your Elasticsearch clusters, for example. You can also change the level of fault tolerance, configure additional features, and much more. <a class="xref" href="ece-customize-deployment.html" title="Customize your deployment">Learn more &#8230;&#8203;</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="listitem">
+After your deployment is ready, write down the password for the <code class="literal">elastic</code> user
+(or the <code class="literal">admin</code> user for version 2.x)
+and keep it somewhere safe. You need the password to connect to your Elasticsearch cluster, Kibana, and App Search. (Missed it?
+<a class="xref" href="ece-password-reset-elastic.html" title="Reset the password for the elastic user">Reset the password</a>.)
+</li>
+</ol>
+</div>
+<p>That&#8217;s it! Now that you are up and running, <a class="xref" href="ece-access-kibana.html" title="Access Kibana">start exploring with Kibana</a>, our open-source visualization tool. If you&#8217;re not familiar with adding data, yet, Kibana can show you how to index your data into Elasticsearch, or try our basic steps for working with <a class="xref" href="ece-working-with-elasticsearch.html" title="Work with Elasticsearch">Elasticsearch</a>.</p>
+<div class="tip admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>Want to take Kibana for a test ride first? In Kibana 6.4.0 and later, you can use the one-click sample data, which allows you to use Kibana without loading your own data. For more information, refer to <a href="/guide/en/kibana/6.4/tutorial-sample-data.html" class="ulink" target="_top">Explore Kibana using the Flight dashboard</a>.</p>
+</div>
+</div>
+
+
+
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="ece-stack-getting-started.html">« Getting started with deployments</a>
+</span>
+<span class="next">
+<a href="ece-getting-started-solutions.html">What are solutions? »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

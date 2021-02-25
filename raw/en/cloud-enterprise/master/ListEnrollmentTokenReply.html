@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ListEnrollmentTokenReply | Elastic Cloud Enterprise Reference [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elastic Cloud Enterprise Reference [master]"/>
+<link rel="up" href="definitions.html" title="Definitions"/>
+<link rel="prev" href="ListEnrollmentTokenElement.html" title="ListEnrollmentTokenElement"/>
+<link rel="next" href="LoggingSettings.html" title="LoggingSettings"/>
+<meta name="DC.type" content="Learn/Docs/CloudEnterprise/Reference/master"/>
+<meta name="DC.subject" content="ECE"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elastic Cloud Enterprise Reference [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-restful-api.html">RESTful API</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-api-reference.html">API reference</a></span>
+»
+<span class="breadcrumb-link"><a href="definitions.html">Definitions</a></span>
+»
+<span class="breadcrumb-node"><code class="literal">ListEnrollmentTokenReply</code></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="ListEnrollmentTokenElement.html">« <code class="literal">ListEnrollmentTokenElement</code></a>
+</span>
+<span class="next">
+<a href="LoggingSettings.html"><code class="literal">LoggingSettings</code> »</a>
+</span>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="ListEnrollmentTokenReply"></a><code class="literal">ListEnrollmentTokenReply</code><a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h3>
+</div></div></div>
+<p>Information about active enrollment tokens.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ece_properties_280"></a>Properties<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h4>
+</div></div></div>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+<code class="literal">tokens</code> (<code class="literal">array[</code><a class="xref" href="ListEnrollmentTokenElement.html" title="ListEnrollmentTokenElement"><code class="literal">ListEnrollmentTokenElement</code></a><code class="literal">]</code>, required)
+</span>
+</dt>
+<dd>
+The list of currently active enrollment tokens
+</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ece_example_284"></a>Example<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h4>
+</div></div></div>
+<div class="pre_wrapper lang-json">
+<pre class="programlisting prettyprint lang-json">{
+   "tokens" : [
+      {
+         "roles" : [
+            "string"
+         ],
+         "token_id" : "string"
+      }
+   ]
+}</pre>
+</div>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="ListEnrollmentTokenElement.html">« <code class="literal">ListEnrollmentTokenElement</code></a>
+</span>
+<span class="next">
+<a href="LoggingSettings.html"><code class="literal">LoggingSettings</code> »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

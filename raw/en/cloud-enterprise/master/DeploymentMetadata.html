@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DeploymentMetadata | Elastic Cloud Enterprise Reference [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elastic Cloud Enterprise Reference [master]"/>
+<link rel="up" href="definitions.html" title="Definitions"/>
+<link rel="prev" href="DeploymentLoggingSettings.html" title="DeploymentLoggingSettings"/>
+<link rel="next" href="DeploymentMetrics.html" title="DeploymentMetrics"/>
+<meta name="DC.type" content="Learn/Docs/CloudEnterprise/Reference/master"/>
+<meta name="DC.subject" content="ECE"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elastic Cloud Enterprise Reference [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-restful-api.html">RESTful API</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-api-reference.html">API reference</a></span>
+»
+<span class="breadcrumb-link"><a href="definitions.html">Definitions</a></span>
+»
+<span class="breadcrumb-node"><code class="literal">DeploymentMetadata</code></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="DeploymentLoggingSettings.html">« <code class="literal">DeploymentLoggingSettings</code></a>
+</span>
+<span class="next">
+<a href="DeploymentMetrics.html"><code class="literal">DeploymentMetrics</code> »</a>
+</span>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="DeploymentMetadata"></a><code class="literal">DeploymentMetadata</code><a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h3>
+</div></div></div>
+<p>Additional information about the current deployment object.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ece_properties_149"></a>Properties<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h4>
+</div></div></div>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+<code class="literal">hidden</code> (<code class="literal">boolean</code>)
+</span>
+</dt>
+<dd>
+Whether or not this deployment is hidden from the normal deployment list
+</dd>
+<dt>
+<span class="term">
+<code class="literal">last_modified</code> (<code class="literal">string</code> as <code class="literal">date-time</code>, required)
+</span>
+</dt>
+<dd>
+The most recent time the cluster metadata was changed (ISO format in UTC)
+</dd>
+<dt>
+<span class="term">
+<code class="literal">last_resource_plan_modified</code> (<code class="literal">string</code> as <code class="literal">date-time</code>)
+</span>
+</dt>
+<dd>
+The most recent time the resource&#39;s plan was changed (ISO format in UTC)
+</dd>
+<dt>
+<span class="term">
+<code class="literal">owner_id</code> (<code class="literal">string</code>)
+</span>
+</dt>
+<dd>
+The user id (referencing whatever user database is in use) of the deployment owner
+</dd>
+<dt>
+<span class="term">
+<code class="literal">subscription_level</code> (<code class="literal">string</code>)
+</span>
+</dt>
+<dd>
+Subscription level of the cluster
+</dd>
+<dt>
+<span class="term">
+<code class="literal">system_owned</code> (<code class="literal">boolean</code>)
+</span>
+</dt>
+<dd>
+Indicates if a deployment is system owned (restricts the set of operations that can be performed on it)
+</dd>
+<dt>
+<span class="term">
+<code class="literal">tags</code> (<code class="literal">array[</code><a class="xref" href="MetadataItem.html" title="MetadataItem"><code class="literal">MetadataItem</code></a><code class="literal">]</code>)
+</span>
+</dt>
+<dd>
+Arbitrary user-defined metadata associated with this deployment
+</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ece_example_151"></a>Example<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h4>
+</div></div></div>
+<div class="pre_wrapper lang-json">
+<pre class="programlisting prettyprint lang-json">{
+   "hidden" : true,
+   "last_modified" : "2019-01-01T00:00:00Z",
+   "last_resource_plan_modified" : "2019-01-01T00:00:00Z",
+   "owner_id" : "string",
+   "subscription_level" : "string",
+   "system_owned" : true,
+   "tags" : [
+      {
+         "key" : "string",
+         "value" : "string"
+      }
+   ]
+}</pre>
+</div>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="DeploymentLoggingSettings.html">« <code class="literal">DeploymentLoggingSettings</code></a>
+</span>
+<span class="next">
+<a href="DeploymentMetrics.html"><code class="literal">DeploymentMetrics</code> »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

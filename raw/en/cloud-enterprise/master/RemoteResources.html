@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RemoteResources | Elastic Cloud Enterprise Reference [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elastic Cloud Enterprise Reference [master]"/>
+<link rel="up" href="definitions.html" title="Definitions"/>
+<link rel="prev" href="RemoteResourceRef.html" title="RemoteResourceRef"/>
+<link rel="next" href="ReplyWarning.html" title="ReplyWarning"/>
+<meta name="DC.type" content="Learn/Docs/CloudEnterprise/Reference/master"/>
+<meta name="DC.subject" content="ECE"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elastic Cloud Enterprise Reference [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-restful-api.html">RESTful API</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-api-reference.html">API reference</a></span>
+»
+<span class="breadcrumb-link"><a href="definitions.html">Definitions</a></span>
+»
+<span class="breadcrumb-node"><code class="literal">RemoteResources</code></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="RemoteResourceRef.html">« <code class="literal">RemoteResourceRef</code></a>
+</span>
+<span class="next">
+<a href="ReplyWarning.html"><code class="literal">ReplyWarning</code> »</a>
+</span>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="RemoteResources"></a><code class="literal">RemoteResources</code><a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h3>
+</div></div></div>
+<p>The list of resources used as remote clusters</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ece_properties_349"></a>Properties<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h4>
+</div></div></div>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+<code class="literal">resources</code> (<code class="literal">array[</code><a class="xref" href="RemoteResourceRef.html" title="RemoteResourceRef"><code class="literal">RemoteResourceRef</code></a><code class="literal">]</code>, required)
+</span>
+</dt>
+<dd>
+The remote resources
+</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ece_example_355"></a>Example<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h4>
+</div></div></div>
+<div class="pre_wrapper lang-json">
+<pre class="programlisting prettyprint lang-json">{
+   "resources" : [
+      {
+         "alias" : "string",
+         "deployment_id" : "string",
+         "elasticsearch_ref_id" : "string",
+         "info" : {
+            "compatible" : true,
+            "connected" : true,
+            "healthy" : true,
+            "trusted" : true,
+            "trusted_back" : true
+         },
+         "skip_unavailable" : true
+      }
+   ]
+}</pre>
+</div>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="RemoteResourceRef.html">« <code class="literal">RemoteResourceRef</code></a>
+</span>
+<span class="next">
+<a href="ReplyWarning.html"><code class="literal">ReplyWarning</code> »</a>
+</span>
+</div>
+</div>
+</body>
+</html>
