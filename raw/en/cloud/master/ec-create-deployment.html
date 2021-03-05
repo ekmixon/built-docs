@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create your deployment | Elasticsearch Service Documentation [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elasticsearch Service Documentation [master]"/>
+<link rel="up" href="ec-getting-started.html" title="Getting started"/>
+<link rel="prev" href="ec-getting-started-private.html" title="Set up Elasticsearch Service Private"/>
+<link rel="next" href="ec-getting-started-solutions.html" title="What are solutions?"/>
+<meta name="DC.type" content="Learn/Docs/Cloud/Reference/master"/>
+<meta name="DC.subject" content="Elastic Cloud"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elasticsearch Service Documentation [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="ec-getting-started.html">Getting started</a></span>
+»
+<span class="breadcrumb-node">Create your deployment</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="ec-getting-started-private.html">« Set up Elasticsearch Service Private</a>
+</span>
+<span class="next">
+<a href="ec-getting-started-solutions.html">What are solutions? »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="ec-create-deployment"></a>Create your deployment<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/shared/ec-ce-getting-started-create.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Deployments are Elastic products that you can spin up quickly and manage in the same user interface. There are <a class="xref" href="ec-getting-started-solutions.html" title="What are solutions?">preconfigured solutions for specific use cases</a>, such as search, observability, or security. If you need something else, you can customize the Elastic Stack for whatever you can dream up, using one of our <a class="xref" href="ec-getting-started-profiles.html" title="What are hardware profiles?">hardware profiles</a> as a starting point.</p>
+<p>To get up and running with your deployment quickly:</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+From the <a href="https://cloud.elastic.co?baymax=docs-body&amp;elektra=docs" class="ulink" target="_top">Elasticsearch Service Console</a>, click <span class="strong strong"><strong>Create deployment</strong></span>.
+</li>
+<li class="listitem">
+<p>Optimize your deployment for your use case by selecting a solution.</p>
+<div class="tip admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>If all you want to do is try out Elasticsearch and Kibana, the trial includes more than enough to get you started. Some of the more powerful features, such as machine learning, become available only when you add a credit card and are not free. If a feature has an <span class="strong strong"><strong>Enable</strong></span> button next to it or is greyed out, you need to <a class="xref" href="ec-billing-details.html" title="Add your billing details">add a credit card</a> to unlock the feature and pay for using it.</p>
+</div>
+</div>
+<p>Solution options are:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+<p><span class="strong strong"><strong>Elastic Enterprise Search</strong></span></p>
+<p>Elastic Enterprise Search comprises two products:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+<span class="strong strong"><strong>App Search</strong></span> enables you to build a customized and powerful search experience in your applications.
+</li>
+<li class="listitem">
+<p><span class="strong strong"><strong>Workplace Search</strong></span> lets you easily consolidate all of your document sources into one organizational search tool.</p>
+<p>This solution includes an application server to manage queries and the search application, together with worker nodes to manage data indexing and analytics. <a class="xref" href="ec-getting-started-solutions.html#ec-getting-started-enterprise-search" title="Elastic Enterprise Search">What&#8217;s included &#8230;&#8203;</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li class="listitem">
+<p><span class="strong strong"><strong>Elastic Observability</strong></span></p>
+<p>Elastic Observability includes any combination of data ingestion for Application Performance Monitoring (APM), logs, or metrics. <a class="xref" href="ec-getting-started-solutions.html#ec-getting-started-observability" title="Elastic Observability">What&#8217;s included &#8230;&#8203;</a></p>
+</li>
+<li class="listitem">
+<p><span class="strong strong"><strong>Elastic Security</strong></span></p>
+<p>Elastic Security combines SIEM threat detection features with endpoint prevention and response capabilities. &lt;&lt;ec-getting-started-security,What&#8217;s included &#8230;&#8203;&gt;</p>
+</li>
+<li class="listitem">
+<p><span class="strong strong"><strong>Elastic Stack</strong></span></p>
+<p>If you select Elastic Stack, you will also have the option to select from a number of hardware profiles. Elasticsearch Service includes the following hardware profiles:</p>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+I/O Optimized
+</span>
+</dt>
+<dd>
+Use for search and general all-purpose workloads. Provides a balance of compute, memory, and storage. If you are new to Elasticsearch or don&#8217;t need to run a more specialized workload, you can&#8217;t go wrong with this template. <a class="xref" href="ec-getting-started-profiles.html#ec-getting-started-profiles-io" title="I/O optimized profile">What&#8217;s included &#8230;&#8203;</a>
+</dd>
+<dt>
+<span class="term">
+Compute Optimized
+</span>
+</dt>
+<dd>
+Run CPU-intensive workloads faster. Alternatively, use this template to run smaller workloads cost-effectively when you need less memory and storage. <a class="xref" href="ec-getting-started-profiles.html#ec-getting-started-profiles-compute" title="Compute optimized profile">What&#8217;s included &#8230;&#8203;</a>
+</dd>
+<dt>
+<span class="term">
+Memory Optimized
+</span>
+</dt>
+<dd>
+Perform memory-intensive operations efficiently, including workloads with frequent aggregations. <a class="xref" href="ec-getting-started-profiles.html#ec-getting-started-profiles-memory" title="Memory optimized profile">What&#8217;s included &#8230;&#8203;</a>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+<p>After a deployment is spun up, you can scale the size and add other features; however, the instance configuration and computing ratios cannot be changed. If you need to change an existing deployment to another template, we recommend <a class="xref" href="ec-migrate-data.html" title="Migrating your Elasticsearch data">migrating your data</a>.</p>
+</li>
+<li class="listitem">
+<p>Change your deployment settings by clicking Expand in the Deployment settings section.</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+<p>Pick a cloud platform where we host your deployment. We support:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Amazon Web Services (AWS)
+</li>
+<li class="listitem">
+Google Cloud Platform (GCP)
+</li>
+<li class="listitem">
+Microsoft Azure
+</li>
+</ul>
+</div>
+<p>Which platform you pick is personal preference. Elasticsearch Service handles all hosting details for you, no additional cloud accounts required.</p>
+</li>
+<li class="listitem">
+<p>Pick a region where your deployment gets hosted.</p>
+<p>A region is a geographic area where the data centers that host your deployment live. If you are not sure what to pick, select one that is close to you. To learn more about the differences between regions, see <a class="xref" href="ec-reference-regions.html" title="Elasticsearch Service regions">Elasticsearch Service Regions</a>.</p>
+</li>
+<li class="listitem">
+<p>Pick your Elastic Stack version, and optionally choose to restore an Elasticsearch snapshot from another deployment.</p>
+<p>Restoring a snapshot can help with major version upgrades by creating a separate, non-production deployment where you can test, for example. Or, make life easier for your developers by providing them with a development environment that is populated with real data.
+To learn more, see <a class="xref" href="ec-restoring-snapshots.html#ec-restore-across-clusters" title="Restore across clusters">Restore Across Deployments</a>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li class="listitem">
+<p>Enable additional features, such as:</p>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+Monitoring
+</span>
+</dt>
+<dd>
+Ship your metrics to a dedicated deployment by enabling monitoring and selecting
+a pre-existing deployment.
+</dd>
+<dt>
+<span class="term">
+Security
+</span>
+</dt>
+<dd>
+Connect to your virtual private cloud (VPC) and/or whitelist your IP addresses by enabling traffic filtering
+and adding traffic filters.
+</dd>
+</dl>
+</div>
+<div class="tip admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>Some features are not displayed and they become available only if you <a class="xref" href="ec-billing-details.html" title="Add your billing details">add a credit card</a> and pay for using them.</p>
+</div>
+</div>
+</li>
+<li class="listitem">
+Give your deployment a name if you prefer a name other than the one that has been pre-populated for you.
+</li>
+<li class="listitem">
+<p>At this point, you can:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Click <span class="strong strong"><strong>Create deployment</strong></span> to get started right away. Recommended if you are a trial user or new to the Elastic Stack.
+</li>
+<li class="listitem">
+Click <span class="strong strong"><strong>Customize deployment</strong></span> to tweak the performance of the Elastic Stack by changing the size of your instances, including of your Elasticsearch clusters, for example. You can also change the level of fault tolerance, configure additional features, and much more. <a class="xref" href="ec-customize-deployment.html" title="Customize your deployment">Learn more &#8230;&#8203;</a>
+</li>
+</ul>
+</div>
+<div class="tip admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>If you are a trial user and this is your first deployment, <span class="strong strong"><strong>Customize deployment</strong></span> will not be available to you.</p>
+</div>
+</div>
+</li>
+<li class="listitem">
+After your deployment is ready, write down the password for the <code class="literal">elastic</code> user
+and keep it somewhere safe. You need the password to connect to your Elasticsearch cluster, Kibana, and App Search. (Missed it?
+<a class="xref" href="ec-password-reset.html" title="Reset the elastic user password">Reset the password</a>.)
+</li>
+</ol>
+</div>
+<p>That&#8217;s it! Now that you are up and running, <a class="xref" href="ec-access-kibana.html" title="Access Kibana">start exploring with Kibana</a>, our open-source visualization tool. If you&#8217;re not familiar with adding data, yet, Kibana can show you how to index your data into Elasticsearch, or try our basic steps for working with <a class="xref" href="ec-working-with-elasticsearch.html" title="Work with Elasticsearch">Elasticsearch</a>.</p>
+<div class="tip admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>Want to take Kibana for a test ride first? In Kibana 6.4.0 and later, you can use the one-click sample data, which allows you to use Kibana without loading your own data. For more information, refer to <a href="/guide/en/kibana/6.4/tutorial-sample-data.html" class="ulink" target="_top">Explore Kibana using the Flight dashboard</a>.</p>
+</div>
+</div>
+<p>Next time you log in to your Elasticsearch Service, you&#8217;ll start out in the Elastic Cloud home page where you&#8217;ll see an at-a-glance view of all your deployments.</p>
+
+
+
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="ec-getting-started-private.html">« Set up Elasticsearch Service Private</a>
+</span>
+<span class="next">
+<a href="ec-getting-started-solutions.html">What are solutions? »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

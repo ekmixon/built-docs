@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>deleteByQuery | elasticsearch.js [16.x] | Elastic</title>
 <link rel="home" href="index.html" title="elasticsearch.js [16.x]"/>
-<link rel="up" href="api-reference.html" title="7.4 API"/>
+<link rel="up" href="api-reference.html" title="7.2 API"/>
 <link rel="prev" href="api-delete.html" title="delete"/>
 <link rel="next" href="api-deletebyqueryrethrottle.html" title="deleteByQueryRethrottle"/>
 <meta name="DC.type" content="Learn/Docs/Clients/JavaScript/16.x"/>
@@ -21,7 +21,7 @@ will be released for this version. For the latest information, see the
 <div class="breadcrumbs">
 <span class="breadcrumb-link"><a href="index.html">elasticsearch.js [16.x]</a></span>
 »
-<span class="breadcrumb-link"><a href="api-reference.html">7.4 API</a></span>
+<span class="breadcrumb-link"><a href="api-reference.html">7.2 API</a></span>
 »
 <span class="breadcrumb-node"><code class="literal">deleteByQuery</code></span>
 </div>
@@ -41,7 +41,7 @@ will be released for this version. For the latest information, see the
 <pre class="programlisting prettyprint lang-js">client.deleteByQuery([params, [callback]])</pre>
 </div>
 <p>Delete documents from one or more indices and one or more types based on a query.</p>
-<p>Check the <span class="strong strong"><strong><a class="xref" href="api-conventions.html" title="API Conventions"><em>API Conventions</em></a></strong></span> and <a href="/guide/en/elasticsearch/reference/7.4/docs-delete-by-query.html" class="ulink" target="_top">the elasticsearch docs</a> for more information pertaining to this method.</p>
+<p>Check the <span class="strong strong"><strong><a class="xref" href="api-conventions.html" title="API Conventions"><em>API Conventions</em></a></strong></span> and <a href="/guide/en/elasticsearch/reference/7.2/docs-delete-by-query.html" class="ulink" target="_top">the elasticsearch docs</a> for more information pertaining to this method.</p>
 <p><strong>Deleting documents with a simple query.</strong></p>
 <div class="pre_wrapper lang-js">
 <pre class="programlisting prettyprint lang-js">await client.deleteByQuery({
@@ -366,19 +366,7 @@ Options
 </td>
 <td valign="top">
 <p>
-<a class="xref" href="api-param-types.html#api-param-type-number"><code class="literal">Number</code></a>&#8201;&#8212;&#8201;Deprecated, please use <code class="literal">max_docs</code> instead
-</p>
-</td>
-</tr>
-<tr>
-<td valign="top">
-<p>
-<code class="literal">maxDocs</code>
-</p>
-</td>
-<td valign="top">
-<p>
-<a class="xref" href="api-param-types.html#api-param-type-number"><code class="literal">Number</code></a>&#8201;&#8212;&#8201;Maximum number of documents to process (default: all documents)
+<a class="xref" href="api-param-types.html#api-param-type-number"><code class="literal">Number</code></a>&#8201;&#8212;&#8201;Number of hits to return (default: 10)
 </p>
 </td>
 </tr>
@@ -594,7 +582,7 @@ Options
 </td>
 <td valign="top">
 <p>
-<a class="xref" href="api-param-types.html#api-param-type-object"><code class="literal">Object</code></a>, <a class="xref" href="api-param-types.html#api-param-type-json"><code class="literal">JSON</code></a>&#8201;&#8212;&#8201;The request body, as either JSON or a JSON serializable object. See <a href="/guide/en/elasticsearch/reference/7.4/docs-delete-by-query.html" class="ulink" target="_top">the elasticsearch docs</a> for details about what can be specified here.
+<a class="xref" href="api-param-types.html#api-param-type-object"><code class="literal">Object</code></a>, <a class="xref" href="api-param-types.html#api-param-type-json"><code class="literal">JSON</code></a>&#8201;&#8212;&#8201;The request body, as either JSON or a JSON serializable object. See <a href="/guide/en/elasticsearch/reference/7.2/docs-delete-by-query.html" class="ulink" target="_top">the elasticsearch docs</a> for details about what can be specified here.
 </p>
 </td>
 </tr>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AWS Marketplace | Elasticsearch Service Documentation [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elasticsearch Service Documentation [master]"/>
+<link rel="up" href="ec-marketplaces.html" title="Subscribing from a marketplace"/>
+<link rel="prev" href="ec-marketplaces.html" title="Subscribing from a marketplace"/>
+<link rel="next" href="ec-billing-azure.html" title="Azure Marketplace"/>
+<meta name="DC.type" content="Learn/Docs/Cloud/Reference/master"/>
+<meta name="DC.subject" content="Elastic Cloud"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elasticsearch Service Documentation [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="ec-marketplaces.html">Subscribing from a marketplace</a></span>
+»
+<span class="breadcrumb-node">AWS Marketplace</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="ec-marketplaces.html">« Subscribing from a marketplace</a>
+</span>
+<span class="next">
+<a href="ec-billing-azure.html">Azure Marketplace »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="ec-billing-aws"></a>AWS Marketplace<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/saas/ec-marketplace-aws.asciidoc">edit</a></h2>
+</div></div></div>
+<p>You can subscribe to Elasticsearch Service directly from the AWS Marketplace. You then have the convenience of viewing your Elasticsearch Service subscription as part of your AWS bill, and you do not have to supply any additional credit card information to Elastic.</p>
+<p>Some differences exist when you subscribe to Elasticsearch Service through the AWS Marketplace:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+There is no trial period. Billing starts when you subscribe to Elasticsearch Service.
+</li>
+<li class="listitem">
+Previous Elasticsearch Service accounts cannot be converted to use the AWS Marketplace. If you already have an account, you must use a different email address when you sign up for a subscription through the AWS Marketplace.
+</li>
+<li class="listitem">
+Pricing is based on the AWS region, the RAM size of your cluster in GB, and the level of high availability, billed per hour, as well as some other parameters such as data transfer out, data transfer internode, snapshot storage, and snapshot APIs. For more details, see <a class="xref" href="ec-billing-dimensions.html" title="Billing Dimensions">Billing Dimensions</a>.
+</li>
+<li class="listitem">
+The consolidated charges for your Elasticsearch Service subscription are shown in the AWS Marketplace billing console. It can take a day or two before new charges show up.
+</li>
+<li class="listitem">
+To see a detailed breakdown of your charges by deployment or by product, open the <a href="https://cloud.elastic.co?baymax=docs-body&amp;elektra=docs" class="ulink" target="_top">Elasticsearch Service Console</a> and go to <span class="strong strong"><strong>Account &amp; Billing</strong></span> &gt; <span class="strong strong"><strong>Usage</strong></span>.
+</li>
+</ul>
+</div>
+<div class="tip admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>If you want to convert an existing Elasticsearch Service account to AWS Marketplace billing, you must migrate your deployments over to the new account. To migrate, use a <a class="xref" href="ec-custom-repository.html" title="Snapshot and restore with custom repositories">custom repository</a> to take a snapshot and then restore that snapshot to a new deployment under your AWS Marketplace account. If you also want to use the same account email with AWS Marketplace billing, you must first change the primary email on your existing account before setting up your new AWS Marketplace account as shown in these steps.</p>
+</div>
+</div>
+<p>To subscribe to Elasticsearch Service through the AWS Marketplace:</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+Go to <a href="https://aws.amazon.com/marketplace/pp/B01N6YCISK" class="ulink" target="_top">Elasticsearch Service on the AWS Marketplace</a> and click <span class="strong strong"><strong>Continue to Subscribe</strong></span>.
+</li>
+<li class="listitem">
+Log in to your Amazon Web Services account, if you aren&#8217;t already.
+</li>
+<li class="listitem">
+Click <span class="strong strong"><strong>Subscribe</strong></span> and then <span class="strong strong"><strong>Set Up Your Account</strong></span>.
+</li>
+<li class="listitem">
+<p>Enter your details on the Elasticsearch Service subscription page and click <span class="strong strong"><strong>Sign up</strong></span>.</p>
+<p>An email is sent to the address you specified with a link to confirm your signup. The link is valid for one hour. If you don&#8217;t see the email after a few minutes, check your spam folder.</p>
+</li>
+<li class="listitem">
+Click the link to verify the email address and accept the terms of service (TOS).
+</li>
+<li class="listitem">
+Choose a password.
+</li>
+</ol>
+</div>
+<p>After you have set your password, you are directed to the <a href="https://cloud.elastic.co?baymax=docs-body&amp;elektra=docs" class="ulink" target="_top">Elasticsearch Service Console</a> where you can start <a class="xref" href="ec-create-deployment.html" title="Create your deployment">creating deployments</a>.</p>
+<div class="tip admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>Your new account is subscribed automatically to the Platinum subscription level. If you like, you can <a class="xref" href="ec-select-subscription-level.html" title="Choose a subscription level">change your subscription level</a> at any time.</p>
+</div>
+</div>
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="ec-marketplaces.html">« Subscribing from a marketplace</a>
+</span>
+<span class="next">
+<a href="ec-billing-azure.html">Azure Marketplace »</a>
+</span>
+</div>
+</div>
+</body>
+</html>
