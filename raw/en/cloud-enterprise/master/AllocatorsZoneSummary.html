@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AllocatorsZoneSummary | Elastic Cloud Enterprise Reference [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elastic Cloud Enterprise Reference [master]"/>
+<link rel="up" href="definitions.html" title="Definitions"/>
+<link rel="prev" href="AllocatorsSummary.html" title="AllocatorsSummary"/>
+<link rel="next" href="ApiBaseUrlData.html" title="ApiBaseUrlData"/>
+<meta name="DC.type" content="Learn/Docs/CloudEnterprise/Reference/master"/>
+<meta name="DC.subject" content="ECE"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elastic Cloud Enterprise Reference [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-restful-api.html">RESTful API</a></span>
+»
+<span class="breadcrumb-link"><a href="ece-api-reference.html">API reference</a></span>
+»
+<span class="breadcrumb-link"><a href="definitions.html">Definitions</a></span>
+»
+<span class="breadcrumb-node"><code class="literal">AllocatorsZoneSummary</code></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="AllocatorsSummary.html">« <code class="literal">AllocatorsSummary</code></a>
+</span>
+<span class="next">
+<a href="ApiBaseUrlData.html"><code class="literal">ApiBaseUrlData</code> »</a>
+</span>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="AllocatorsZoneSummary"></a><code class="literal">AllocatorsZoneSummary</code><a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h3>
+</div></div></div>
+<p>Summary of the allocators for the specified zone.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ece_properties_26"></a>Properties<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h4>
+</div></div></div>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+<code class="literal">connected_allocators</code> (<code class="literal">integer</code> as <code class="literal">int32</code>, required)
+</span>
+</dt>
+<dd>
+Number of connected allocators
+</dd>
+<dt>
+<span class="term">
+<code class="literal">connected_capacity</code> (<code class="literal">integer</code> as <code class="literal">int32</code>, required)
+</span>
+</dt>
+<dd>
+Capacity of connected allocators in megabytes
+</dd>
+<dt>
+<span class="term">
+<code class="literal">disconnected_allocators</code> (<code class="literal">integer</code> as <code class="literal">int32</code>, required)
+</span>
+</dt>
+<dd>
+Number of disconnected allocators
+</dd>
+<dt>
+<span class="term">
+<code class="literal">in_maintenance_allocators</code> (<code class="literal">integer</code> as <code class="literal">int32</code>, required)
+</span>
+</dt>
+<dd>
+Number of connected allocators in maintenance
+</dd>
+<dt>
+<span class="term">
+<code class="literal">instances</code> (<code class="literal">integer</code> as <code class="literal">int32</code>, required)
+</span>
+</dt>
+<dd>
+Number of instances across all allocators in the region
+</dd>
+<dt>
+<span class="term">
+<code class="literal">max_available_capacity</code> (<code class="literal">integer</code> as <code class="literal">int32</code>, required)
+</span>
+</dt>
+<dd>
+Maximum capacity available in one allocator in megabytes
+</dd>
+<dt>
+<span class="term">
+<code class="literal">total_allocators</code> (<code class="literal">integer</code> as <code class="literal">int32</code>, required)
+</span>
+</dt>
+<dd>
+Total number of allocators
+</dd>
+<dt>
+<span class="term">
+<code class="literal">zone_id</code> (<code class="literal">string</code>, required)
+</span>
+</dt>
+<dd>
+Identifier of the zone
+</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h4 class="title"><a id="ece_example_26"></a>Example<a class="edit_me edit_me_private" rel="nofollow" title="Editing on GitHub is available to Elastic" href="https://github.com/elastic/cloud/edit/master/docs/cloud-enterprise/ce-api-swagger.asciidoc">edit</a></h4>
+</div></div></div>
+<div class="pre_wrapper lang-json">
+<pre class="programlisting prettyprint lang-json">{
+   "connected_allocators" : 0,
+   "connected_capacity" : 0,
+   "disconnected_allocators" : 0,
+   "in_maintenance_allocators" : 0,
+   "instances" : 0,
+   "max_available_capacity" : 0,
+   "total_allocators" : 0,
+   "zone_id" : "string"
+}</pre>
+</div>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="AllocatorsSummary.html">« <code class="literal">AllocatorsSummary</code></a>
+</span>
+<span class="next">
+<a href="ApiBaseUrlData.html"><code class="literal">ApiBaseUrlData</code> »</a>
+</span>
+</div>
+</div>
+</body>
+</html>
