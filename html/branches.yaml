@@ -1939,7 +1939,9 @@ cloud:
   'Elasticsearch Add-On for Heroku - Hosted Elasticsearch and Kibana for Heroku Users/docs/heroku/ms-56': 818b7eb0f993ba2da7600e9da88c2af9f5fe3717
   'Elasticsearch Add-On for Heroku - Hosted Elasticsearch and Kibana for Heroku Users/docs/saas/ms-56': 818b7eb0f993ba2da7600e9da88c2af9f5fe3717
   'Elasticsearch Add-On for Heroku - Hosted Elasticsearch and Kibana for Heroku Users/docs/shared/ms-56': 818b7eb0f993ba2da7600e9da88c2af9f5fe3717
+  'Elasticsearch Service - Hosted Elastic Stack/docs/saas/master': local
   'Elasticsearch Service - Hosted Elastic Stack/docs/saas/ms-56': 818b7eb0f993ba2da7600e9da88c2af9f5fe3717
+  'Elasticsearch Service - Hosted Elastic Stack/docs/shared/master': local
   'Elasticsearch Service - Hosted Elastic Stack/docs/shared/ms-56': 818b7eb0f993ba2da7600e9da88c2af9f5fe3717
 cloud-assets:
   'Elastic Cloud Enterprise - Elastic Cloud on your Infrastructure/docs/master': 024886b98fd5ecb0380e69eb9ae18fc6e3f18ede
@@ -3240,8 +3242,8 @@ elasticsearch:
   Elasticsearch Guide/buildSrc/7.11: 63267562914d576ed50dd83749c07850f8040b55
   Elasticsearch Guide/buildSrc/7.12: 633481f15ec4d4de68afc5dc57ce9b4799f98f6d
   Elasticsearch Guide/buildSrc/7.13: eb64fb4cc2744d2df8bb77556777558d2c636471
-  Elasticsearch Guide/buildSrc/7.x: d48139dcb2fa3cd38b15a318ddf09c3dbcbe4e71
-  Elasticsearch Guide/buildSrc/master: 25421df5fd77b912892da8055c735f1a2033177d
+  Elasticsearch Guide/buildSrc/7.x: 2307b4099e830a3919ca4316ef3a5d931f4cf783
+  Elasticsearch Guide/buildSrc/master: e9add28e4f23d8fdfacf57628f1c2256c48de897
   Elasticsearch Guide/docs/Versions.asciidoc/5.0: f69aaace36375c9353851dde625a1c2a8a77535e
   Elasticsearch Guide/docs/Versions.asciidoc/5.1: 78d057b45a31d03914f794dfd8550defe5f5e4b8
   Elasticsearch Guide/docs/Versions.asciidoc/5.2: 6b7649d839d4874c8ced71f1d696370476dabebd
@@ -3272,8 +3274,8 @@ elasticsearch:
   Elasticsearch Guide/docs/Versions.asciidoc/7.7: ddbbd4ab0ce82b21cc5e035c7d62d7f63a2414bb
   Elasticsearch Guide/docs/Versions.asciidoc/7.8: 12659f9897b212ed58daf7e2f661de962688308e
   Elasticsearch Guide/docs/Versions.asciidoc/7.9: 3bf70f93bbb23326051c6b982022e642d458b508
-  Elasticsearch Guide/docs/Versions.asciidoc/7.x: d48139dcb2fa3cd38b15a318ddf09c3dbcbe4e71
-  Elasticsearch Guide/docs/Versions.asciidoc/master: 25421df5fd77b912892da8055c735f1a2033177d
+  Elasticsearch Guide/docs/Versions.asciidoc/7.x: 2307b4099e830a3919ca4316ef3a5d931f4cf783
+  Elasticsearch Guide/docs/Versions.asciidoc/master: e9add28e4f23d8fdfacf57628f1c2256c48de897
   Elasticsearch Guide/docs/painless/5.5: f8bcf137de834a7253e018714bcf45446bda928c
   Elasticsearch Guide/docs/painless/5.6: 54af48d44129c7f154aef6e86f511b1f9c305e36
   Elasticsearch Guide/docs/painless/6.0: 08d98369bcadf71531966dfd4afdb8ec8524bb7b
@@ -3299,8 +3301,8 @@ elasticsearch:
   Elasticsearch Guide/docs/painless/7.7: ddbbd4ab0ce82b21cc5e035c7d62d7f63a2414bb
   Elasticsearch Guide/docs/painless/7.8: 12659f9897b212ed58daf7e2f661de962688308e
   Elasticsearch Guide/docs/painless/7.9: 3bf70f93bbb23326051c6b982022e642d458b508
-  Elasticsearch Guide/docs/painless/7.x: d48139dcb2fa3cd38b15a318ddf09c3dbcbe4e71
-  Elasticsearch Guide/docs/painless/master: 25421df5fd77b912892da8055c735f1a2033177d
+  Elasticsearch Guide/docs/painless/7.x: 2307b4099e830a3919ca4316ef3a5d931f4cf783
+  Elasticsearch Guide/docs/painless/master: e9add28e4f23d8fdfacf57628f1c2256c48de897
   Elasticsearch Guide/docs/reference/0.90: d9a89ea210cd3344c7365a08a1224287829bbe11
   Elasticsearch Guide/docs/reference/1.3: d15527e242f0933b19458ec05d389c5fd61eabb7
   Elasticsearch Guide/docs/reference/1.4: ffdd6c9c6709a6fd678a2f8b810e9888fcbcdc9f
@@ -3342,8 +3344,8 @@ elasticsearch:
   Elasticsearch Guide/docs/reference/7.7: ddbbd4ab0ce82b21cc5e035c7d62d7f63a2414bb
   Elasticsearch Guide/docs/reference/7.8: 12659f9897b212ed58daf7e2f661de962688308e
   Elasticsearch Guide/docs/reference/7.9: 3bf70f93bbb23326051c6b982022e642d458b508
-  Elasticsearch Guide/docs/reference/7.x: d48139dcb2fa3cd38b15a318ddf09c3dbcbe4e71
-  Elasticsearch Guide/docs/reference/master: 25421df5fd77b912892da8055c735f1a2033177d
+  Elasticsearch Guide/docs/reference/7.x: 2307b4099e830a3919ca4316ef3a5d931f4cf783
+  Elasticsearch Guide/docs/reference/master: e9add28e4f23d8fdfacf57628f1c2256c48de897
   Elasticsearch Guide/docs/src/test/cluster/config/5.3: c48e5a3eae785d65245bed60f919bc94b35adb4f
   Elasticsearch Guide/docs/src/test/cluster/config/5.4: 42c6c4502ca879192a366ca9c0de9cac4a6823d9
   Elasticsearch Guide/docs/src/test/cluster/config/5.5: f8bcf137de834a7253e018714bcf45446bda928c
@@ -3371,8 +3373,8 @@ elasticsearch:
   Elasticsearch Guide/docs/src/test/cluster/config/7.7: ddbbd4ab0ce82b21cc5e035c7d62d7f63a2414bb
   Elasticsearch Guide/docs/src/test/cluster/config/7.8: 12659f9897b212ed58daf7e2f661de962688308e
   Elasticsearch Guide/docs/src/test/cluster/config/7.9: 3bf70f93bbb23326051c6b982022e642d458b508
-  Elasticsearch Guide/docs/src/test/cluster/config/7.x: d48139dcb2fa3cd38b15a318ddf09c3dbcbe4e71
-  Elasticsearch Guide/docs/src/test/cluster/config/master: 25421df5fd77b912892da8055c735f1a2033177d
+  Elasticsearch Guide/docs/src/test/cluster/config/7.x: 2307b4099e830a3919ca4316ef3a5d931f4cf783
+  Elasticsearch Guide/docs/src/test/cluster/config/master: e9add28e4f23d8fdfacf57628f1c2256c48de897
   Elasticsearch Guide/plugins/examples/5.5: f8bcf137de834a7253e018714bcf45446bda928c
   Elasticsearch Guide/plugins/examples/5.6: 54af48d44129c7f154aef6e86f511b1f9c305e36
   Elasticsearch Guide/plugins/examples/6.0: 08d98369bcadf71531966dfd4afdb8ec8524bb7b
@@ -3398,8 +3400,8 @@ elasticsearch:
   Elasticsearch Guide/plugins/examples/7.7: ddbbd4ab0ce82b21cc5e035c7d62d7f63a2414bb
   Elasticsearch Guide/plugins/examples/7.8: 12659f9897b212ed58daf7e2f661de962688308e
   Elasticsearch Guide/plugins/examples/7.9: 3bf70f93bbb23326051c6b982022e642d458b508
-  Elasticsearch Guide/plugins/examples/7.x: d48139dcb2fa3cd38b15a318ddf09c3dbcbe4e71
-  Elasticsearch Guide/plugins/examples/master: 25421df5fd77b912892da8055c735f1a2033177d
+  Elasticsearch Guide/plugins/examples/7.x: 2307b4099e830a3919ca4316ef3a5d931f4cf783
+  Elasticsearch Guide/plugins/examples/master: e9add28e4f23d8fdfacf57628f1c2256c48de897
   Elasticsearch Guide/x-pack/docs/6.3: c16878e3a725eb48feb0c10eacd83a369c436051
   Elasticsearch Guide/x-pack/docs/6.4: 7425a4bf562b4dfc126a0b4a0fb80f72b7ab2b82
   Elasticsearch Guide/x-pack/docs/6.5: 4e904d2ba675e29dc16b2ef1f20aeb1796e2e5a0
@@ -3420,8 +3422,8 @@ elasticsearch:
   Elasticsearch Guide/x-pack/docs/7.7: ddbbd4ab0ce82b21cc5e035c7d62d7f63a2414bb
   Elasticsearch Guide/x-pack/docs/7.8: 12659f9897b212ed58daf7e2f661de962688308e
   Elasticsearch Guide/x-pack/docs/7.9: 3bf70f93bbb23326051c6b982022e642d458b508
-  Elasticsearch Guide/x-pack/docs/7.x: d48139dcb2fa3cd38b15a318ddf09c3dbcbe4e71
-  Elasticsearch Guide/x-pack/docs/master: 25421df5fd77b912892da8055c735f1a2033177d
+  Elasticsearch Guide/x-pack/docs/7.x: 2307b4099e830a3919ca4316ef3a5d931f4cf783
+  Elasticsearch Guide/x-pack/docs/master: e9add28e4f23d8fdfacf57628f1c2256c48de897
   Elasticsearch Guide/x-pack/plugin/sql/qa/6.6: a3e7d27c665f75c61152aae3ffa8cf95df5f4ef1
   Elasticsearch Guide/x-pack/plugin/sql/qa/6.7: 0618edb503aead8624ac81bbc4e4cc5136b05e0e
   Elasticsearch Guide/x-pack/plugin/sql/qa/6.8: 103f38cad814fb566f91d2c75828b835b910eab0
@@ -3439,8 +3441,8 @@ elasticsearch:
   Elasticsearch Guide/x-pack/plugin/sql/qa/7.7: ddbbd4ab0ce82b21cc5e035c7d62d7f63a2414bb
   Elasticsearch Guide/x-pack/plugin/sql/qa/7.8: 12659f9897b212ed58daf7e2f661de962688308e
   Elasticsearch Guide/x-pack/plugin/sql/qa/7.9: 3bf70f93bbb23326051c6b982022e642d458b508
-  Elasticsearch Guide/x-pack/plugin/sql/qa/7.x: d48139dcb2fa3cd38b15a318ddf09c3dbcbe4e71
-  Elasticsearch Guide/x-pack/plugin/sql/qa/master: 25421df5fd77b912892da8055c735f1a2033177d
+  Elasticsearch Guide/x-pack/plugin/sql/qa/7.x: 2307b4099e830a3919ca4316ef3a5d931f4cf783
+  Elasticsearch Guide/x-pack/plugin/sql/qa/master: e9add28e4f23d8fdfacf57628f1c2256c48de897
   Elasticsearch Guide/x-pack/qa/sql/6.3: c16878e3a725eb48feb0c10eacd83a369c436051
   Elasticsearch Guide/x-pack/qa/sql/6.4: 7425a4bf562b4dfc126a0b4a0fb80f72b7ab2b82
   Elasticsearch Guide/x-pack/qa/sql/6.5: 4e904d2ba675e29dc16b2ef1f20aeb1796e2e5a0
@@ -3454,7 +3456,7 @@ elasticsearch:
   Elasticsearchリファレンス/docs/5.4: 42c6c4502ca879192a366ca9c0de9cac4a6823d9
   Elasticsearchリファレンス/docs/jp/reference/5.3: c48e5a3eae785d65245bed60f919bc94b35adb4f
   Elasticsearchリファレンス/docs/jp/reference/5.4: 42c6c4502ca879192a366ca9c0de9cac4a6823d9
-  Glossary/docs/reference/glossary.asciidoc/master: 25421df5fd77b912892da8055c735f1a2033177d
+  Glossary/docs/reference/glossary.asciidoc/master: e9add28e4f23d8fdfacf57628f1c2256c48de897
   Groovy API/docs/groovy-api/0.90: d9a89ea210cd3344c7365a08a1224287829bbe11
   Groovy API/docs/groovy-api/1.3: d15527e242f0933b19458ec05d389c5fd61eabb7
   Groovy API/docs/groovy-api/1.4: ffdd6c9c6709a6fd678a2f8b810e9888fcbcdc9f
@@ -3496,8 +3498,8 @@ elasticsearch:
   Installation and Upgrade Guide/docs/7.7: ddbbd4ab0ce82b21cc5e035c7d62d7f63a2414bb
   Installation and Upgrade Guide/docs/7.8: 12659f9897b212ed58daf7e2f661de962688308e
   Installation and Upgrade Guide/docs/7.9: 3bf70f93bbb23326051c6b982022e642d458b508
-  Installation and Upgrade Guide/docs/7.x: d48139dcb2fa3cd38b15a318ddf09c3dbcbe4e71
-  Installation and Upgrade Guide/docs/master: 25421df5fd77b912892da8055c735f1a2033177d
+  Installation and Upgrade Guide/docs/7.x: 2307b4099e830a3919ca4316ef3a5d931f4cf783
+  Installation and Upgrade Guide/docs/master: e9add28e4f23d8fdfacf57628f1c2256c48de897
   Java API (deprecated)/client/rest-high-level/src/test/java/org/elasticsearch/client/6.0: 08d98369bcadf71531966dfd4afdb8ec8524bb7b
   Java API (deprecated)/client/rest-high-level/src/test/java/org/elasticsearch/client/6.1: 793099fae982324ac12e84b3c97c675ba9fd52a4
   Java API (deprecated)/client/rest-high-level/src/test/java/org/elasticsearch/client/6.2: 8f8d043eef57f0c1ee5866cf1aeb5f23029683bb
@@ -3767,8 +3769,8 @@ elasticsearch:
   Machine Learning/docs/7.7: ddbbd4ab0ce82b21cc5e035c7d62d7f63a2414bb
   Machine Learning/docs/7.8: 12659f9897b212ed58daf7e2f661de962688308e
   Machine Learning/docs/7.9: 3bf70f93bbb23326051c6b982022e642d458b508
-  Machine Learning/docs/7.x: d48139dcb2fa3cd38b15a318ddf09c3dbcbe4e71
-  Machine Learning/docs/master: 25421df5fd77b912892da8055c735f1a2033177d
+  Machine Learning/docs/7.x: 2307b4099e830a3919ca4316ef3a5d931f4cf783
+  Machine Learning/docs/master: e9add28e4f23d8fdfacf57628f1c2256c48de897
   Painless Scripting Language/docs/Versions.asciidoc/5.5: f8bcf137de834a7253e018714bcf45446bda928c
   Painless Scripting Language/docs/Versions.asciidoc/5.6: 54af48d44129c7f154aef6e86f511b1f9c305e36
   Painless Scripting Language/docs/Versions.asciidoc/6.0: 08d98369bcadf71531966dfd4afdb8ec8524bb7b
@@ -3972,7 +3974,7 @@ elasticsearch-hadoop:
   Installation and Upgrade Guide/docs/src/reference/asciidoc/master: 4699d39b13fe7e0377b8a9a77bb19a5ef32bfb8e
 elasticsearch-js:
   Elasticsearch Guide/docs/doc_examples/master: 52d68a0e83b7a4a489ccf9f4a5b66ad4d6de90a1
-  JavaScript API/docs/16.x: 388c5e8e7ec1c0a097ee4960b2297073a484a33e
+  JavaScript API/docs/16.x: 8c359aeb7e90fbc8c4ef4de08ea14d3b02942269
   JavaScript API/docs/5.x: abfd356b619dd9e7f746570a6abcd337932887c4
   JavaScript API/docs/6.x: 231cfade24657ce2d8cdcac293e142b3e1b0a07b
   JavaScript API/docs/7.x: 9b0f45f390c8458466c70277e529de7de6b93c52
@@ -4349,7 +4351,7 @@ stack-docs:
   Elastic Security/docs/en/7.8: ae504ba6343594dcd014028fcdba94350bf044ec
   Elastic Security/docs/en/7.9: e0efc8ca6701d11d5ed0b7c0eb0c74c712795bb8
   Elastic Security/docs/en/7.x: 6e8ea921a398f2fe3ad59dc4730767fdb75fe66a
-  Elastic Security/docs/en/master: c987ab79c6c80fdc9d4862d80194d1b60d43c9d8
+  Elastic Security/docs/en/master: 6339e77fa70fc58f5819d39577bf2d41cd33ccf2
   Elastic Stack and Google Cloud's Anthos/docs/en/gke-on-prem/master: 8b7749d19eb9b7caeb31e198332a4d381ceafe8b
   Getting Started/docs/en/6.3: 102d889b697ee82ec1510e569d72962720f46398
   Getting Started/docs/en/6.4: 74bfa88aa51d6260be3805d6278fee6b90f6ab63
@@ -4372,8 +4374,8 @@ stack-docs:
   Getting Started/docs/en/7.8: ae504ba6343594dcd014028fcdba94350bf044ec
   Getting Started/docs/en/7.9: e0efc8ca6701d11d5ed0b7c0eb0c74c712795bb8
   Getting Started/docs/en/7.x: 6e8ea921a398f2fe3ad59dc4730767fdb75fe66a
-  Getting Started/docs/en/master: c987ab79c6c80fdc9d4862d80194d1b60d43c9d8
-  Glossary/docs/en/master: c987ab79c6c80fdc9d4862d80194d1b60d43c9d8
+  Getting Started/docs/en/master: 6339e77fa70fc58f5819d39577bf2d41cd33ccf2
+  Glossary/docs/en/master: 6339e77fa70fc58f5819d39577bf2d41cd33ccf2
   Infrastructure Monitoring Guide for 6.5-7.4/docs/en/6.5: f60dfb803704d300f2ea5741fdb9d454e5c408ce
   Infrastructure Monitoring Guide for 6.5-7.4/docs/en/6.6: 2b01bf7241946f1ae71c8fd05682fc16b5661990
   Infrastructure Monitoring Guide for 6.5-7.4/docs/en/6.7: 449a4de8ab0a3e0559cd7609f8fa282e569ef923
@@ -4414,7 +4416,7 @@ stack-docs:
   Installation and Upgrade Guide/docs/en/7.8: ae504ba6343594dcd014028fcdba94350bf044ec
   Installation and Upgrade Guide/docs/en/7.9: e0efc8ca6701d11d5ed0b7c0eb0c74c712795bb8
   Installation and Upgrade Guide/docs/en/7.x: 6e8ea921a398f2fe3ad59dc4730767fdb75fe66a
-  Installation and Upgrade Guide/docs/en/master: c987ab79c6c80fdc9d4862d80194d1b60d43c9d8
+  Installation and Upgrade Guide/docs/en/master: 6339e77fa70fc58f5819d39577bf2d41cd33ccf2
   Machine Learning/docs/en/stack/6.3: 102d889b697ee82ec1510e569d72962720f46398
   Machine Learning/docs/en/stack/6.4: 74bfa88aa51d6260be3805d6278fee6b90f6ab63
   Machine Learning/docs/en/stack/6.5: f60dfb803704d300f2ea5741fdb9d454e5c408ce
@@ -4436,7 +4438,7 @@ stack-docs:
   Machine Learning/docs/en/stack/7.8: ae504ba6343594dcd014028fcdba94350bf044ec
   Machine Learning/docs/en/stack/7.9: e0efc8ca6701d11d5ed0b7c0eb0c74c712795bb8
   Machine Learning/docs/en/stack/7.x: 6e8ea921a398f2fe3ad59dc4730767fdb75fe66a
-  Machine Learning/docs/en/stack/master: c987ab79c6c80fdc9d4862d80194d1b60d43c9d8
+  Machine Learning/docs/en/stack/master: 6339e77fa70fc58f5819d39577bf2d41cd33ccf2
   SIEM Guide/docs/en/7.2: 766284b3bff3eaafa87fcc4f03fc04b337842343
   SIEM Guide/docs/en/7.3: 1743754758debdf9d1ad492ef88a03e7794f5e42
   SIEM Guide/docs/en/7.4: af6fa63e158e0155702576053deb171f0aaf2c16
