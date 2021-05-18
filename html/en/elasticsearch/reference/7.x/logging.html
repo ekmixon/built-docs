@@ -53,8 +53,6 @@
     <link rel="stylesheet" type="text/css" href="/guide/static/styles.css" />
   </head>
 
-  <!--© 2015-2021 Elasticsearch B.V. Copying, publishing and/or distributing without written permission is strictly prohibited.-->
-
   <body>
     <!-- Google Tag Manager -->
     <script>dataLayer = [];</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-58RLH5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -799,7 +797,7 @@ logs streams when parsing.</p>
 appender.rolling.layout.type_name = server</pre>
 </div>
 <p>Each line contains a single JSON document with the properties configured in <code class="literal">ESJsonLayout</code>.
-See this class <a href="https://snapshots.elastic.co/javadoc/org/elasticsearch/elasticsearch/7.14.0-SNAPSHOT/org/elasticsearch/common/logging/ESJsonLayout.html" class="ulink" target="_top">javadoc</a> for more details.
+See this class <a href="https://snapshots.elastic.co/javadoc/org/elasticsearch/elasticsearch/7.13.0-SNAPSHOT/org/elasticsearch/common/logging/ESJsonLayout.html" class="ulink" target="_top">javadoc</a> for more details.
 However if a JSON document contains an exception, it will be printed over multiple lines.
 The first line will contain regular properties and subsequent lines will contain the
 stacktrace formatted as a JSON array.</p>

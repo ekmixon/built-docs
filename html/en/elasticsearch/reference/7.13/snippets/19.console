@@ -1,4 +1,0 @@
-PUT /my-index-000001/_settings
-{
-  "index.blocks.read_only_allow_delete": null
-}

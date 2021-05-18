@@ -53,8 +53,6 @@
     <link rel="stylesheet" type="text/css" href="/guide/static/styles.css" />
   </head>
 
-  <!--© 2015-2021 Elasticsearch B.V. Copying, publishing and/or distributing without written permission is strictly prohibited.-->
-
   <body>
     <!-- Google Tag Manager -->
     <script>dataLayer = [];</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-58RLH5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -363,8 +361,8 @@ Desktop</a>.
 <p>Run:</p>
 <div class="pre_wrapper lang-sh">
 <pre class="programlisting prettyprint lang-sh">docker network create elastic
-docker pull docker.elastic.co/elasticsearch/elasticsearch:7.12.1
-docker run --name es01-test --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.12.1</pre>
+docker pull docker.elastic.co/elasticsearch/elasticsearch:7.12.0
+docker run --name es01-test --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.12.0</pre>
 </div>
 </li>
 </ol>
@@ -377,8 +375,8 @@ Kibana.</p>
 <li class="listitem">
 <p>In a new terminal session, run:</p>
 <div class="pre_wrapper lang-txt">
-<pre class="programlisting prettyprint lang-txt">docker pull docker.elastic.co/kibana/kibana:7.12.1
-docker run --name kib01-test --net elastic -p 5601:5601 -e "ELASTICSEARCH_HOSTS=http://es01-test:9200" docker.elastic.co/kibana/kibana:7.12.1</pre>
+<pre class="programlisting prettyprint lang-txt">docker pull docker.elastic.co/kibana/kibana:7.12.0
+docker run --name kib01-test --net elastic -p 5601:5601 -e "ELASTICSEARCH_HOSTS=http://es01-test:9200" docker.elastic.co/kibana/kibana:7.12.0</pre>
 </div>
 </li>
 <li class="listitem">

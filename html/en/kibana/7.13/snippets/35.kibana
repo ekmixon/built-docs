@@ -1,1 +1,0 @@
-$ curl -X DELETE api/saved_objects/index-pattern/my-pattern

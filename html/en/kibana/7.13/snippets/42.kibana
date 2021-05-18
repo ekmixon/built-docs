@@ -1,1 +1,0 @@
-$ curl -X POST api/saved_objects/_import -H "kbn-xsrf: true" --form file=@file.ndjson

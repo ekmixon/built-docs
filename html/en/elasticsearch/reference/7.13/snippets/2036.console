@@ -1,2 +1,0 @@
-POST /my-index-000001/_freeze
-POST /my-index-000001/_unfreeze
