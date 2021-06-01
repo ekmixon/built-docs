@@ -4011,9 +4011,9 @@ elasticsearch-py:
 elasticsearch-rs:
   Rust API/docs/master: 3efe7dc8ad892c6534ac004ffcf6ff9c900ca1e4
 elasticsearch-ruby:
-  Elasticsearch Guide/docs/examples/guide/master: 8ae0632a1be3198503baf4ecad75ed9886f0b50a
+  Elasticsearch Guide/docs/examples/guide/master: local
   Ruby API/docs/7.x: cc9cf11cc6aa93204775897e2281ad4818d0d109
-  Ruby API/docs/master: 6629215928900c65e59945f019079d86ae309126
+  Ruby API/docs/master: local
 enterprise-search-pubs:
   App Search Guide/app-search-docs/7.10: 0d2b561145aa1ec93b13c1500b9eeb488e7fd0e7
   App Search Guide/app-search-docs/7.11: 7e53ad36792f077f435ca477fe52211138c8a262
