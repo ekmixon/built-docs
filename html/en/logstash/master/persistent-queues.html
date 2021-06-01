@@ -222,7 +222,9 @@ completed, but not recorded as ACKed, when an abnormal termination occurs.</p>
 <h3 class="title"><a id="configuring-persistent-queues"></a>Configuring Persistent Queues<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/logstash/edit/master/docs/static/persistent-queues.asciidoc">edit</a></h3>
 </div></div></div>
 <p>To configure persistent queues, you can specify the following options in the
-Logstash <a class="xref" href="logstash-settings-file.html" title="logstash.yml">settings file</a>:</p>
+Logstash <a class="xref" href="logstash-settings-file.html" title="logstash.yml">settings file</a>.
+The settings will be applied to all pipelines and values are per pipeline.
+If you want to define them for a specific pipeline, use <a class="xref" href="multiple-pipelines.html" title="Multiple Pipelines"><code class="literal">pipelines.yml</code></a>.</p>
 <div class="ulist itemizedlist">
 <ul class="itemizedlist">
 <li class="listitem">
