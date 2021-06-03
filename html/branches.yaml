@@ -1941,7 +1941,9 @@ cloud:
   'Elasticsearch Add-On for Heroku - Hosted Elasticsearch and Kibana for Heroku Users/docs/heroku/ms-57': 92fe3e8f7f8986aaefc89a409ce4fffe501787e9
   'Elasticsearch Add-On for Heroku - Hosted Elasticsearch and Kibana for Heroku Users/docs/saas/ms-57': 92fe3e8f7f8986aaefc89a409ce4fffe501787e9
   'Elasticsearch Add-On for Heroku - Hosted Elasticsearch and Kibana for Heroku Users/docs/shared/ms-57': 92fe3e8f7f8986aaefc89a409ce4fffe501787e9
+  'Elasticsearch Service - Hosted Elastic Stack/docs/saas/master': local
   'Elasticsearch Service - Hosted Elastic Stack/docs/saas/ms-57': 92fe3e8f7f8986aaefc89a409ce4fffe501787e9
+  'Elasticsearch Service - Hosted Elastic Stack/docs/shared/master': local
   'Elasticsearch Service - Hosted Elastic Stack/docs/shared/ms-57': 92fe3e8f7f8986aaefc89a409ce4fffe501787e9
 cloud-assets:
   'Elastic Cloud Enterprise - Elastic Cloud on your Infrastructure/docs/master': c5dbc3d2c051ef88cff1277de0d5da1ddc16f3a7
@@ -3980,7 +3982,7 @@ elasticsearch-hadoop:
   Installation and Upgrade Guide/docs/src/reference/asciidoc/master: cc0f91b91d962320e7610f06066630e2a8a43452
 elasticsearch-js:
   Elasticsearch Guide/docs/doc_examples/master: 102520c3046e771cc7be3625c3f68520b0273d9b
-  JavaScript API/docs/16.x: 388c5e8e7ec1c0a097ee4960b2297073a484a33e
+  JavaScript API/docs/16.x: 8c359aeb7e90fbc8c4ef4de08ea14d3b02942269
   JavaScript API/docs/5.x: abfd356b619dd9e7f746570a6abcd337932887c4
   JavaScript API/docs/6.x: 231cfade24657ce2d8cdcac293e142b3e1b0a07b
   JavaScript API/docs/7.x: ea3df650f1094c037750eebb2a2d6135c49496c3
@@ -4085,12 +4087,12 @@ kibana:
   Installation and Upgrade Guide/docs/6.6: d99159bfde9883d025940537ed9b28bbc8a3ce15|asciidoctor
   Installation and Upgrade Guide/docs/6.7: 322de3fc7e98c676547ba4f9d6f9c20c5d51dce7|asciidoctor
   Installation and Upgrade Guide/docs/7.0: 2aebbaa571af3b857f3716f07adf2488620e45be
-  Installation and Upgrade Guide/docs/7.1: 1600b5b1dbd86938bbee4d364f277fef36569df2
+  Installation and Upgrade Guide/docs/7.1: 8cef98d2cc1716e7b90a2e078a8c10cb20f83e5e
   Installation and Upgrade Guide/docs/7.10: 4992ee4f2cc677aaf7e877d3ec4c03190d9f4c57
   Installation and Upgrade Guide/docs/7.11: ed3b521f57a25d57598dd27c59e7545d4e7663f2
   Installation and Upgrade Guide/docs/7.12: 410ec278b118381158e7987ea90ce37b649fb42a
   Installation and Upgrade Guide/docs/7.13: 67b10c3b7fedf222af23d0cccd9bbaa84b727d4a
-  Installation and Upgrade Guide/docs/7.2: dc3bae2b521f5e71c524a8a925ccb5594ca37474
+  Installation and Upgrade Guide/docs/7.2: f019904766815d018b76c5baeba48d7b5616e430
   Installation and Upgrade Guide/docs/7.3: 165239fa39e23db4dc586d213a49f133f99fdc05
   Installation and Upgrade Guide/docs/7.4: b8fb49fc400981f643e31cdd0c2faad496481f7d
   Installation and Upgrade Guide/docs/7.5: f17ea055fc80e800072d5d1541e6a44860f0e611
@@ -4143,12 +4145,12 @@ kibana:
   Kibana Guide/docs/6.7: cdd839d9d0c49164b47297bd8502aae5be014d46
   Kibana Guide/docs/6.8: 7443e4dd16c93efb038b2e6338ea2f028800a21d
   Kibana Guide/docs/7.0: 2aebbaa571af3b857f3716f07adf2488620e45be
-  Kibana Guide/docs/7.1: 1600b5b1dbd86938bbee4d364f277fef36569df2
+  Kibana Guide/docs/7.1: 8cef98d2cc1716e7b90a2e078a8c10cb20f83e5e
   Kibana Guide/docs/7.10: 4992ee4f2cc677aaf7e877d3ec4c03190d9f4c57
   Kibana Guide/docs/7.11: ed3b521f57a25d57598dd27c59e7545d4e7663f2
   Kibana Guide/docs/7.12: 410ec278b118381158e7987ea90ce37b649fb42a
   Kibana Guide/docs/7.13: 2bbcad4c145e724a4d990f2c2e0c4ae4004faa7c
-  Kibana Guide/docs/7.2: dc3bae2b521f5e71c524a8a925ccb5594ca37474
+  Kibana Guide/docs/7.2: f019904766815d018b76c5baeba48d7b5616e430
   Kibana Guide/docs/7.3: 165239fa39e23db4dc586d213a49f133f99fdc05
   Kibana Guide/docs/7.4: b8fb49fc400981f643e31cdd0c2faad496481f7d
   Kibana Guide/docs/7.5: f17ea055fc80e800072d5d1541e6a44860f0e611
@@ -4242,7 +4244,7 @@ logstash:
   Logstash Reference/docs/7.10: 4344a874f6ace5e6bfb777cab46a93155eec7a22
   Logstash Reference/docs/7.11: 866633f2c3d230ceddbaf2b400753c95047d663b
   Logstash Reference/docs/7.12: 764861333bec062bff8bb7bcc5ea4a3cdc9f17d1
-  Logstash Reference/docs/7.13: 55ddb65fede001503b630ecaf985f557d0fc3528
+  Logstash Reference/docs/7.13: 3486e4d73536af541b777655ea9911690c51da1c
   Logstash Reference/docs/7.2: 0505c158e463d86a556b17e2942edce9ad64733f
   Logstash Reference/docs/7.3: 3d8b4efbcd55b0c84a6ff2294a985ff1fa65ac74
   Logstash Reference/docs/7.4: 13ea6298dfdbb0e343fc57a3a13ec91fcdd069ec
@@ -4285,7 +4287,7 @@ logstash-docs:
   Logstash Reference/docs/7.10: 6ee20e9341c32d238851779208818c65b7bbd407
   Logstash Reference/docs/7.11: c7ae5c585267570107ae00ced76f86c41e580c14
   Logstash Reference/docs/7.12: 25fcfebef4e54768f6bf71d60e06bb824229ae9e
-  Logstash Reference/docs/7.13: 31dba4879f8f815ddc61f64dfb6256e6d0edfeb9
+  Logstash Reference/docs/7.13: 242d578245c24d066d85b0d052debd220da406d7
   Logstash Reference/docs/7.2: 17d78f9d86ec04ff1779a666c99a44ac0f91368b
   Logstash Reference/docs/7.3: 823afa9d565cde29a403bca366e20164e859b5b8
   Logstash Reference/docs/7.4: f1331c3327f297f7331055c56458c27ef2f800ae
