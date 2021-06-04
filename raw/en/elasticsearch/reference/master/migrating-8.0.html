@@ -120,6 +120,9 @@ your application to Elasticsearch 8.0.</p>
 <li class="listitem">
 <a class="xref" href="migrating-8.0.html#breaking_80_transport_changes" title="Transport changes">Transport changes</a>
 </li>
+<li class="listitem">
+<a class="xref" href="migrating-8.0.html#breaking_80_watcher_changes" title="Watcher changes">Watcher changes</a>
+</li>
 </ul>
 </div>
 <h3><a id="breaking-changes-8.0"></a>Breaking changes<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/elasticsearch/edit/master/docs/reference/migration/migrate_8_0.asciidoc">edit</a></h3>
@@ -1904,6 +1907,22 @@ Discontinue use of the <code class="literal">es.unsafely_permit_handshake_from_i
 system property, and ensure that all nodes of the same version are running
 exactly the same build. Setting this system property will result in an error
 on startup.</p>
+</div>
+</details>
+<h4><a id="breaking_80_watcher_changes"></a>Watcher changes<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/elasticsearch/edit/master/docs/reference/migration/migrate_8_0/watcher.asciidoc">edit</a></h4>
+<details>
+<summary class="title">Watcher context (ctx) is no longer modifiable.</summary>
+<div class="content">
+<p><span class="strong strong"><strong>Details</strong></span><br></p>
+<p>Watcher supports dynamic variables that can be set and accessed by
+different constructs during the execution of a watch. These are
+available via <code class="literal">ctx.vars</code> (e.g. <code class="literal">ctx.vars.someVar = 1</code>).</p>
+<p>Previously, watcher also permitted dynamic variables that could be set
+and accessed within a single construct by direct modification of the
+<code class="literal">ctx</code> itself (e.g. <code class="literal">ctx.someVar = 1</code>). This is no longer permitted,
+all dynamic variables must now use <code class="literal">ctx.vars</code>.</p>
+<p><span class="strong strong"><strong>Impact</strong></span><br>
+Use <code class="literal">ctx.vars</code> for all dynamic variables.</p>
 </div>
 </details>
 
