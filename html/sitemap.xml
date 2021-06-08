@@ -53608,6 +53608,223 @@
 </url>
 
 <url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_add_a_data_stream.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_asset_testing.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_build_the_package.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_community_integrations.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_create_a_new_package.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_create_kibana_dashboards.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_final_checklist.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_format.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_lint.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_open_a_pr.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_pipeline_testing.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_promote.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_pull_request_review_guidelines.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_spin_up_the_elastic_stack.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_static_testing.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_system_testing.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_test.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/_testing_and_validation.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/build-a-new-integration.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/build-integration-prerequisites.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/changelog-spec.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/data-stream-spec.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/dev-spec.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/docs-spec.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/elastic-package.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/integration-example-apache.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/integration-lifecycle.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/kibana-spec.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/manifest-spec.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/specification.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://www.elastic.co/guide/en/integrations-developer/current/what-is-an-integration.html</loc>
+    <lastmod>2021-06-08T21:55:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
     <loc>https://www.elastic.co/guide/en/kibana/current/access.html</loc>
     <lastmod>2021-05-25T12:30:51+00:00</lastmod>
     <changefreq>weekly</changefreq>

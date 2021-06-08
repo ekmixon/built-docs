@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Integration example: Apache | Integrations Developer Guide | Elastic</title>
+<link rel="home" href="index.html" title="Integrations Developer Guide"/>
+<link rel="up" href="index.html" title="Integrations Developer Guide"/>
+<link rel="prev" href="manifest-spec.html" title="manifest.yml"/>
+<link rel="next" href="elastic-package.html" title="elastic-package"/>
+<meta name="DC.type" content="Learn/Docs/Integrations/Developer"/>
+<meta name="DC.subject" content="Integrations"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+<b>
+  📗 Comments? ✏️ Feedback? 🤔 Suggestions?
+  <a href="https://github.com/elastic/observability-docs/pull/769">Leave it here</a> 🙏👋
+</b>
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Integrations Developer Guide</a></span>
+»
+<span class="breadcrumb-node">Integration example: Apache</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="manifest-spec.html">« <code class="literal">manifest.yml</code></a>
+</span>
+<span class="next">
+<a href="elastic-package.html"><code class="literal">elastic-package</code> »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h1 class="title"><a id="integration-example-apache"></a>Integration example: Apache<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-example.asciidoc">edit</a></h1>
+</div></div></div>
+<p>Let&#8217;s look at an example:
+The <a href="https://github.com/elastic/integrations/tree/master/packages/apache" class="ulink" target="_top">Apache integration</a>.
+This integration periodically:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+fetches <span class="strong strong"><strong>status metrics</strong></span> from the Apache server
+</li>
+<li class="listitem">
+fetches and parses <span class="strong strong"><strong>access logs</strong></span> created by the Apache server
+</li>
+<li class="listitem">
+fetches and parses <span class="strong strong"><strong>error logs</strong></span> created by the Apache server
+</li>
+</ul>
+</div>
+<p>Each of these different data types is considered a <span class="strong strong"><strong>data stream</strong></span>.</p>
+<h3><a id="apache-data-streams"></a>Data streams<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-example.asciidoc">edit</a></h3>
+<div class="sidebar">
+<div class="titlepage"></div>
+<p><span class="strong strong"><strong>Data streams</strong></span> allow you to store time series data across multiple indices while giving you a single named resource for requests.</p>
+<details>
+<summary class="title">Expand to learn more</summary>
+<div class="content">
+<p>stuff</p>
+</div>
+</details>
+</div>
+<p>Each data stream is represented by a folder in the <code class="literal">data_stream</code> directory:</p>
+<div class="pre_wrapper lang-text">
+<pre class="programlisting prettyprint lang-text">apache
+└───data_stream
+│   └───access <a id="CO1-1"></a><i class="conum" data-value="1"></i>
+│   └───error <a id="CO1-2"></a><i class="conum" data-value="1"></i>
+│   └───status <a id="CO1-3"></a><i class="conum" data-value="1"></i></pre>
+</div>
+<div class="calloutlist">
+<table border="0" summary="Callout list">
+<tr>
+<td align="left" valign="top" width="5%">
+<p><a href="#CO1-1"><i class="conum" data-value="1"></i></a><a href="#CO1-2"></a><a href="#CO1-3"></a></p>
+</td>
+<td align="left" valign="top">
+<p>Apache&#8217;s three different data streams</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Let&#8217;s choose one of these data streams to dig into: access logs.</p>
+<h3><a id="apache-ingest-pipelines"></a>Ingest pipelines<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-example.asciidoc">edit</a></h3>
+<p>Access logs (or any logs) should be parsed into structured data prior to ingesting them into Elasticsearch.
+To do this, integrations use <span class="strong strong"><strong>ingest pipelines</strong></span></p>
+<div class="sidebar">
+<div class="titlepage"></div>
+<p><span class="strong strong"><strong>Ingest pipelines</strong></span> let you perform common transformations on your data before indexing. For example, you can use pipelines to remove fields, extract values from text, and enrich your data.</p>
+<p>A pipeline consists of a series of configurable tasks called processors. Each processor runs sequentially, making specific changes to incoming documents. After the processors have run, Elasticsearch adds the transformed documents to your data stream or index.</p>
+<details>
+<summary class="title">Expand to learn more</summary>
+<div class="content">
+<p>stuff</p>
+</div>
+</details>
+</div>
+<p>Ingest pipelines are defined in the <code class="literal">elasticsearch/ingest_pipeline</code> directory.
+They only apply to the parent data stream:</p>
+<div class="pre_wrapper lang-text">
+<pre class="programlisting prettyprint lang-text">apache
+└───data_stream
+│   └───access
+│   │   └───elasticsearch/ingest_pipeline
+│   │          default.yml <a id="CO2-1"></a><i class="conum" data-value="1"></i>
+│   └───error
+│   └───status</pre>
+</div>
+<div class="calloutlist">
+<table border="0" summary="Callout list">
+<tr>
+<td align="left" valign="top" width="5%">
+<p><a href="#CO2-1"><i class="conum" data-value="1"></i></a></p>
+</td>
+<td align="left" valign="top">
+<p>The ingest pipeline definition for the access logs data stream of the apache integration</p>
+</td>
+</tr>
+</table>
+</div>
+<p>The ingest pipeline definition requires a description and an array of processors.
+Here&#8217;s a snippet of the access logs ingest pipeline:</p>
+<div class="pre_wrapper lang-yaml">
+<pre class="programlisting prettyprint lang-yaml">description: "Pipeline for parsing Apache HTTP Server access logs."
+processors:
+- set:
+    field: event.ingested
+    value: '{{_ingest.timestamp}}'
+- rename:
+    field: message
+    target_field: event.original
+- remove:
+    field: apache.access.time
+    ignore_failure: true</pre>
+</div>
+<p>For more information, see add a link here of some kind</p>
+<h3><a id="apache-mappings"></a>Mappings<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-example.asciidoc">edit</a></h3>
+<p>Ingest pipelines create fields in an Elasticsearch index, but don&#8217;t define the fields themselves.
+Each field needs a defined data type, or mapping.</p>
+<div class="sidebar">
+<div class="titlepage"></div>
+<p><span class="strong strong"><strong>Mapping</strong></span> is the process of defining how a document, and the fields it contains, are stored and indexed.
+Each document is a collection of fields, which each have their own data type. When mapping your data, you create a mapping definition, which contains a list of fields that are pertinent to the document. A mapping definition also includes metadata fields, like the _source field, which customize how a document’s associated metadata is handled.</p>
+<details>
+<summary class="title">Expand to learn more</summary>
+<div class="content">
+<p>stuff</p>
+</div>
+</details>
+</div>
+<p>Mappings are defined in the <code class="literal">fields</code> directory.
+Like ingest pipelines, mappings only apply to the parent datastream.
+The apache integration has four different field definitions:</p>
+<div class="pre_wrapper lang-text">
+<pre class="programlisting prettyprint lang-text">apache
+└───data_stream
+│   └───access
+│   │   └───elasticsearch/ingest_pipeline
+│   │   │      default.yml
+│   │   └───fields
+│   │          agent.yml <a id="CO3-1"></a><i class="conum" data-value="1"></i>
+│   │          base-fields.yml <a id="CO3-2"></a><i class="conum" data-value="2"></i>
+│   │          ecs.yml <a id="CO3-3"></a><i class="conum" data-value="3"></i>
+│   │          fields.yml <a id="CO3-4"></a><i class="conum" data-value="4"></i>
+│   └───error
+│   └───status</pre>
+</div>
+<div class="calloutlist">
+<table border="0" summary="Callout list">
+<tr>
+<td align="left" valign="top" width="5%">
+<p><a href="#CO3-1"><i class="conum" data-value="1"></i></a></p>
+</td>
+<td align="left" valign="top">
+<p>??</p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" width="5%">
+<p><a href="#CO3-2"><i class="conum" data-value="2"></i></a></p>
+</td>
+<td align="left" valign="top">
+<p><code class="literal">base-fields.yml</code> never changes and is required for all integrations</p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" width="5%">
+<p><a href="#CO3-3"><i class="conum" data-value="3"></i></a></p>
+</td>
+<td align="left" valign="top">
+<p>Defines the relevant ECS fields</p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" width="5%">
+<p><a href="#CO3-4"><i class="conum" data-value="4"></i></a></p>
+</td>
+<td align="left" valign="top">
+<p>Custom apache access log fields ??</p>
+</td>
+</tr>
+</table>
+</div>
+<p>Maybe include one here or something</p>
+<h3><a id="apache-ecs"></a>ECS fields<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-example.asciidoc">edit</a></h3>
+<div class="sidebar">
+<div class="titlepage"></div>
+<p><span class="strong strong"><strong>ECS</strong></span></p>
+<p>Something about ECS here.</p>
+<details>
+<summary class="title">Expand to learn more</summary>
+<div class="content">
+<p>stuff</p>
+</div>
+</details>
+</div>
+<h3><a id="apache-policy-templates"></a>Policy templates?<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-example.asciidoc">edit</a></h3>
+<p>??</p>
+<h3><a id="apache-kibana-assets"></a>Kibana assets<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-example.asciidoc">edit</a></h3>
+<p>Something about Kibana dashboards or visualizations</p>
+<h3><a id="apache-everything-else"></a>Everything else<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-example.asciidoc">edit</a></h3>
+<p>Something about docs, screenshots, and tests</p>
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="manifest-spec.html">« <code class="literal">manifest.yml</code></a>
+</span>
+<span class="next">
+<a href="elastic-package.html"><code class="literal">elastic-package</code> »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

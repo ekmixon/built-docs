@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>What is an integration? | Integrations Developer Guide | Elastic</title>
+<link rel="home" href="index.html" title="Integrations Developer Guide"/>
+<link rel="up" href="index.html" title="Integrations Developer Guide"/>
+<link rel="prev" href="index.html" title="Integrations Developer Guide"/>
+<link rel="next" href="integration-lifecycle.html" title="Integration lifecycle"/>
+<meta name="DC.type" content="Learn/Docs/Integrations/Developer"/>
+<meta name="DC.subject" content="Integrations"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+<b>
+  📗 Comments? ✏️ Feedback? 🤔 Suggestions?
+  <a href="https://github.com/elastic/observability-docs/pull/769">Leave it here</a> 🙏👋
+</b>
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Integrations Developer Guide</a></span>
+»
+<span class="breadcrumb-node">What is an integration?</span>
+</div>
+<div class="navheader">
+<span class="prev">
+</span>
+<span class="next">
+<a href="integration-lifecycle.html">Integration lifecycle »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h1 class="title"><a id="what-is-an-integration"></a>What is an integration?<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/what-is-an-integration.asciidoc">edit</a></h1>
+</div></div></div>
+<p>An Elastic integration is a collection of assets that defines how to observe a specific product with the Elastic Stack.
+Integrations offer a number of benefits over other Observability options:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Structured around the service that is being observed&#8212;&#8203;not the monitoring agent
+</li>
+<li class="listitem">
+Easy, less error-prone configuration
+</li>
+<li class="listitem">
+Fewer monitoring agents for users to install
+</li>
+<li class="listitem">
+Deploy in just a few clicks
+</li>
+<li class="listitem">
+Decoupled release process from the Elastic Stack
+</li>
+</ul>
+</div>
+<p>The assets contained in an integration can define every step of the observability process:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Data transformation, ingestion, and storage.
+</li>
+<li class="listitem">
+Data visualization
+</li>
+<li class="listitem">
+Elastic Agent configuration
+</li>
+<li class="listitem">
+Documentation
+</li>
+<li class="listitem">
+Tests
+</li>
+</ul>
+</div>
+<p>Integrations have a strict, well-defined structure.
+This structure is described by the package specification.</p>
+<h3><a id="why-build-an-integration"></a>Why build an integration?<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/what-is-an-integration.asciidoc">edit</a></h3>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+You want to observe <em>some</em> service
+</li>
+<li class="listitem">
+You observe that service by ingesting metrics and/or logs from it
+</li>
+<li class="listitem">
+You want to visualize this data in a meaningful way
+</li>
+</ul>
+</div>
+</div>
+<div class="navfooter">
+<span class="prev">
+</span>
+<span class="next">
+<a href="integration-lifecycle.html">Integration lifecycle »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

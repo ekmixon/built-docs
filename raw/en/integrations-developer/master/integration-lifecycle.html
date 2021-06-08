@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Integration lifecycle | Integrations Developer Guide | Elastic</title>
+<link rel="home" href="index.html" title="Integrations Developer Guide"/>
+<link rel="up" href="index.html" title="Integrations Developer Guide"/>
+<link rel="prev" href="what-is-an-integration.html" title="What is an integration?"/>
+<link rel="next" href="specification.html" title="Specification"/>
+<meta name="DC.type" content="Learn/Docs/Integrations/Developer"/>
+<meta name="DC.subject" content="Integrations"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+<b>
+  📗 Comments? ✏️ Feedback? 🤔 Suggestions?
+  <a href="https://github.com/elastic/observability-docs/pull/769">Leave it here</a> 🙏👋
+</b>
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Integrations Developer Guide</a></span>
+»
+<span class="breadcrumb-node">Integration lifecycle</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="what-is-an-integration.html">« What is an integration?</a>
+</span>
+<span class="next">
+<a href="specification.html">Specification »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h1 class="title"><a id="integration-lifecycle"></a>Integration lifecycle<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-lifecycle.asciidoc">edit</a></h1>
+</div></div></div>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+<p>Create a source package</p>
+<p>All integrations start as a source package.
+You&#8217;ll find most Elastic integrations in the <code class="literal">elastic/integrations</code> repo,
+but a package can live anywhere.</p>
+</li>
+<li class="listitem">
+<p>Publish to the package registry</p>
+<p>When an integration is ready to be published, bump the version in the manifest file
+and publish the package to the Elastic Package Registry (EPR) using <code class="literal">elastic-package</code></p>
+</li>
+<li class="listitem">
+<p>Install the package</p>
+<p>After a package is published in the EPR, it is downloaded as a .zip file from the package-registry by Fleet inside Kibana.
+The package is now ready to be installed.</p>
+<p>Click <span class="strong strong"><strong>add integration</strong></span> to install the integration and add it to an Elastic Agent policy.
+When you install a package, its assets are unpacked and installed into Elasticsearch and Kibana using stack APIs.
+In addition, configuration for the package is persisted in Elasticsearch as an Elastic Agent policy.</p>
+</li>
+<li class="listitem">
+<p>Add the policy with the integration to an Elastic Agent</p>
+<p>Once the policy with an integration is added to an Elastic Agent,
+the agent will begin to collect and ship data to the Elastic Stack based on the Elastic integration.</p>
+<p>Package assets may come into play here. For example, if a package installed ingest pipelines,
+those will intercept the data, and transform it before it is indexed.</p>
+</li>
+<li class="listitem">
+<p>Visualize</p>
+<p>Integrations can ship with custom dashboards and visualizations that are installed with the integration.
+Use these for a tailored view at your Observability data.</p>
+</li>
+</ol>
+</div>
+<h3><a id="integration-repos"></a>Repositories<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-lifecycle.asciidoc">edit</a></h3>
+<h4><a id="_package_specification"></a>Package specification<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-lifecycle.asciidoc">edit</a></h4>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Formal spec of what an Elastic package is
+</li>
+<li class="listitem">
+What we use for validation of new or updated packages
+</li>
+</ul>
+</div>
+<p>Repo: <a href="https://github.com/elastic/package-spec" class="ulink" target="_top">https://github.com/elastic/package-spec</a></p>
+<p>Right now it&#8217;s on V1. Should we pull some of this content into the documentation?
+<a href="https://github.com/elastic/package-spec/tree/master/versions/1" class="ulink" target="_top">https://github.com/elastic/package-spec/tree/master/versions/1</a></p>
+<h4><a id="_package_storage"></a>Package storage<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-lifecycle.asciidoc">edit</a></h4>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Backing store for the package registry service
+</li>
+<li class="listitem">
+Whatever you see in this repo is what you can find via the package registry service
+</li>
+<li class="listitem">
+3 branches: snapshot, staging, production
+</li>
+</ul>
+</div>
+<p>Repo: <a href="https://github.com/elastic/package-storage" class="ulink" target="_top">https://github.com/elastic/package-storage</a></p>
+<h4><a id="_package_registry"></a>Package registry<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-lifecycle.asciidoc">edit</a></h4>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Source code for the package registry server
+</li>
+</ul>
+</div>
+<p>Repo: <a href="https://github.com/elastic/package-registry" class="ulink" target="_top">https://github.com/elastic/package-registry</a></p>
+<h4><a id="_integrations"></a>Integrations<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/integrations/integration-lifecycle.asciidoc">edit</a></h4>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Where most <em>Elastic</em> packages are kept
+</li>
+</ul>
+</div>
+<p>Repo: <a href="https://github.com/elastic/integrations" class="ulink" target="_top">https://github.com/elastic/integrations</a></p>
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="what-is-an-integration.html">« What is an integration?</a>
+</span>
+<span class="next">
+<a href="specification.html">Specification »</a>
+</span>
+</div>
+</div>
+</body>
+</html>
