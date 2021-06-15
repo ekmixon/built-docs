@@ -6,7 +6,7 @@
 <link rel="home" href="index.html" title="APM Java Agent Reference [master]"/>
 <link rel="up" href="configuration.html" title="Configuration"/>
 <link rel="prev" href="config-stacktrace.html" title="Stacktrace configuration options"/>
-<link rel="next" href="public-api.html" title="Public API"/>
+<link rel="next" href="apis.html" title="Tracing APIs"/>
 <meta name="DC.type" content="Learn/Docs/APM Java Agent/Reference/master"/>
 <meta name="DC.subject" content="APM"/>
 <meta name="DC.identifier" content="master"/>
@@ -29,7 +29,7 @@ Not what you want? See the
 <a href="config-stacktrace.html">« Stacktrace configuration options</a>
 </span>
 <span class="next">
-<a href="public-api.html">Public API »</a>
+<a href="apis.html">Tracing APIs »</a>
 </span>
 </div>
 <div class="section">
@@ -301,16 +301,26 @@ Not what you want? See the
 # sanitize_field_names=password,passwd,pwd,secret,*key,*token*,*session*,*credit*,*card*,authorization,set-cookie
 
 # A list of instrumentations which should be disabled.
-# Valid options are `annotations`, `apache-commons-exec`, `apache-httpclient`, `asynchttpclient`, `bootdelegation`, `cassandra`, `concurrent`, `dubbo`, `elasticsearch-restclient`, `exception-handler`, `executor`, `executor-collection`, `experimental`, `fork-join`, `grails`, `grpc`, `hibernate-search`, `http-client`, `jax-rs`, `jax-ws`, `jdbc`, `jdk-httpclient`, `jedis`, `jms`, `jsf`, `kafka`, `lettuce`, `log4j1-ecs`, `log4j2-ecs`, `log4j2-error`, `logback-ecs`, `logging`, `micrometer`, `mongodb-client`, `okhttp`, `opentracing`, `process`, `public-api`, `quartz`, `rabbitmq`, `redis`, `redisson`, `render`, `scala-future`, `scheduled`, `servlet-api`, `servlet-api-async`, `servlet-api-dispatch`, `servlet-input-stream`, `slf4j-error`, `spring-amqp`, `spring-mvc`, `spring-resttemplate`, `spring-service-name`, `spring-view-render`, `spring-webflux`, `ssl-context`, `struts`, `timer-task`, `urlconnection`, `vertx`, `vertx-web`, `vertx-webclient`.
+# Valid options are `annotations`, `apache-commons-exec`, `apache-httpclient`, `asynchttpclient`, `bootdelegation`, `cassandra`, `concurrent`, `dubbo`, `elasticsearch-restclient`, `exception-handler`, `executor`, `executor-collection`, `experimental`, `fork-join`, `grails`, `grpc`, `hibernate-search`, `http-client`, `jax-rs`, `jax-ws`, `jdbc`, `jdk-httpclient`, `jedis`, `jms`, `jsf`, `kafka`, `lettuce`, `log4j1-ecs`, `log4j2-ecs`, `log4j2-error`, `logback-ecs`, `logging`, `micrometer`, `mongodb-client`, `okhttp`, `opentelemetry`, `opentracing`, `process`, `public-api`, `quartz`, `rabbitmq`, `redis`, `redisson`, `render`, `scala-future`, `scheduled`, `servlet-api`, `servlet-api-async`, `servlet-api-dispatch`, `servlet-input-stream`, `slf4j-error`, `spring-amqp`, `spring-mvc`, `spring-resttemplate`, `spring-service-name`, `spring-view-render`, `spring-webflux`, `ssl-context`, `struts`, `timer-task`, `urlconnection`, `vertx`, `vertx-web`, `vertx-webclient`.
 # If you want to try out experimental features, set the value to an empty string.
 #
 # NOTE: Changing this value at runtime can slow down the application temporarily.
 #
 # This setting can be changed at runtime
 # Type: comma separated list
-# Default value: experimental
+# Default value:
 #
-# disable_instrumentations=experimental
+# disable_instrumentations=
+
+# Whether to apply experimental instrumentations.
+#
+# NOTE: Changing this value at runtime can slow down the application temporarily.
+#
+# This setting can be changed at runtime
+# Type: Boolean
+# Default value: false
+#
+# enable_experimental_instrumentations=false
 
 # When reporting exceptions,
 # un-nests the exceptions matching the wildcard pattern.
@@ -1324,7 +1334,7 @@ Not what you want? See the
 <a href="config-stacktrace.html">« Stacktrace configuration options</a>
 </span>
 <span class="next">
-<a href="public-api.html">Public API »</a>
+<a href="apis.html">Tracing APIs »</a>
 </span>
 </div>
 </div>
