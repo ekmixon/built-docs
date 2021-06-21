@@ -4219,7 +4219,7 @@ logstash:
   Installation and Upgrade Guide/docs/7.8: bb9e6f8d56347ca11bc1cda77346d234176f1b43
   Installation and Upgrade Guide/docs/7.9: 78afd781f78e6a911f7a99136b2f5a4b1ad229a1
   Installation and Upgrade Guide/docs/7.x: 2c84a5d672214f29d1b515a34cea06cb6fe75ec7
-  Installation and Upgrade Guide/docs/master: 6ae2146a755c1410a1d7955bc284406f674fb935
+  Installation and Upgrade Guide/docs/master: local
   Logstash Reference/docs/1.5: 983007bb28dd51b2493061ea02989ab76f10af73
   Logstash Reference/docs/2.0: 55d8a0acf6ce12a8997f627b0b1c715bb555cef6
   Logstash Reference/docs/2.1: f71acf3fcac2b6e590d022c57ce1b64efef19650
@@ -4257,7 +4257,7 @@ logstash:
   Logstash Reference/docs/7.8: bb9e6f8d56347ca11bc1cda77346d234176f1b43
   Logstash Reference/docs/7.9: 78afd781f78e6a911f7a99136b2f5a4b1ad229a1
   Logstash Reference/docs/7.x: 7d4b2ff313731f13799c2ec76f66be5c6fbf0fc6
-  Logstash Reference/docs/master: 328fc9e7e6544fcbd2a1940c076c85a3eafb4d7c
+  Logstash Reference/docs/master: local
   Logstash 참조/docs/kr/5.3: 191f450208459d3814ca6ce62fa8a58eb01e98c1
   Logstash 참조/docs/kr/5.4: 09aad734ca5f743bac1ad07a14627e7670a848ad
   Logstashリファレンス/docs/jp/5.3: 191f450208459d3814ca6ce62fa8a58eb01e98c1
