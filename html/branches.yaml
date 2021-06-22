@@ -4073,7 +4073,7 @@ guide:
 guide-cn:
   《Elasticsearch 权威指南》中文版/./cn: 9a6ce9b6223253002dcf8d0ad02ca3916c8e041b
 kibana:
-  Glossary/docs/glossary.asciidoc/master: 853de830c2c908d7c3601e76896c4edc0a9c2ff4
+  Glossary/docs/glossary.asciidoc/master: local
   Installation and Upgrade Guide/docs/5.0: 541ea6b48d92cb54e13b924c643b010431761773|asciidoctor
   Installation and Upgrade Guide/docs/5.1: 09eb8c18cabcb8c0a4f4f0de3f8e21e620650497|asciidoctor
   Installation and Upgrade Guide/docs/5.2: 18228e3774f2b514a9619096f31ac25bea75eaa5|asciidoctor
@@ -4104,25 +4104,25 @@ kibana:
   Installation and Upgrade Guide/docs/7.8: 9931b87a3a90c4435fa9421bfbad9dddd2c13658
   Installation and Upgrade Guide/docs/7.9: cf8523ef8b0c64a6280871d39c823a32ab548ef9
   Installation and Upgrade Guide/docs/7.x: de22956d00bf719e5e9bcf598d3cb86307cb5dde
-  Installation and Upgrade Guide/docs/master: a2e7b388a4072b3e64721e0e55d345381ced469d
+  Installation and Upgrade Guide/docs/master: local
   Kibana Guide/:(glob)examples/**/*.asciidoc/7.10: 73c63e2a61ae934b7ad2900d246acc6ca9413eae
   Kibana Guide/:(glob)examples/**/*.asciidoc/7.11: 8db3f75cd448af31ece190011082c9d18ffa3199
   Kibana Guide/:(glob)examples/**/*.asciidoc/7.12: d8d70422850701446be8aa3c6dff679d65d2666f
   Kibana Guide/:(glob)examples/**/*.asciidoc/7.13: 264d5f25907ac6a51143b9ef16b69460f554c8b7
   Kibana Guide/:(glob)examples/**/*.asciidoc/7.x: 875af978284cede3a808b55cd3d865b13af214d4
-  Kibana Guide/:(glob)examples/**/*.asciidoc/master: a2e7b388a4072b3e64721e0e55d345381ced469d
+  Kibana Guide/:(glob)examples/**/*.asciidoc/master: local
   Kibana Guide/:(glob)src/**/*.asciidoc/7.10: 73c63e2a61ae934b7ad2900d246acc6ca9413eae
   Kibana Guide/:(glob)src/**/*.asciidoc/7.11: 8db3f75cd448af31ece190011082c9d18ffa3199
   Kibana Guide/:(glob)src/**/*.asciidoc/7.12: d8d70422850701446be8aa3c6dff679d65d2666f
   Kibana Guide/:(glob)src/**/*.asciidoc/7.13: 264d5f25907ac6a51143b9ef16b69460f554c8b7
   Kibana Guide/:(glob)src/**/*.asciidoc/7.x: 875af978284cede3a808b55cd3d865b13af214d4
-  Kibana Guide/:(glob)src/**/*.asciidoc/master: a2e7b388a4072b3e64721e0e55d345381ced469d
+  Kibana Guide/:(glob)src/**/*.asciidoc/master: local
   Kibana Guide/:(glob)x-pack/**/*.asciidoc/7.10: 73c63e2a61ae934b7ad2900d246acc6ca9413eae
   Kibana Guide/:(glob)x-pack/**/*.asciidoc/7.11: 8db3f75cd448af31ece190011082c9d18ffa3199
   Kibana Guide/:(glob)x-pack/**/*.asciidoc/7.12: d8d70422850701446be8aa3c6dff679d65d2666f
   Kibana Guide/:(glob)x-pack/**/*.asciidoc/7.13: 264d5f25907ac6a51143b9ef16b69460f554c8b7
   Kibana Guide/:(glob)x-pack/**/*.asciidoc/7.x: 875af978284cede3a808b55cd3d865b13af214d4
-  Kibana Guide/:(glob)x-pack/**/*.asciidoc/master: a2e7b388a4072b3e64721e0e55d345381ced469d
+  Kibana Guide/:(glob)x-pack/**/*.asciidoc/master: local
   Kibana Guide/docs/3.0: ab14a2f8f5646e647d1f4c5cad4f8a799dd8a2af
   Kibana Guide/docs/4.0: eb193c8b281143797e53c87477de8f825e8ab910
   Kibana Guide/docs/4.1: e788c2afbd2552842f4928dde824abdb65a9c98c
@@ -4162,14 +4162,14 @@ kibana:
   Kibana Guide/docs/7.8: 9931b87a3a90c4435fa9421bfbad9dddd2c13658
   Kibana Guide/docs/7.9: cf8523ef8b0c64a6280871d39c823a32ab548ef9
   Kibana Guide/docs/7.x: 875af978284cede3a808b55cd3d865b13af214d4
-  Kibana Guide/docs/master: a2e7b388a4072b3e64721e0e55d345381ced469d
+  Kibana Guide/docs/master: local
   Kibana 사용자 가이드/docs/kr/5.3: 0d2c9728cdd64e619503715b890c1950db3b9470
   Kibana 사용자 가이드/docs/kr/5.4: 73d3e96e2b29b571e3c62801bfda04b3474c282c
   Kibanaユーザーガイド/docs/jp/5.3: 0d2c9728cdd64e619503715b890c1950db3b9470
   Kibanaユーザーガイド/docs/jp/5.4: 73d3e96e2b29b571e3c62801bfda04b3474c282c
   link-check-kibana/src/core/public/doc_links/doc_links_service.ts/7.13: e58ee022b17699fdff917fa630302080207c3653
   link-check-kibana/src/core/public/doc_links/doc_links_service.ts/7.x: 915e32a9ab627d8294bb6974a39a7d76d15f48da
-  link-check-kibana/src/core/public/doc_links/doc_links_service.ts/master: a2e7b388a4072b3e64721e0e55d345381ced469d
+  link-check-kibana/src/core/public/doc_links/doc_links_service.ts/master: local
   link-check-kibana/src/legacy/ui/public/documentation_links/documentation_links.ts/7.0: aee350a077cbc349c380d905c65bf80cfdc19be0
   link-check-kibana/src/legacy/ui/public/documentation_links/documentation_links.ts/7.1: a31950e8a071b2ea7ced742180b18ae4de3c366c
   link-check-kibana/src/legacy/ui/public/documentation_links/documentation_links.ts/7.10: 73c63e2a61ae934b7ad2900d246acc6ca9413eae
