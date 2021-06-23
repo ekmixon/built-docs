@@ -833,7 +833,7 @@ List of paths to PEM encoded certificate files that should be trusted.
 </span>
 </dt>
 <dd>
-<span class="strong strong"><strong>Default: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES256-GCM-SHA384, DHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES128-SHA256, DHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, DHE-RSA-AES256-SHA384, ECDHE-RSA-AES256-SHA256, DHE-RSA-AES256-SHA256, HIGH,!aNULL, !eNULL, !EXPORT, !DES, !RC4, !MD5, !PSK, !SRP, !CAMELLIA</strong></span>. Details on the format, and the valid options, are available via the [OpenSSL cipher list format documentation](<a href="https://www.openssl.org/docs/man1.0.2/apps/ciphers.html#CIPHER-LIST-FORMAT" class="ulink" target="_top">https://www.openssl.org/docs/man1.0.2/apps/ciphers.html#CIPHER-LIST-FORMAT</a>)
+<span class="strong strong"><strong>Default: TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_GCM_SHA256, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES256-GCM-SHA384, DHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES128-SHA256, DHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, DHE-RSA-AES256-SHA384, ECDHE-RSA-AES256-SHA256, DHE-RSA-AES256-SHA256, HIGH,!aNULL, !eNULL, !EXPORT, !DES, !RC4, !MD5, !PSK, !SRP, !CAMELLIA</strong></span>. Details on the format, and the valid options, are available via the [OpenSSL cipher list format documentation](<a href="https://www.openssl.org/docs/man1.1.1/man1/ciphers.html#CIPHER-LIST-FORMAT" class="ulink" target="_top">https://www.openssl.org/docs/man1.1.1/man1/ciphers.html#CIPHER-LIST-FORMAT</a>)
 </dd>
 <dt>
 <span class="term">
@@ -857,7 +857,7 @@ Kibana will bind to this port and redirect all http requests to https over the p
 </span>
 </dt>
 <dd>
-<span class="strong strong"><strong>Default: TLSv1, TLSv1.1, TLSv1.2</strong></span>  An array of supported protocols with versions. Valid protocols: <code class="literal">TLSv1</code>, <code class="literal">TLSv1.1</code>, <code class="literal">TLSv1.2</code>
+<span class="strong strong"><strong>Default: TLSv1, TLSv1.1, TLSv1.2, TLSv1.3</strong></span>  An array of supported protocols with versions. Valid protocols: <code class="literal">TLSv1</code>, <code class="literal">TLSv1.1</code>, <code class="literal">TLSv1.2</code>, <code class="literal">TLSv1.3</code>.
 </dd>
 <dt>
 <span class="term">
