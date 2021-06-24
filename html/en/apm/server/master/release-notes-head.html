@@ -139,6 +139,9 @@ Not what you want? See the
 <li class="listitem">
 Removed monitoring counters <code class="literal">apm-server.processor.stream.errors.{queue,server,closed}</code> <a href="https://github.com/elastic/apm-server/pull/5453" class="ulink" target="_top">5453</a>
 </li>
+<li class="listitem">
+Removed <code class="literal">service.name</code> from dataset <a href="https://github.com/elastic/apm-server/pull/5451" class="ulink" target="_top">5451</a>
+</li>
 </ul>
 </div>
 <h4><a id="_bug_fixes"></a>Bug fixes<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/apm-server/edit/master/changelogs/head.asciidoc">edit</a></h4>
@@ -149,9 +152,6 @@ Fix panic due to misaligned 64-bit access on 32-bit architectures <a href="https
 </li>
 <li class="listitem">
 Fixed tail-based sampling pubsub to use _seq_no correctly <a href="https://github.com/elastic/apm-server/pull/5126" class="ulink" target="_top">5126</a>
-</li>
-<li class="listitem">
-Removed service name from dataset <a href="https://github.com/elastic/apm-server/pull/5451" class="ulink" target="_top">5451</a>
 </li>
 </ul>
 </div>
@@ -213,7 +213,7 @@ Server sends its raw config to kibana when running on ECE/ESS <a href="https://g
 <div class="ulist itemizedlist">
 <ul class="itemizedlist">
 <li class="listitem">
-Make destination.service.name and destination.service.type fields optional and deprecated <a href="https://github.com/elastic/apm-server/pull/5468" class="ulink" target="_top">5468</a>
+Make <code class="literal">destination.service.name</code> and <code class="literal">destination.service.type</code> fields optional and deprecated <a href="https://github.com/elastic/apm-server/pull/5468" class="ulink" target="_top">5468</a>
 </li>
 <li class="listitem">
 <code class="literal">apm-server.secret_token</code> is now <code class="literal">apm-server.auth.secret_token</code> <a href="https://github.com/elastic/apm-server/pull/5457" class="ulink" target="_top">5457</a>

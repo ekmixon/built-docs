@@ -117,8 +117,8 @@ apm-server:
   APM Overview/docs/guide/7.7: 843c551afc3af54dcb957ae776466e7390d36010
   APM Overview/docs/guide/7.8: 389f32b2ffc21c5b32ed962ea85f6b7f0ffed01d
   APM Overview/docs/guide/7.9: c786de54fdedb1201399005e6e4c8fb9e0cdf44e
-  APM Overview/docs/guide/master: 7b86cb707cf3456dcdf53da5db9798c721ebc7cc
-  APM Overview/docs/master: 7b86cb707cf3456dcdf53da5db9798c721ebc7cc
+  APM Overview/docs/guide/master: local
+  APM Overview/docs/master: local
   APM Server Reference/CHANGELOG.asciidoc/6.0: ae191ba5dd9c07cd567cf3f55e7e1433902fb9fc
   APM Server Reference/CHANGELOG.asciidoc/6.1: e5bfd57830cfe07435a1ad057fc61116e6357a06
   APM Server Reference/CHANGELOG.asciidoc/6.2: 42ef8dea11bc8d85b5e4edb5d0c2e5965dbae564
@@ -142,7 +142,7 @@ apm-server:
   APM Server Reference/CHANGELOG.asciidoc/7.7: 843c551afc3af54dcb957ae776466e7390d36010
   APM Server Reference/CHANGELOG.asciidoc/7.8: 389f32b2ffc21c5b32ed962ea85f6b7f0ffed01d
   APM Server Reference/CHANGELOG.asciidoc/7.9: c786de54fdedb1201399005e6e4c8fb9e0cdf44e
-  APM Server Reference/CHANGELOG.asciidoc/master: 1920f9583222dd9eea24e6b2a2f9ada64ca29ee4
+  APM Server Reference/CHANGELOG.asciidoc/master: local
   APM Server Reference/changelogs/6.1: e5bfd57830cfe07435a1ad057fc61116e6357a06
   APM Server Reference/changelogs/6.2: 42ef8dea11bc8d85b5e4edb5d0c2e5965dbae564
   APM Server Reference/changelogs/6.3: 74b2e2522e0d8dcaa2266f5b1d6d543cf0d446c8
@@ -165,7 +165,7 @@ apm-server:
   APM Server Reference/changelogs/7.7: 843c551afc3af54dcb957ae776466e7390d36010
   APM Server Reference/changelogs/7.8: 389f32b2ffc21c5b32ed962ea85f6b7f0ffed01d
   APM Server Reference/changelogs/7.9: c786de54fdedb1201399005e6e4c8fb9e0cdf44e
-  APM Server Reference/changelogs/master: 1920f9583222dd9eea24e6b2a2f9ada64ca29ee4
+  APM Server Reference/changelogs/master: local
   APM Server Reference/docs/6.0: ae191ba5dd9c07cd567cf3f55e7e1433902fb9fc
   APM Server Reference/docs/6.1: e5bfd57830cfe07435a1ad057fc61116e6357a06
   APM Server Reference/docs/6.2: 42ef8dea11bc8d85b5e4edb5d0c2e5965dbae564
@@ -189,11 +189,11 @@ apm-server:
   APM Server Reference/docs/7.7: 843c551afc3af54dcb957ae776466e7390d36010
   APM Server Reference/docs/7.8: 389f32b2ffc21c5b32ed962ea85f6b7f0ffed01d
   APM Server Reference/docs/7.9: c786de54fdedb1201399005e6e4c8fb9e0cdf44e
-  APM Server Reference/docs/master: 1920f9583222dd9eea24e6b2a2f9ada64ca29ee4
+  APM Server Reference/docs/master: local
   Fleet User Guide/docs/7.12: 51abf1c8d33be3aa030233341fee28fa4c7acbe2
   Fleet User Guide/docs/7.13: 46d438b4acfe1d0ade026225e72a9fff45e547fe
   Fleet User Guide/docs/7.x: 4a5a87d9900d73bc3fe6371e4a0366221dac1d0b
-  Fleet User Guide/docs/master: 92f04526831bc471fca92cc189b6f21d1d3159b6
+  Fleet User Guide/docs/master: local
   Installation and Upgrade Guide/docs/guide/7.0: 52be7fe64897131117148fa9f5e4b7757c76814f
   Installation and Upgrade Guide/docs/guide/7.1: 3c8032e7bd5bbeb809f734ecfaa8a7cd620febaf
   Installation and Upgrade Guide/docs/guide/7.10: 556316b18ed2010c01d77728fe867edbd14e31a5
@@ -209,14 +209,14 @@ apm-server:
   Installation and Upgrade Guide/docs/guide/7.8: 389f32b2ffc21c5b32ed962ea85f6b7f0ffed01d
   Installation and Upgrade Guide/docs/guide/7.9: c786de54fdedb1201399005e6e4c8fb9e0cdf44e
   Installation and Upgrade Guide/docs/guide/7.x: 4a5a87d9900d73bc3fe6371e4a0366221dac1d0b
-  Installation and Upgrade Guide/docs/guide/master: 92f04526831bc471fca92cc189b6f21d1d3159b6
+  Installation and Upgrade Guide/docs/guide/master: local
   Observability/docs/7.10: 556316b18ed2010c01d77728fe867edbd14e31a5
   Observability/docs/7.11: b47faa9aad515043f703fcc052410b027bd51285
   Observability/docs/7.12: 51abf1c8d33be3aa030233341fee28fa4c7acbe2
   Observability/docs/7.13: 46d438b4acfe1d0ade026225e72a9fff45e547fe
   Observability/docs/7.9: c786de54fdedb1201399005e6e4c8fb9e0cdf44e
   Observability/docs/7.x: 4a5a87d9900d73bc3fe6371e4a0366221dac1d0b
-  Observability/docs/master: 92f04526831bc471fca92cc189b6f21d1d3159b6
+  Observability/docs/master: local
 azure-marketplace:
   Azure Marketplace and Resource Manager (ARM) template/docs/6.3: 633c9f5044df0acd25bc42b1a2d8acef126bba39
   Azure Marketplace and Resource Manager (ARM) template/docs/6.4: 2f890bdfb227d2220732388463a076d76c6f8669
