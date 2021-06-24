@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Unregister node for shutdown API | Elasticsearch Guide [master] | Elastic</title>
+<link rel="home" href="index.html" title="Elasticsearch Guide [master]"/>
+<link rel="up" href="node-lifecycle-api.html" title="Node lifecycle API"/>
+<link rel="prev" href="shutdown-api-get-shutdown.html" title="Node shutdown status API"/>
+<link rel="next" href="indices-reload-analyzers.html" title="Reload search analyzers API"/>
+<meta name="DC.type" content="Learn/Docs/Elasticsearch/Reference/master"/>
+<meta name="DC.subject" content="Elasticsearch"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Elasticsearch Guide [master]</a></span>
+»
+<span class="breadcrumb-link"><a href="rest-apis.html">REST APIs</a></span>
+»
+<span class="breadcrumb-link"><a href="node-lifecycle-api.html">Node lifecycle API</a></span>
+»
+<span class="breadcrumb-node">Unregister node for shutdown API</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="shutdown-api-get-shutdown.html">« Node shutdown status API</a>
+</span>
+<span class="next">
+<a href="indices-reload-analyzers.html">Reload search analyzers API »</a>
+</span>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="shutdown-api-delete-shutdown"></a>Unregister node for shutdown API<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/elasticsearch/edit/master/docs/reference/shutdown/apis/shutdown-delete.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Signals that a node should no longer be prepared to shut down.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="shutdown-api-delete-request"></a>Request<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/elasticsearch/edit/master/docs/reference/shutdown/apis/shutdown-delete.asciidoc">edit</a></h3>
+</div></div></div>
+<p><code class="literal">DELETE _nodes/&lt;node-id&gt;/shutdown</code></p>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="shutdown-api-delete-prereqs"></a>Prerequisites<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/elasticsearch/edit/master/docs/reference/shutdown/apis/shutdown-delete.asciidoc">edit</a></h3>
+</div></div></div>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+If the Elasticsearch security features are enabled, you must have the <code class="literal">manage</code>
+<a class="xref" href="security-privileges.html#privileges-list-cluster" title="Cluster privileges">cluster privilege</a> to use this API.
+</li>
+<li class="listitem">
+If the <a class="xref" href="operator-privileges.html" title="Operator privileges">operator privileges feature</a> is enabled, only operator
+users can use this API.
+</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="shutdown-api-delete-desc"></a>Description<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/elasticsearch/edit/master/docs/reference/shutdown/apis/shutdown-delete.asciidoc">edit</a></h3>
+</div></div></div>
+<p>Signals that the given node should no longer be prepared for shutdown and
+can resume operations as a normal node in the cluster.</p>
+<div class="note admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>This API must be used if a node returns to the cluster after the node has
+been <a class="xref" href="shutdown-api-put-shutdown.html" title="Register node for shutdown API">registered for shutdown</a> - requests will not
+be automatically cleared for either <code class="literal">RESTART</code> or <code class="literal">REMOVE</code> request types.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="shutdown-api-delete-path-params"></a>Path parameters<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/elasticsearch/edit/master/docs/reference/shutdown/apis/shutdown-delete.asciidoc">edit</a></h3>
+</div></div></div>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+<code class="literal">&lt;node-id&gt;</code>
+</span>
+</dt>
+<dd>
+(Optional, string)
+The ID of a node which is preparing to be shut down.
+</dd>
+</dl>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="shutdown-api-delete-params"></a>Query parameters<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/elasticsearch/edit/master/docs/reference/shutdown/apis/shutdown-delete.asciidoc">edit</a></h3>
+</div></div></div>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+<code class="literal">master_timeout</code>
+</span>
+</dt>
+<dd>
+(Optional, <a class="xref" href="common-options.html#time-units" title="Time units">time units</a>)
+Period to wait for a connection to the master node. If no response is received
+before the timeout expires, the request fails and returns an error. Defaults to
+<code class="literal">30s</code>.
+</dd>
+<dt>
+<span class="term">
+<code class="literal">timeout</code>
+</span>
+</dt>
+<dd>
+(Optional, <a class="xref" href="common-options.html#time-units" title="Time units">time units</a>)
+Period to wait for a response. If no response is received before the timeout
+expires, the request fails and returns an error. Defaults to <code class="literal">30s</code>.
+</dd>
+</dl>
+</div>
+<p><a id="shutdown-api-delete-example"></a>This API is only useful after a node has been registered for shutdown:</p>
+<a id="d4acd51017388e839ddba225b8f2169c"></a>
+<div class="pre_wrapper lang-console">
+<pre class="programlisting prettyprint lang-console">PUT /_nodes/USpTGYaBSIKbgSUJR2Z9lg/shutdown
+{
+  "type": "restart",
+  "reason": "demonstrating how the node shutdown API works"
+}</pre>
+</div>
+<div class="console_widget" data-snippet="snippets/2223.console"></div>
+<p>Once a node is in the process of preparing for shutdown, we can cancel the
+process by issuing a request like so:</p>
+<a id="6b3dcde0656d3a96dbcfed1ec814e10a"></a>
+<div class="pre_wrapper lang-console">
+<pre class="programlisting prettyprint lang-console">DELETE /_nodes/USpTGYaBSIKbgSUJR2Z9lg/shutdown</pre>
+</div>
+<div class="console_widget" data-snippet="snippets/2224.console"></div>
+<p>Which returns the following response:</p>
+<a id="581fbd443376ef07072018020e700289"></a>
+<div class="pre_wrapper lang-console-result">
+<pre class="programlisting prettyprint lang-console-result">{
+    "acknowledged": true
+}</pre>
+</div>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="shutdown-api-get-shutdown.html">« Node shutdown status API</a>
+</span>
+<span class="next">
+<a href="indices-reload-analyzers.html">Reload search analyzers API »</a>
+</span>
+</div>
+</div>
+</body>
+</html>
