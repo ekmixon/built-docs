@@ -4065,9 +4065,9 @@ enterprise-search-ruby:
   Enterprise Search Ruby client/docs/guide/7.x: b9f2483daf72662af580a09362c82a60753e2f53
   Enterprise Search Ruby client/docs/guide/master: fa408e0a615055adaba5ff81727baf5fe51c8e89
 go-elasticsearch:
-  Elasticsearch Guide/.doc/examples/doc/master: aa1301e7ba9d0e781f7df536ae6e918c3b627800
+  Elasticsearch Guide/.doc/examples/doc/master: local
   Go API/.doc/7.x: d6876039c4dde26f7e126ba42d6db8cb49e92bb3
-  Go API/.doc/master: f01628963386eceb8113b6609cb5f39c1bb55e2f
+  Go API/.doc/master: local
 guide:
   'Elasticsearch - The Definitive Guide/./1.x': af5ba9e7d272f8ca359750dd723e101957cdb227
   'Elasticsearch - The Definitive Guide/./2.x': a7abd15483ab7244d5c42af93be58d7f6b9bf99e
