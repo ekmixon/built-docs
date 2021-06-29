@@ -139,6 +139,344 @@ Download the Logstash installation file for your host environment&#8212;&#8203;T
 ZIP, or RPM.</p>
 <p>Unpack the file. Do not install Logstash into a directory path that
 contains colon (:) characters.</p>
+<style>
+.tabs {
+  width: 100%;
+}
+[role="tablist"] {
+  margin: 0 0 -0.1em;
+  overflow: visible;
+}
+[role="tab"] {
+  position: relative;
+  padding: 0.3em 0.5em 0.4em;
+  border: 1px solid hsl(219, 1%, 72%);
+  border-radius: 0.2em 0.2em 0 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  background: hsl(220, 20%, 94%);
+}
+[role="tab"]:hover::before,
+[role="tab"]:focus::before,
+[role="tab"][aria-selected="true"]::before {
+  position: absolute;
+  bottom: 100%;
+  right: -1px;
+  left: -1px;
+  border-radius: 0.2em 0.2em 0 0;
+  border-top: 3px solid hsl(219, 1%, 72%);
+  content: '';
+}
+[role="tab"][aria-selected="true"] {
+  border-radius: 0;
+  background: hsl(220, 43%, 99%);
+  outline: 0;
+}
+[role="tab"][aria-selected="true"]:not(:focus):not(:hover)::before {
+  border-top: 5px solid hsl(218, 96%, 48%);
+}
+[role="tab"][aria-selected="true"]::after {
+  position: absolute;
+  z-index: 3;
+  bottom: -1px;
+  right: 0;
+  left: 0;
+  height: 0.3em;
+  background: hsl(220, 43%, 99%);
+  box-shadow: none;
+  content: '';
+}
+[role="tab"]:hover,
+[role="tab"]:focus,
+[role="tab"]:active {
+  outline: 0;
+  border-radius: 0;
+  color: inherit;
+}
+[role="tab"]:hover::before,
+[role="tab"]:focus::before {
+  border-color: hsl(218, 96%, 48%);
+}
+[role="tabpanel"] {
+  position: relative;
+  z-index: 2;
+  padding: 1em;
+  border: 1px solid hsl(219, 1%, 72%);
+  border-radius: 0 0.2em 0.2em 0.2em;
+  box-shadow: 0 0 0.2em hsl(219, 1%, 72%);
+  background: hsl(220, 43%, 99%);
+  margin-bottom: 1em;
+}
+[role="tabpanel"] p {
+  margin: 0;
+}
+[role="tabpanel"] * + p {
+  margin-top: 1em;
+}
+</style>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll('[role="tab"]');
+  const tabList = document.querySelector('[role="tablist"]');
+  // Add a click event handler to each tab
+  tabs.forEach(tab => {
+    tab.addEventListener("click", changeTabs);
+  });
+  // Enable arrow navigation between tabs in the tab list
+  let tabFocus = 0;
+  tabList.addEventListener("keydown", e => {
+    // Move right
+    if (e.keyCode === 39 || e.keyCode === 37) {
+      tabs[tabFocus].setAttribute("tabindex", -1);
+      if (e.keyCode === 39) {
+        tabFocus++;
+        // If we're at the end, go to the start
+        if (tabFocus >= tabs.length) {
+          tabFocus = 0;
+        }
+        // Move left
+      } else if (e.keyCode === 37) {
+        tabFocus--;
+        // If we're at the start, move to the end
+        if (tabFocus < 0) {
+          tabFocus = tabs.length - 1;
+        }
+      }
+      tabs[tabFocus].setAttribute("tabindex", 0);
+      tabs[tabFocus].focus();
+    }
+  });
+});
+
+function setActiveTab(target) {
+  const parent = target.parentNode;
+  const grandparent = parent.parentNode;
+  // console.log(grandparent);
+  // Remove all current selected tabs
+  parent
+    .querySelectorAll('[aria-selected="true"]')
+    .forEach(t => t.setAttribute("aria-selected", false));
+  // Set this tab as selected
+  target.setAttribute("aria-selected", true);
+  // Hide all tab panels
+  grandparent
+    .querySelectorAll('[role="tabpanel"]')
+    .forEach(p => p.setAttribute("hidden", true));
+  // Show the selected panel
+  grandparent.parentNode
+    .querySelector(`#${target.getAttribute("aria-controls")}`)
+    .removeAttribute("hidden");
+}
+
+function changeTabs(e) {
+  // get the containing list of the tab that was just clicked
+  const tabList = e.target.parentNode;
+
+  // get all of the sibling tabs
+  const buttons = Array.apply(null, tabList.querySelectorAll('button'));
+
+  // loop over the siblings to discover which index thje clicked one was
+  const { index } = buttons.reduce(({ found, index }, button) => {
+    if (!found && buttons[index] === e.target) {
+      return { found: true, index };
+    } else if (!found) {
+      return { found, index: index + 1 };
+    } else {
+      return { found, index };
+    }
+  }, { found: false, index: 0 });
+
+  // get the tab container
+  const container = tabList.parentNode;
+  // read the data-tab-group value from the container, e.g. "os"
+  const { tabGroup } = container.dataset;
+  // get a list of all the tab groups that match this value on the page
+  const groups = document.querySelectorAll('[data-tab-group=' + tabGroup + ']');
+
+  // for each of the found tab groups, find the tab button at the previously discovered index and select it for each group
+  groups.forEach((group) => {
+    const target = group.querySelectorAll('button')[index];
+    setActiveTab(target);
+  });
+}
+</script>
+<div class="tabs" data-tab-group="apm-agent-kube">
+  <div role="tablist" aria-label="Install-kube">
+    <button role="tab"
+            aria-selected="false"
+            aria-controls="go-tab-install-kube"
+            id="go-install-kube">
+      Linux X86_64
+    </button>
+    <button role="tab"
+            aria-selected="true"
+            aria-controls="java-tab-install-kube"
+            id="java-install-kube"
+            tabindex="-1">
+      Linux AARCH64
+    </button>
+    <button role="tab"
+            aria-selected="false"
+            aria-controls="net-tab-install-kube"
+            id="net-install-kube"
+            tabindex="-1">
+      MacOS
+    </button>
+    <button role="tab"
+            aria-selected="false"
+            aria-controls="node-tab-install-kube"
+            id="node-install-kube"
+            tabindex="-1">
+      Windows
+    </button>
+    <button role="tab"
+            aria-selected="false"
+            aria-controls="php-tab-install-kube"
+            id="php-install-kube"
+            tabindex="-1">
+      DEB X86_64
+    </button>
+    <button role="tab"
+            aria-selected="false"
+            aria-controls="python-tab-install-kube"
+            id="python-install-kube"
+            tabindex="-1">
+      DEB AARCH64
+    </button>
+    <button role="tab"
+            aria-selected="false"
+            aria-controls="ruby-tab-install-kube"
+            id="ruby-install-kube"
+            tabindex="-1">
+      RPM X86_64
+    </button>
+    <button role="tab"
+            aria-selected="false"
+            aria-controls="ruby-tab-install-kube"
+            id="ruby-install-kube"
+            tabindex="-1">
+      RPM AARCH64
+    </button>
+  </div>
+  <div tabindex="0"
+       role="tabpanel"
+       id="go-tab-install-kube"
+       aria-labelledby="go-install-kube"
+       hidden="">
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">curl -L -O https://artifacts.elastic.co/downloads/logstash-8.0.0-linux-x86_64.tar.gz
+tar xzvf logstash-linux-x86_64.tar.gz</pre>
+</div>
+  </div>
+  <div tabindex="0"
+       role="tabpanel"
+       id="java-tab-install-kube"
+       aria-labelledby="java-install-kube">
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">curl -L -O https://artifacts.elastic.co/downloads/logstash-8.0.0-linux-aarch64.tar.gz
+tar xzvf logstash-linux-aarch64.tar.gz</pre>
+</div>
+  </div>
+  <div tabindex="0"
+       role="tabpanel"
+       id="net-tab-install-kube"
+       aria-labelledby="net-install-kube"
+       hidden="">
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">curl -L -O https://artifacts.elastic.co/downloads/logstash-8.0.0-darwin-x86_64.tar.gz
+tar xzvf logstash-darwin-x86_64.tar.gz</pre>
+</div>
+  </div>
+  <div tabindex="0"
+       role="tabpanel"
+       id="node-tab-install-kube"
+       aria-labelledby="node-install-kube"
+       hidden="">
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+Download the {beatname_uc} Windows zip file from the
+<a href="/downloads/beats/{beatname_lc}" class="ulink" target="_top">downloads page</a>.
+</li>
+<li class="listitem">
+Extract the contents of the zip file into <code class="literal">C:\Program Files</code>.
+</li>
+<li class="listitem">
+Rename the <code class="literal">{beatname_lc}-&lt;version&gt;-windows</code> directory to <code class="literal">{beatname_uc}</code>.
+</li>
+<li class="listitem">
+Open a PowerShell prompt as an Administrator (right-click the PowerShell icon
+and select <span class="strong strong"><strong>Run As Administrator</strong></span>).
+</li>
+<li class="listitem">
+<p>From the PowerShell prompt, run the following commands to install
+{beatname_uc} as a Windows service:</p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">PS &gt; cd 'C:\Program Files\{beatname_uc}'
+PS C:\Program Files\{beatname_uc}&gt; .\install-service-{beatname_lc}.ps1</pre>
+</div>
+</li>
+</ol>
+</div>
+<div class="note admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>If script execution is disabled on your system, you need to set the
+execution policy for the current session to allow the script to run. For
+example:
+<code class="literal">PowerShell.exe -ExecutionPolicy UnRestricted -File .\install-service-{beatname_lc}.ps1</code>.</p>
+</div>
+</div>
+  </div>
+  <div tabindex="0"
+       role="tabpanel"
+       id="php-tab-install-kube"
+       aria-labelledby="php-install-kube"
+       hidden="">
+<p><span class="strong strong"><strong>DEB x86_64</strong></span></p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">curl -L -O https://artifacts.elastic.co/downloads/logstash-8.0.0-amd64.deb
+sudo dpkg -i logstash-8.0.0-amd64.deb</pre>
+</div>
+<p><span class="strong strong"><strong>DEB AARCH64</strong></span></p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">curl -L -O https://artifacts.elastic.co/downloads/logstash-8.0.0-arm64.deb
+sudo dpkg -i logstash-8.0.0-arm64.deb</pre>
+</div>
+  </div>
+  <div tabindex="0"
+       role="tabpanel"
+       id="python-tab-install-kube"
+       aria-labelledby="python-install-kube"
+       hidden="">
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">curl -L -O https://artifacts.elastic.co/downloads/logstash-8.0.0-amd64.deb
+sudo dpkg -i logstash-8.0.0-amd64.deb</pre>
+</div>
+  </div>
+  <div tabindex="0"
+       role="tabpanel"
+       id="ruby-tab-install-kube"
+       aria-labelledby="ruby-install-kube"
+       hidden="">
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">curl -L -O https://artifacts.elastic.co/downloads/logstash-8.0.0-x86_64.rpm
+sudo rpm -vi logstash-8.0.0-x86_64.rpm</pre>
+</div>
+  </div>
+  <div tabindex="0"
+       role="tabpanel"
+       id="ruby-tab-install-kube"
+       aria-labelledby="ruby-install-kube"
+       hidden="">
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">curl -L -O https://artifacts.elastic.co/downloads/logstash/logstash-8.0.0-aarch64.rpm
+sudo rpm -vi logstash-8.0.0-aarch64.rpm</pre>
+</div>
+  </div>
+</div>
 <div class="note admon">
 <div class="icon"></div>
 <div class="admon_content">
@@ -181,9 +519,66 @@ for more information.</p>
 </div>
 </div>
 <h4><a id="_apt"></a>APT<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/logstash/edit/master/docs/static/getting-started-with-logstash.asciidoc">edit</a></h4>
-<p>Version 8.0.0 of Logstash has not yet been released.</p>
+<p>Download and install the Public Signing Key:</p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -</pre>
+</div>
+<p>You may need to install the <code class="literal">apt-transport-https</code> package on Debian before proceeding:</p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">sudo apt-get install apt-transport-https</pre>
+</div>
+<p>Save the repository definition to  <code class="literal">/etc/apt/sources.list.d/elastic-8.x.list</code>:</p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">echo "deb https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list</pre>
+</div>
+<div class="warning admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>Use the <code class="literal">echo</code> method described above to add the Logstash repository.  Do not
+use <code class="literal">add-apt-repository</code> as it will add a <code class="literal">deb-src</code> entry as well, but we do not
+provide a source package. If you have added the <code class="literal">deb-src</code> entry, you will see an
+error like the following:</p>
+<pre class="literallayout">Unable to find expected entry 'main/source/Sources' in Release file (Wrong sources.list entry or malformed file)</pre>
+
+<p>Just delete the <code class="literal">deb-src</code> entry from the <code class="literal">/etc/apt/sources.list</code> file and the
+installation should work as expected.</p>
+</div>
+</div>
+<p>Run <code class="literal">sudo apt-get update</code> and the repository is ready for use. You can install
+it with:</p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">sudo apt-get update &amp;&amp; sudo apt-get install logstash</pre>
+</div>
+<p>See <a href="/guide/en/logstash/master/running-logstash.html" class="ulink" target="_top">Running Logstash</a> for details about managing Logstash as a system service.</p>
 <h4><a id="_yum"></a>YUM<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/logstash/edit/master/docs/static/getting-started-with-logstash.asciidoc">edit</a></h4>
-<p>Version 8.0.0 of Logstash has not yet been released.</p>
+<p>Download and install the public signing key:</p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch</pre>
+</div>
+<p>Add the following in your <code class="literal">/etc/yum.repos.d/</code> directory
+in a file with a <code class="literal">.repo</code> suffix, for example <code class="literal">logstash.repo</code></p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">[logstash-8.x]
+name=Elastic repository for 8.x packages
+baseurl=https://artifacts.elastic.co/packages/8.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md</pre>
+</div>
+<p>And your repository is ready for use. You can install it with:</p>
+<div class="pre_wrapper lang-sh">
+<pre class="programlisting prettyprint lang-sh">sudo yum install logstash</pre>
+</div>
+<div class="warning admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>The repositories do not work with older rpm based distributions
+         that still use RPM v3, like CentOS5.</p>
+</div>
+</div>
+<p>See the <a href="/guide/en/logstash/master/running-logstash.html" class="ulink" target="_top">Running Logstash</a> document for managing Logstash as a system service.</p>
 <h3><a id="brew"></a>Installing Logstash on macOS with Homebrew<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/logstash/edit/master/docs/static/getting-started-with-logstash.asciidoc">edit</a></h3>
 <p>Elastic publishes Homebrew formulae so you can install Logstash with the
 <a href="https://brew.sh/" class="ulink" target="_top">Homebrew</a> package manager.</p>
