@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fleet enrollment tokens | Fleet User Guide [master] | Elastic</title>
+<link rel="home" href="index.html" title="Fleet User Guide [master]"/>
+<link rel="up" href="index.html" title="Fleet User Guide [master]"/>
+<link rel="prev" href="agent-policy.html" title="Elastic Agent policies"/>
+<link rel="next" href="secure-connections.html" title="Encrypt traffic in a self-managed cluster"/>
+<meta name="DC.type" content="Learn/Docs/Fleet/Guide/master"/>
+<meta name="DC.subject" content="Fleet"/>
+<meta name="DC.identifier" content="master"/>
+</head>
+<body><div class="page_header">
+You are looking at preliminary documentation for a future release.
+Not what you want? See the
+<a href="../current/index.html">current release documentation</a>.
+</div>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="index.html">Fleet User Guide [master]</a></span>
+»
+<span class="breadcrumb-node">Fleet enrollment tokens</span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="agent-policy.html">« Elastic Agent policies</a>
+</span>
+<span class="next">
+<a href="secure-connections.html">Encrypt traffic in a self-managed cluster »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h1 class="title"><a id="fleet-enrollment-tokens"></a>Fleet enrollment tokens<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/ingest-management/security/enrollment-tokens.asciidoc">edit</a></h1>
+</div></div></div>
+<p>An enrollment token is an Elasticsearch API key that you use to enroll one or more
+Elastic Agents in Fleet. The enrollment token is used for the initial communication
+between Elastic Agent and Fleet Server. You can use the token as many times as
+required. It will remain valid until you revoke it.</p>
+<p>After the initial connection request from the Elastic Agent to the Fleet Server,
+Fleet Server passes two API keys to the Elastic Agent:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+<p>An output API key.</p>
+<p>This API key is used to send data to Elasticsearch. It has the minimal permissions needed
+to ingest all the data specified by the policy. If the API key is invalid, the
+Elastic Agent stops ingesting data into Elasticsearch.</p>
+</li>
+<li class="listitem">
+<p>A communication API.</p>
+<p>This API key is used to communicate with the Fleet Server. It has only the
+permissions needed to communicate with the Fleet Server. If the API key is
+invalid, Fleet Server stops communicating with the Elastic Agent.</p>
+</li>
+</ul>
+</div>
+<h3><a id="create-fleet-enrollment-tokens"></a>Create enrollment tokens<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/ingest-management/security/enrollment-tokens.asciidoc">edit</a></h3>
+<p>Mention the enrollment token shown when you add an agent.</p>
+<p>Fleet &gt; Agent &gt; Enrollment tokens. Create enrollment token. Select a policy.
+Use the token when you enroll an agent in Fleet.</p>
+<h3><a id="revoke-fleet-enrollment-tokens"></a>Revoke enrollment tokens<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/observability-docs/edit/master/docs/en/ingest-management/security/enrollment-tokens.asciidoc">edit</a></h3>
+<p>Under Fleet &gt; Agent &gt; Enrollment tokens, click the Revoke token icon.</p>
+<p>ADD SCREEN CAPTURE HERE.</p>
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="agent-policy.html">« Elastic Agent policies</a>
+</span>
+<span class="next">
+<a href="secure-connections.html">Encrypt traffic in a self-managed cluster »</a>
+</span>
+</div>
+</div>
+</body>
+</html>
