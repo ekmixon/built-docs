@@ -27,12 +27,12 @@ apm-agent-java:
 apm-agent-nodejs:
   APM Node.js Agent/CHANGELOG.asciidoc/2.x: d38aa089aeb003f075105bdadfed7ca95d788e23
   APM Node.js Agent/CHANGELOG.asciidoc/3.x: 818bd29e47e2365afa5f3e15ba96d9025d6354e9
-  APM Node.js Agent/CHANGELOG.asciidoc/master: 3d68f6aa34f7d21d984446c96498301d0905c350
+  APM Node.js Agent/CHANGELOG.asciidoc/master: local
   APM Node.js Agent/docs/0.x: 635eae53d69db8ceee35a9311ddc1986425d842d
   APM Node.js Agent/docs/1.x: e757d1b35724763fff086274b9cda9bdd2837aeb
   APM Node.js Agent/docs/2.x: d38aa089aeb003f075105bdadfed7ca95d788e23
   APM Node.js Agent/docs/3.x: 818bd29e47e2365afa5f3e15ba96d9025d6354e9
-  APM Node.js Agent/docs/master: 3d68f6aa34f7d21d984446c96498301d0905c350
+  APM Node.js Agent/docs/master: local
 apm-agent-php:
   APM PHP Agent/CHANGELOG.asciidoc/1.x: 9a09df2c61ca628304245cf8d48bc75e8d4d1a5d
   APM PHP Agent/CHANGELOG.asciidoc/master: 9a09df2c61ca628304245cf8d48bc75e8d4d1a5d
