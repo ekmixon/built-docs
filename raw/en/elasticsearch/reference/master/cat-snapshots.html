@@ -201,7 +201,7 @@ the snapshot process ended.
 </span>
 </dt>
 <dd>
-(Default) Time it took the snapshot process to complete in <a class="xref" href="common-options.html#time-units" title="Time units">time
+(Default) Time it took the snapshot process to complete in <a class="xref" href="api-conventions.html#time-units" title="Time units">time
 units</a>.
 </dd>
 <dt>
@@ -271,7 +271,7 @@ unavailable snapshots. Defaults to <code class="literal">false</code>.
 </span>
 </dt>
 <dd>
-(Optional, <a class="xref" href="common-options.html#time-units" title="Time units">time units</a>)
+(Optional, <a class="xref" href="api-conventions.html#time-units" title="Time units">time units</a>)
 Period to wait for a connection to the master node. If no response is received
 before the timeout expires, the request fails and returns an error. Defaults to
 <code class="literal">30s</code>.
@@ -291,7 +291,7 @@ to sort the response.
 </span>
 </dt>
 <dd>
-(Optional, <a class="xref" href="common-options.html#time-units" title="Time units">time units</a>)
+(Optional, <a class="xref" href="api-conventions.html#time-units" title="Time units">time units</a>)
 Unit used to display time values.
 </dd>
 <dt>
@@ -315,7 +315,7 @@ Defaults to <code class="literal">false</code>.
 <div class="pre_wrapper lang-console">
 <pre class="programlisting prettyprint lang-console">GET /_cat/snapshots/repo1?v=true&amp;s=id</pre>
 </div>
-<div class="console_widget" data-snippet="snippets/1715.console"></div>
+<div class="console_widget" data-snippet="snippets/1733.console"></div>
 <p>The API returns the following response:</p>
 <div class="pre_wrapper lang-txt">
 <pre class="programlisting prettyprint lang-txt">id     repository status start_epoch start_time end_epoch  end_time duration indices successful_shards failed_shards total_shards

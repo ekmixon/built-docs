@@ -181,7 +181,7 @@ the following settings must be configured.</p>
   }
 }</pre>
 </div>
-<div class="console_widget" data-snippet="snippets/1400.console"></div>
+<div class="console_widget" data-snippet="snippets/1418.console"></div>
 <div class="section">
 <div class="titlepage"><div><div>
 <h3 class="title"><a id="ilm-rollover-options"></a>Options<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/elasticsearch/edit/master/docs/reference/ilm/actions/ilm-rollover.asciidoc">edit</a></h3>
@@ -196,7 +196,7 @@ An empty rollover action is invalid.</p>
 </span>
 </dt>
 <dd>
-(Optional,  <a class="xref" href="common-options.html#time-units" title="Time units">time units</a>)
+(Optional,  <a class="xref" href="api-conventions.html#time-units" title="Time units">time units</a>)
 Triggers rollover after the maximum elapsed time from index creation is reached.
 The elapsed time is always calculated since the index creation time, even if the
 index origination date is configured to a custom date, such as when using the
@@ -221,7 +221,7 @@ The document count does <span class="strong strong"><strong>not</strong></span> 
 </dt>
 <dd>
 <p>
-(Optional, <a class="xref" href="common-options.html#byte-units" title="Byte size units">byte units</a>)
+(Optional, <a class="xref" href="api-conventions.html#byte-units" title="Byte size units">byte units</a>)
 Triggers rollover when the index reaches a certain size.
 This is the total size of all primary shards in the index.
 Replicas are not counted toward the maximum index size.
@@ -241,7 +241,7 @@ The <code class="literal">pri.store.size</code> value shows the combined size of
 </dt>
 <dd>
 <p>
-(Optional, <a class="xref" href="common-options.html#byte-units" title="Byte size units">byte units</a>)
+(Optional, <a class="xref" href="api-conventions.html#byte-units" title="Byte size units">byte units</a>)
 Triggers rollover when the largest primary shard in the index reaches a certain size.
 This is the maximum size of the primary shards in the index. As with <code class="literal">max_size</code>,
 replicas are ignored.
@@ -285,7 +285,7 @@ shard is a primary (<code class="literal">p</code>) or a replica (<code class="l
   }
 }</pre>
 </div>
-<div class="console_widget" data-snippet="snippets/1401.console"></div>
+<div class="console_widget" data-snippet="snippets/1419.console"></div>
 </div>
 
 <div class="section">
@@ -310,7 +310,7 @@ shard is a primary (<code class="literal">p</code>) or a replica (<code class="l
   }
 }</pre>
 </div>
-<div class="console_widget" data-snippet="snippets/1402.console"></div>
+<div class="console_widget" data-snippet="snippets/1420.console"></div>
 </div>
 
 <div class="ilm-rollover-documents-ex]">
@@ -335,7 +335,7 @@ shard is a primary (<code class="literal">p</code>) or a replica (<code class="l
   }
 }</pre>
 </div>
-<div class="console_widget" data-snippet="snippets/1403.console"></div>
+<div class="console_widget" data-snippet="snippets/1421.console"></div>
 </div>
 
 <div class="ilm-rollover-age-ex]">
@@ -360,7 +360,7 @@ shard is a primary (<code class="literal">p</code>) or a replica (<code class="l
   }
 }</pre>
 </div>
-<div class="console_widget" data-snippet="snippets/1404.console"></div>
+<div class="console_widget" data-snippet="snippets/1422.console"></div>
 </div>
 
 <div class="ilm-rollover-conditions-ex]">
@@ -388,7 +388,7 @@ This example rolls the index over if it is at least 7 days old or at least 100 g
   }
 }</pre>
 </div>
-<div class="console_widget" data-snippet="snippets/1405.console"></div>
+<div class="console_widget" data-snippet="snippets/1423.console"></div>
 </div>
 
 <div class="ilm-rollover-block-ex]">
@@ -422,7 +422,7 @@ It does not delete the index one day after it was created.</p>
   }
 }</pre>
 </div>
-<div class="console_widget" data-snippet="snippets/1406.console"></div>
+<div class="console_widget" data-snippet="snippets/1424.console"></div>
 </div>
 
 </div>
