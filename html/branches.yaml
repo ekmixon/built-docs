@@ -4211,7 +4211,7 @@ logstash:
   Installation and Upgrade Guide/docs/7.10: 4344a874f6ace5e6bfb777cab46a93155eec7a22
   Installation and Upgrade Guide/docs/7.11: 866633f2c3d230ceddbaf2b400753c95047d663b
   Installation and Upgrade Guide/docs/7.12: 764861333bec062bff8bb7bcc5ea4a3cdc9f17d1
-  Installation and Upgrade Guide/docs/7.13: 5e907b77a6f89354ee4de6b5ca5beacfc4cff11e
+  Installation and Upgrade Guide/docs/7.13: local
   Installation and Upgrade Guide/docs/7.2: 0505c158e463d86a556b17e2942edce9ad64733f
   Installation and Upgrade Guide/docs/7.3: 3d8b4efbcd55b0c84a6ff2294a985ff1fa65ac74
   Installation and Upgrade Guide/docs/7.4: 13ea6298dfdbb0e343fc57a3a13ec91fcdd069ec
@@ -4249,7 +4249,7 @@ logstash:
   Logstash Reference/docs/7.10: 4344a874f6ace5e6bfb777cab46a93155eec7a22
   Logstash Reference/docs/7.11: 866633f2c3d230ceddbaf2b400753c95047d663b
   Logstash Reference/docs/7.12: 764861333bec062bff8bb7bcc5ea4a3cdc9f17d1
-  Logstash Reference/docs/7.13: 5e907b77a6f89354ee4de6b5ca5beacfc4cff11e
+  Logstash Reference/docs/7.13: local
   Logstash Reference/docs/7.2: 0505c158e463d86a556b17e2942edce9ad64733f
   Logstash Reference/docs/7.3: 3d8b4efbcd55b0c84a6ff2294a985ff1fa65ac74
   Logstash Reference/docs/7.4: 13ea6298dfdbb0e343fc57a3a13ec91fcdd069ec

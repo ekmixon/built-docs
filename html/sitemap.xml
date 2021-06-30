@@ -69331,49 +69331,49 @@
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-0-0-alpha1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-0-0-alpha2.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-0-0-beta1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-0-0-rc1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-0-0-rc2.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-0-0.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-0-1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -69401,14 +69401,14 @@
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-10-1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-10-2.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -69429,7 +69429,7 @@
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-11-2.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -69443,35 +69443,35 @@
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-12-1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-13-0.html</loc>
-    <lastmod>2021-06-01T14:38:20+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-13-1.html</loc>
-    <lastmod>2021-06-14T12:08:04+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-13-2.html</loc>
-    <lastmod>2021-06-14T12:08:04+00:00</lastmod>
+    <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-13-3.html</loc>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-2-0.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -69485,14 +69485,14 @@
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-3-0.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-3-1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -69506,14 +69506,14 @@
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-4-0.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-4-1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -69527,42 +69527,42 @@
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-5-0.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-5-1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-5-2.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-6-0.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-6-1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-6-2.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -69576,21 +69576,21 @@
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-7-1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-8-0.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-8-1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -69604,21 +69604,21 @@
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-9-1.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-9-2.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/logstash-7-9-3.html</loc>
-    <lastmod>2021-05-25T12:30:51+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -71186,7 +71186,7 @@
 
 <url>
     <loc>https://www.elastic.co/guide/en/logstash/current/releasenotes.html</loc>
-    <lastmod>2021-06-14T12:08:04+00:00</lastmod>
+    <lastmod>2021-06-30T11:56:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
 </url>
