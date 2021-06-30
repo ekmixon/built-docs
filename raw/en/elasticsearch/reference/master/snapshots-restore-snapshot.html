@@ -45,7 +45,7 @@ a snapshot of a cluster or specified data streams and indices:</p>
 <div class="console_widget" data-snippet="snippets/1498.console"></div>
 <p>By default, all data streams and indices in the snapshot are restored, but the cluster state is
 <span class="strong strong"><strong>not</strong></span> restored. Use the <code class="literal">indices</code> parameter to restore only specific data streams or indices. This parameter
-supports <a class="xref" href="multi-index.html" title="Multi-target syntax">multi-target syntax</a>. To include the global cluster state, set
+supports <a class="xref" href="api-conventions.html#api-multi-index" title="Multi-target syntax">multi-target syntax</a>. To include the global cluster state, set
 <code class="literal">include_global_state</code> to <code class="literal">true</code> in the restore request body.</p>
 <p>Because all indices in the snapshot are restored by default, all system indices will be restored
 by default as well.</p>
