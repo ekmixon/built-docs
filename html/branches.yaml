@@ -4309,7 +4309,7 @@ observability-docs:
   Fleet User Guide/docs/en/7.10: 56a6aa7f741e8fa725ebed7e2a9af20c42bc45f9
   Fleet User Guide/docs/en/7.11: 3cdb382877300181c297511dc1c7bff039fdb5ee
   Fleet User Guide/docs/en/7.12: 65032658775d79886b6c0303a8ddba38976b87d9
-  Fleet User Guide/docs/en/7.13: 56d003855db7b7f6c6c6b0a4253955ebc43e0d4d
+  Fleet User Guide/docs/en/7.13: local
   Fleet User Guide/docs/en/7.8: 0bb5092b5cb4683cc12c4597ce9e706e05fb6544
   Fleet User Guide/docs/en/7.9: 1988aa40e20d221d96fdcdb208795d2227b82f3c
   Fleet User Guide/docs/en/7.x: 0c4d10871ed8e86f35acd237df641d3a6332b6d0
@@ -4317,7 +4317,7 @@ observability-docs:
   Installation and Upgrade Guide/docs/en/observability/7.10: 56a6aa7f741e8fa725ebed7e2a9af20c42bc45f9
   Installation and Upgrade Guide/docs/en/observability/7.11: 3cdb382877300181c297511dc1c7bff039fdb5ee
   Installation and Upgrade Guide/docs/en/observability/7.12: 65032658775d79886b6c0303a8ddba38976b87d9
-  Installation and Upgrade Guide/docs/en/observability/7.13: 56d003855db7b7f6c6c6b0a4253955ebc43e0d4d
+  Installation and Upgrade Guide/docs/en/observability/7.13: local
   Installation and Upgrade Guide/docs/en/observability/7.x: 0c4d10871ed8e86f35acd237df641d3a6332b6d0
   Installation and Upgrade Guide/docs/en/observability/master: 7f986668108c4ed1f2d3d10d0ef539b3971b3d0e
   Logs Monitoring Guide for 7.5-7.9/docs/en/7.5: 8be931149fefc486a33cbd2ddfd510ed1e383497
@@ -4333,7 +4333,7 @@ observability-docs:
   Observability/docs/en/7.10: 56a6aa7f741e8fa725ebed7e2a9af20c42bc45f9
   Observability/docs/en/7.11: 3cdb382877300181c297511dc1c7bff039fdb5ee
   Observability/docs/en/7.12: 65032658775d79886b6c0303a8ddba38976b87d9
-  Observability/docs/en/7.13: 56d003855db7b7f6c6c6b0a4253955ebc43e0d4d
+  Observability/docs/en/7.13: local
   Observability/docs/en/7.9: 1988aa40e20d221d96fdcdb208795d2227b82f3c
   Observability/docs/en/7.x: 0c4d10871ed8e86f35acd237df641d3a6332b6d0
   Observability/docs/en/master: 672b68db3f761d66f3222995da835688ad901a25
