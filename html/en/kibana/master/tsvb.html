@@ -268,6 +268,34 @@ This function must always be the last metric in the series.
 </dd>
 </dl>
 </div>
+<h4><a id="tsvb-index-pattern-mode"></a>TSVB Index pattern mode<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/kibana/edit/master/docs/user/dashboard/tsvb.asciidoc">edit</a></h4>
+<p>From 7.13.0, TSVB supports a new mode of creating a chart, the <span class="strong strong"><strong>index pattern mode</strong></span>.
+It is the default one for new visualizations but it can also be switched for the old implementations:</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+Click <span class="strong strong"><strong>Panel options</strong></span>, then click the gear icon on the <span class="strong strong"><strong>Index pattern</strong></span> setting.
+</li>
+<li class="listitem">
+Switch on the <span class="strong strong"><strong>Use only Kibana index patterns</strong></span> switch
+</li>
+<li class="listitem">
+Reselect the index pattern from the dropdown and the timefield
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/tsvb_index_pattern_selection_mode.png" alt="Change index pattern selection mode action">
+</div>
+</div>
+<p>The new mode unlocks many new features such as:
+* Runtime fields
+* Url drilldowns
+* Create filters by clicking on a timeseries chart
+* Better performance
+* and more features to come</p>
+<p>The old mode, which the users can create a TSVB chart by applying an es index string, is considered as deprecated and is going to be removed in the future.</p>
 <h4><a id="tsvb-faq"></a>Frequently asked questions<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/kibana/edit/master/docs/user/dashboard/tsvb.asciidoc">edit</a></h4>
 <p>For answers to frequently asked <span class="strong strong"><strong>TSVB</strong></span> question, review the following.</p>
 <h5><a id="_why_is_my_tsvb_visualization_missing_data"></a>Why is my TSVB visualization missing data?<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/kibana/edit/master/docs/user/dashboard/tsvb.asciidoc">edit</a></h5>
