@@ -3,11 +3,13 @@
   <head>
     
 <meta charset="UTF-8">
-<title>Secure the reporting endpoints | Kibana Guide [master] | Elastic</title>
+<meta name="description" content="Consider the production components that are used to generate reports.">
+<meta name="keywords" content="administrator, analyst, concept, setup, reporting">
+<title>Reporting production considerations | Kibana Guide [master] | Elastic</title>
 <link rel="home" href="index.html" title="Kibana Guide [master]"/>
-<link rel="up" href="configuring-reporting.html" title="Reporting configuration"/>
-<link rel="prev" href="secure-reporting.html" title="Reporting and security"/>
-<link rel="next" href="reporting-network-policy.html" title="Restrict requests with a Reporting network policy"/>
+<link rel="up" href="production.html" title="Use Kibana in a production environment"/>
+<link rel="prev" href="alerting-production-considerations.html" title="Alerting production considerations"/>
+<link rel="next" href="task-manager-production-considerations.html" title="Task Manager"/>
 <meta name="DC.type" content="Learn/Docs/Kibana/Reference/master"/>
 <meta name="DC.subject" content="Kibana"/>
 <meta name="DC.identifier" content="master"/>
@@ -116,73 +118,46 @@ Not what you want? See the
 <div class="breadcrumbs">
 <span class="breadcrumb-link"><a href="index.html">Kibana Guide [master]</a></span>
 »
-<span class="breadcrumb-link"><a href="reporting-getting-started.html">Reporting</a></span>
+<span class="breadcrumb-link"><a href="production.html">Use Kibana in a production environment</a></span>
 »
-<span class="breadcrumb-link"><a href="configuring-reporting.html">Reporting configuration</a></span>
-»
-<span class="breadcrumb-node">Secure the reporting endpoints</span>
+<span class="breadcrumb-node">Reporting production considerations</span>
 </div>
 <div class="navheader">
 <span class="prev">
-<a href="secure-reporting.html">« Reporting and security</a>
+<a href="alerting-production-considerations.html">« Alerting production considerations</a>
 </span>
 <span class="next">
-<a href="reporting-network-policy.html">Restrict requests with a Reporting network policy »</a>
+<a href="task-manager-production-considerations.html">Task Manager »</a>
 </span>
 </div>
-<div class="section xpack">
+<div class="chapter xpack">
 <div class="titlepage"><div><div>
-<h2 class="title"><a id="securing-reporting"></a>Secure the reporting endpoints<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/kibana/edit/master/docs/user/security/reporting.asciidoc">edit</a><a class="xpack_tag" href="/subscriptions"></a></h2>
+<h2 class="title"><a id="reporting-production-considerations"></a>Reporting production considerations<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/kibana/edit/master/docs/user/production-considerations/reporting-production-considerations.asciidoc">edit</a><a class="xpack_tag" href="/subscriptions"></a></h2>
 </div></div></div>
-<p>In a production environment, you should restrict access to
-the reporting endpoints to authorized users. This requires that you:</p>
-<div class="olist orderedlist">
-<ol class="orderedlist">
-<li class="listitem">
-Enable Elastic Stack security features on your Elasticsearch cluster. For more information,
-see <a href="/guide/en/elasticsearch/reference/master/security-getting-started.html" class="ulink" target="_top">Getting started with security</a>.
-</li>
-<li class="listitem">
-Configure TLS/SSL encryption for the Kibana server. For more information, see
-<a class="xref" href="configuring-tls.html" title="Encrypt communications in Kibana">Encrypt communications</a>.
-</li>
-<li class="listitem">
-<p>Specify the Kibana server&#8217;s CA certificate chain in <code class="literal">elasticsearch.yml</code>:</p>
-<p>If you are using your own CA to sign the Kibana server certificate, then you need
-to specify the CA certificate chain in Elasticsearch to properly establish trust in TLS
-connections between Watcher and Kibana. If your CA certificate chain is
-contained in a PKCS #12 trust store, specify it like so:</p>
-<div class="pre_wrapper lang-yaml">
-<pre class="programlisting prettyprint lang-yaml">xpack.http.ssl.truststore.path: "/path/to/your/truststore.p12"
-xpack.http.ssl.truststore.type: "PKCS12"
-xpack.http.ssl.truststore.password: "optional decryption password"</pre>
-</div>
-<p>Otherwise, if your CA certificate chain is in PEM format, specify it like so:</p>
-<div class="pre_wrapper lang-yaml">
-<pre class="programlisting prettyprint lang-yaml">xpack.http.ssl.certificate_authorities: ["/path/to/your/cacert1.pem", "/path/to/your/cacert2.pem"]</pre>
-</div>
-<p>For more information, see <a href="/guide/en/elasticsearch/reference/master/notification-settings.html#ssl-notification-settings" class="ulink" target="_top">the Watcher HTTP TLS/SSL Settings</a>.</p>
-</li>
-<li class="listitem">
-Add one or more users who have the permissions
-necessary to use Kibana and reporting features. For more information, see
-<a class="xref" href="secure-reporting.html" title="Reporting and security">Reporting and security</a>.
-</li>
-</ol>
-</div>
-<p>Once you&#8217;ve enabled SSL for Kibana, all requests to the reporting endpoints
-must include valid credentials. For example, see the following page which
-includes a watch that submits requests as the built-in <code class="literal">elastic</code> user:
-<a class="xref" href="automating-report-generation.html" title="Automating report generation"><em>Automating report generation</em></a>.</p>
-<p>For more information about configuring watches, see
-<a href="/guide/en/elasticsearch/reference/master/how-watcher-works.html" class="ulink" target="_top">How Watcher works</a>.</p>
+
+<p>To generate reports, Kibana uses a custom build of the Chromium web browser, which runs on the Kibana server in headless mode to load Kibana and capture the rendered Kibana visualizations as images. Chromium is an open-source project not related to Elastic, but the Chromium binary for Kibana has been custom-built by Elastic to make sure it works with minimal setup. The operating system that the Kibana server uses can require additional dependencies for Chromium.</p>
+<h3><a id="reporting-chromium-sandbox"></a>Chromium sandbox<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/kibana/edit/master/docs/user/production-considerations/reporting-production-considerations.asciidoc">edit</a></h3>
+<p>For an additional layer of security, use the sandbox. The Chromium sandbox uses operating system-provided mechanisms to ensure that code execution cannot make persistent changes to the computer or access confidential information. The specific sandboxing techniques differ for each operating system.</p>
+<h4><a id="reporting-linux-sandbox"></a>Linux sandbox<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/kibana/edit/master/docs/user/production-considerations/reporting-production-considerations.asciidoc">edit</a></h4>
+<p>The Linux sandbox depends on user namespaces, which were introduced with the 3.8 Linux kernel. However, many
+distributions don&#8217;t have user namespaces enabled by default, or they require the CAP_SYS_ADMIN capability. The reporting features
+automatically disable the sandbox when it is running on Debian and CentOS, as additional steps are required to enable
+unprivileged usernamespaces. In these situations, you&#8217;ll see the following message in your Kibana startup logs:
+<code class="literal">Chromium sandbox provides an additional layer of protection, but is not supported for your OS.
+Automatically setting 'xpack.reporting.capture.browser.chromium.disableSandbox: true'.</code></p>
+<p>Reporting automatically enables the Chromium sandbox at startup when a supported OS is detected. However, if your kernel is 3.8 or newer, it&#8217;s
+recommended to set <code class="literal">xpack.reporting.capture.browser.chromium.disableSandbox: false</code> in your <code class="literal">kibana.yml</code> to explicitly enable usernamespaces.</p>
+<h4><a id="reporting-docker-sandbox"></a>Docker<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/elastic/kibana/edit/master/docs/user/production-considerations/reporting-production-considerations.asciidoc">edit</a></h4>
+<p>When running Kibana in a Docker container, all container processes are run within a usernamespace with seccomp-bpf and
+AppArmor profiles that prevent the Chromium sandbox from being used. In these situations, disabling the sandbox is recommended,
+as the container implements similar security mechanisms.</p>
 </div>
 <div class="navfooter">
 <span class="prev">
-<a href="secure-reporting.html">« Reporting and security</a>
+<a href="alerting-production-considerations.html">« Alerting production considerations</a>
 </span>
 <span class="next">
-<a href="reporting-network-policy.html">Restrict requests with a Reporting network policy »</a>
+<a href="task-manager-production-considerations.html">Task Manager »</a>
 </span>
 </div>
 </div>
