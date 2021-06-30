@@ -196,7 +196,7 @@ you want to create or update.
 </span>
 </dt>
 <dd>
-(Optional, <a class="xref" href="common-options.html#time-units" title="Time units">time units</a>)
+(Optional, <a class="xref" href="api-conventions.html#time-units" title="Time units">time units</a>)
 Period to wait for a connection to the master node. If no response is received
 before the timeout expires, the request fails and returns an error. Defaults to
 <code class="literal">30s</code>.
@@ -207,7 +207,7 @@ before the timeout expires, the request fails and returns an error. Defaults to
 </span>
 </dt>
 <dd>
-(Optional, <a class="xref" href="common-options.html#time-units" title="Time units">time units</a>)
+(Optional, <a class="xref" href="api-conventions.html#time-units" title="Time units">time units</a>)
 Period to wait for a response. If no response is received before the timeout
 expires, the request fails and returns an error. Defaults to <code class="literal">30s</code>.
 </dd>
@@ -263,7 +263,7 @@ If <code class="literal">true</code>, cluster states are included in snapshots. 
 <dd>
 (Optional, array of strings)
 Array of data streams and indices to include in snapshots.
-<a class="xref" href="date-math-index-names.html" title="Date math support in index and index alias names">Date math</a> and wildcard (<code class="literal">*</code>) expressions are
+<a class="xref" href="date-math-index-names.html" title="Date math support in system and index alias names">Date math</a> and wildcard (<code class="literal">*</code>) expressions are
 supported.
 </dd>
 </dl>
@@ -279,7 +279,7 @@ supported.
 <dd>
 (Required, string)
 Name automatically assigned to each snapshot created by the policy.
-<a class="xref" href="date-math-index-names.html" title="Date math support in index and index alias names">Date math</a> is supported.
+<a class="xref" href="date-math-index-names.html" title="Date math support in system and index alias names">Date math</a> is supported.
 To prevent conflicting snapshot names, a UUID is automatically appended to each
 snapshot name.
 </dd>
@@ -320,7 +320,7 @@ Retention rules used to retain and delete snapshots created by the policy.
 </span>
 </dt>
 <dd>
-(Optional, <a class="xref" href="common-options.html#time-units" title="Time units">time units</a>)
+(Optional, <a class="xref" href="api-conventions.html#time-units" title="Time units">time units</a>)
 Time period after which a snapshot is considered expired and eligible for
 deletion. SLM deletes expired snapshots based on the
 <a class="xref" href="slm-settings.html#slm-retention-schedule"><code class="literal">slm.retention_schedule</code></a>.

@@ -701,7 +701,7 @@ that Elasticsearch needs to return the correct documents. The search context is 
 by the initial request and kept alive by subsequent requests.</p>
 <p>The <code class="literal">scroll</code> parameter (passed to the <code class="literal">search</code> request and to every <code class="literal">scroll</code>
 request) tells Elasticsearch how long it should keep the search context alive.
-Its value (e.g. <code class="literal">1m</code>, see <a class="xref" href="common-options.html#time-units" title="Time units">Time units</a>) does not need to be long enough to
+Its value (e.g. <code class="literal">1m</code>, see <a class="xref" href="api-conventions.html#time-units" title="Time units">Time units</a>) does not need to be long enough to
 process all data&#8201;&#8212;&#8201;it just needs to be long enough to process the previous
 batch of results. Each <code class="literal">scroll</code> request (with the <code class="literal">scroll</code> parameter) sets a
 new expiry time. If a <code class="literal">scroll</code> request doesn&#8217;t pass in the <code class="literal">scroll</code>
