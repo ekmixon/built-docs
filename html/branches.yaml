@@ -3998,8 +3998,8 @@ elasticsearch-net:
   .NET API/docs/5.x: 80e9b969d3fbb51039bc61c02ba05c31334135f6
   .NET API/docs/6.x: c703802da9dcfb2c2f7c520b8be5311b3d29801a
   .NET API/docs/7.x: 9f69bd45f2db4da391792e4c5d7bf6643dc19d56
-  .NET API/docs/master: 63bba676d6df512f7fefacf6a03f4f9ef598059d
-  Elasticsearch Guide/examples/master: 85f7a8e60bc7d25e634471fc7a5ce050c8c73047
+  .NET API/docs/master: local
+  Elasticsearch Guide/examples/master: local
 elasticsearch-perl:
   Perl API/docs/master: 1a878949b15742b904e3a99006f51ed8ec8c5076
 elasticsearch-php:
