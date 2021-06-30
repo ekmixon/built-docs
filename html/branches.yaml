@@ -15,8 +15,8 @@ apm-agent-go:
   APM Go Agent/docs/1.x: c5c7e21aa26a6def7790f74fbceed792ad47ef35
   APM Go Agent/docs/master: a3bd52678a199061a80af418807dfe29ef9bfa2b
 apm-agent-ios:
-  APM iOS Agent/CHANGELOG.asciidoc/main: 44d2368c372ed0031c7d899dce3c41858600f8e6
-  APM iOS Agent/docs/main: 44d2368c372ed0031c7d899dce3c41858600f8e6
+  APM iOS Agent/CHANGELOG.asciidoc/main: local
+  APM iOS Agent/docs/main: local
 apm-agent-java:
   APM Java Agent/CHANGELOG.asciidoc/1.x: bf2bb8d81f20cb3fb764d24d328c314f719f71ca
   APM Java Agent/CHANGELOG.asciidoc/master: df7159e4b060abe236ed855f38fba2a7a3482ec8
